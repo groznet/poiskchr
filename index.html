@@ -1,1 +1,1034 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поисковое движение России - Чеченская Республика | Главная</title>
+    <meta name="description" content="Официальный сайт регионального отделения Поискового движения России в Чеченской Республике. Увековечиваем память защитников Отечества.">
+    <meta name="keywords" content="поисковое движение чечня, поисковики россии, поиск солдат вов, поиск без вести пропавших, военные захоронения чечня">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://poisk-chr.ru/">
+    <meta property="og:title" content="Поисковое движение России - Чеченская Республика">
+    <meta property="og:description" content="Увековечиваем память защитников Отечества">
+    <meta property="og:image" content="https://poisk-chr.ru/assets/og-image.jpg">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            /* WWII Historic Color Palette */
+            --primary-color: #2d3e50;        /* Dark Blue-Gray (Military) */
+            --secondary-color: #8b4513;      /* Saddle Brown (Earth/Trenches) */
+            --accent-color: #cd853f;         /* Peru (Weathered Brass) */
+            --dark-gray: #34495e;            /* Charcoal */
+            --light-gray: #bdc3c7;           /* Silver Gray */
+            --background-light: #f8f9fa;     /* Off-white */
+            --text-dark: #2c3e50;            /* Dark Text */
+            --text-light: #7f8c8d;           /* Light Text */
+            --memorial-red: #8b0000;         /* Dark Red (Memorial) */
+            --victory-gold: #daa520;         /* Goldenrod (Victory) */
+            --heritage-green: #556b2f;       /* Dark Olive Green */
+            
+            /* Typography */
+            --font-primary: 'Roboto', sans-serif;
+            --font-display: 'Playfair Display', serif;
+            
+            /* Spacing */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2rem;
+            --spacing-xl: 3rem;
+            
+            /* Border Radius */
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            
+            /* Shadows */
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 8px rgba(0,0,0,0.15);
+            --shadow-lg: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-primary);
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--background-light);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-sm);
+        }
+        
+        /* Header Styles */
+        .header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-gray) 100%);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .header-top {
+            background-color: rgba(0,0,0,0.1);
+            padding: var(--spacing-xs) 0;
+            font-size: 0.875rem;
+        }
+        
+        .header-top-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .contact-info a {
+            color: var(--light-gray);
+            text-decoration: none;
+            margin-right: var(--spacing-md);
+            transition: color 0.3s ease;
+        }
+        
+        .contact-info a:hover {
+            color: var(--victory-gold);
+        }
+        
+        .social-links a {
+            color: var(--light-gray);
+            margin-left: var(--spacing-sm);
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--victory-gold);
+        }
+        
+        .header-main {
+            padding: var(--spacing-md) 0;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--victory-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: var(--spacing-sm);
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+        
+        .logo-text h1 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+        
+        .logo-text p {
+            font-size: 0.875rem;
+            color: var(--light-gray);
+        }
+        
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        .nav {
+            display: flex;
+            list-style: none;
+            gap: var(--spacing-lg);
+        }
+        
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: var(--radius-sm);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .nav a:hover,
+        .nav a.active {
+            background-color: var(--victory-gold);
+            color: var(--primary-color);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23556b2f" width="1200" height="600"/><path fill="%23344d2e" opacity="0.3" d="M0,300 Q300,200 600,300 T1200,300 V600 H0 Z"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: var(--spacing-xl) 0;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h2 {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-md);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: var(--spacing-lg);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: var(--spacing-md);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: var(--spacing-sm) var(--spacing-lg);
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            font-weight: 500;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .btn-primary {
+            background-color: var(--victory-gold);
+            color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border-color: white;
+        }
+        
+        .btn-secondary:hover {
+            background-color: white;
+            color: var(--primary-color);
+        }
+        
+        /* Stats Section */
+        .stats {
+            padding: var(--spacing-xl) 0;
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-lg);
+            text-align: center;
+        }
+        
+        .stat-item h3 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--victory-gold);
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .stat-item p {
+            font-size: 1.1rem;
+            color: var(--light-gray);
+        }
+        
+        /* About Section */
+        .about {
+            padding: var(--spacing-xl) 0;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-xl);
+            align-items: center;
+        }
+        
+        .about-text h2 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .about-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: var(--spacing-md);
+            color: var(--text-light);
+        }
+        
+        .about-image {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        
+        /* Services/Projects Section */
+        .services {
+            padding: var(--spacing-xl) 0;
+            background-color: var(--background-light);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .section-header h2 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+        }
+        
+        .service-card {
+            background: white;
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--victory-gold);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--victory-gold), var(--accent-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--spacing-md);
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .service-card h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .service-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        
+        /* News Section */
+        .news {
+            padding: var(--spacing-xl) 0;
+        }
+        
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--spacing-lg);
+        }
+        
+        .news-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .news-image {
+            height: 200px;
+            background: linear-gradient(135deg, var(--heritage-green), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+        
+        .news-content {
+            padding: var(--spacing-md);
+        }
+        
+        .news-date {
+            color: var(--text-light);
+            font-size: 0.875rem;
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .news-card h3 {
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-sm);
+            font-size: 1.25rem;
+        }
+        
+        .news-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .read-more {
+            color: var(--victory-gold);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .read-more:hover {
+            color: var(--secondary-color);
+        }
+        
+        /* Memorial Section */
+        .memorial {
+            padding: var(--spacing-xl) 0;
+            background: linear-gradient(135deg, var(--memorial-red), var(--secondary-color));
+            color: white;
+            text-align: center;
+        }
+        
+        .memorial h2 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .memorial p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto var(--spacing-lg);
+            line-height: 1.8;
+        }
+        
+        .memorial-flame {
+            font-size: 4rem;
+            color: var(--victory-gold);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: var(--spacing-xl) 0 var(--spacing-md);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .footer-section h3 {
+            color: var(--victory-gold);
+            margin-bottom: var(--spacing-md);
+            font-size: 1.25rem;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .footer-section a {
+            color: var(--light-gray);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-section a:hover {
+            color: var(--victory-gold);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid var(--dark-gray);
+            padding-top: var(--spacing-md);
+            text-align: center;
+            color: var(--light-gray);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: block;
+            }
+            
+            .nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: var(--primary-color);
+                flex-direction: column;
+                padding: var(--spacing-md);
+                box-shadow: var(--shadow-md);
+            }
+            
+            .nav.active {
+                display: flex;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: var(--spacing-md);
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .services-grid,
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header-top-content {
+                flex-direction: column;
+                gap: var(--spacing-xs);
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-buttons {
+                width: 100%;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+        }
+        
+        /* Utility Classes */
+        .text-center { text-align: center; }
+        .text-left { text-align: left; }
+        .text-right { text-align: right; }
+        
+        .mb-sm { margin-bottom: var(--spacing-sm); }
+        .mb-md { margin-bottom: var(--spacing-md); }
+        .mb-lg { margin-bottom: var(--spacing-lg); }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <div class="contact-info">
+                        <a href="mailto:isa-terkho@bk.ru"><i class="fas fa-envelope"></i> isa-terkho@bk.ru</a>
+                        <a href="tel:+7"><i class="fas fa-phone"></i> Связаться с нами</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://vk.com/public162517912" target="_blank" title="ВКонтакте"><i class="fab fa-vk"></i></a>
+                        <a href="https://ok.ru/profile/591215182136" target="_blank" title="Одноклассники"><i class="fab fa-odnoklassniki"></i></a>
+                        <a href="https://www.youtube.com/@poisk-chr" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="header-main">
+            <div class="container">
+                <div class="header-content">
+                    <a href="/" class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="logo-text">
+                            <h1>Поиск-ЧР</h1>
+                            <p>Поисковое движение России</p>
+                        </div>
+                    </a>
+                    
+                    <button class="nav-toggle" onclick="toggleNav()">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    
+                    <nav class="nav" id="nav">
+                        <a href="/" class="active">Главная</a>
+                        <a href="/about">О нас</a>
+                        <a href="/projects">Проекты</a>
+                        <a href="/blog">Новости</a>
+                        <a href="/reports">Отчеты</a>
+                        <a href="/videos">Видео</a>
+                        <a href="/docs">Документы</a>
+                        <a href="/partners">Партнеры</a>
+                        <a href="/contact">Контакты</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Увековечиваем память защитников Отечества</h2>
+                <p>Региональное отделение Поискового движения России в Чеченской Республике ведет поиск и перезахоронение погибших солдат, сохраняя историческую память для будущих поколений.</p>
+                <div class="hero-buttons">
+                    <a href="/about" class="btn btn-primary">Узнать больше</a>
+                    <a href="/contact" class="btn btn-secondary">Присоединиться</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>15+</h3>
+                    <p>Лет деятельности</p>
+                </div>
+                <div class="stat-item">
+                    <h3>500+</h3>
+                    <p>Найденных солдат</p>
+                </div>
+                <div class="stat-item">
+                    <h3>50+</h3>
+                    <p>Экспедиций</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100+</h3>
+                    <p>Волонтеров</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Наша миссия</h2>
+                    <p>Поисковое движение России в Чеченской Республике объединяет людей, стремящихся сохранить память о героях Великой Отечественной войны. Мы занимаемся поиском и перезахоронением останков погибших солдат, установлением их судеб и оказанием помощи родственникам.</p>
+                    <p>Наша работа - это не только поисковые экспедиции, но и патриотическое воспитание молодежи, ведение архивных исследований и просветительская деятельность.</p>
+                    <a href="/about" class="btn btn-primary">Подробнее о нас</a>
+                </div>
+                <div class="about-image">
+                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'><rect fill='%23556b2f' width='600' height='400'/><circle fill='%23daa520' cx='300' cy='200' r='80' opacity='0.3'/><text x='300' y='210' text-anchor='middle' fill='white' font-size='20'>Поисковая работа</text></svg>" alt="Поисковая деятельность">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Наша деятельность</h2>
+                <p>Основные направления работы регионального отделения Поискового движения России</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Поисковые экспедиции</h3>
+                    <p>Организация и проведение поисковых работ для обнаружения останков погибших солдат Великой Отечественной войны на территории различных регионов.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-archive"></i>
+                    </div>
+                    <h3>Архивные исследования</h3>
+                    <p>Работа с историческими документами, военными архивами для установления судеб пропавших без вести солдат и офицеров.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Патриотическое воспитание</h3>
+                    <p>Просветительские программы для молодежи, школьников и студентов, направленные на сохранение исторической памяти.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Помощь родственникам</h3>
+                    <p>Консультации и содействие семьям в поиске информации о судьбах родственников, пропавших без вести в годы войны.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-monument"></i>
+                    </div>
+                    <h3>Мемориальная работа</h3>
+                    <p>Установка памятников, уход за воинскими захоронениями, организация торжественных церемоний перезахоронения.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Сотрудничество</h3>
+                    <p>Взаимодействие с государственными органами, общественными организациями и международными поисковыми объединениями.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="news">
+        <div class="container">
+            <div class="section-header">
+                <h2>Последние новости</h2>
+                <p>Актуальная информация о деятельности нашего отделения и поисковых мероприятиях</p>
+            </div>
+            
+            <div class="news-grid">
+                <article class="news-card">
+                    <div class="news-image">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">25 декабря 2024</div>
+                        <h3>Итоги поисковой экспедиции "Память"</h3>
+                        <p>Завершилась очередная поисковая экспедиция в Волгоградской области. За две недели работы удалось обнаружить останки 12 солдат.</p>
+                        <a href="/blog/?p=1" class="read-more">Читать далее →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="news-image">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">20 декабря 2024</div>
+                        <h3>Награждение активных поисковиков</h3>
+                        <p>В торжественной обстановке были награждены волонтеры, принимавшие активное участие в поисковых работах в течение года.</p>
+                        <a href="/blog/?p=2" class="read-more">Читать далее →</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="news-image">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">15 декабря 2024</div>
+                        <h3>Урок памяти в школах Грозного</h3>
+                        <p>Представители отделения провели серию уроков памяти в образовательных учреждениях столицы республики.</p>
+                        <a href="/blog/?p=3" class="read-more">Читать далее →</a>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="text-center" style="margin-top: 2rem;">
+                <a href="/blog" class="btn btn-primary">Все новости</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Memorial Section -->
+    <section class="memorial">
+        <div class="container">
+            <div class="memorial-flame">🕯️</div>
+            <h2>Вечная память героям</h2>
+            <p>Каждый найденный солдат - это восстановленная связь времен, возвращенное имя и закрытая страница неизвестности для родных и близких. Мы работаем, чтобы ни один защитник Отечества не остался безымянным.</p>
+            <a href="/reports" class="btn btn-secondary">Наши отчеты</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> isa-terkho@bk.ru</li>
+                        <li><i class="fas fa-envelope"></i> isa-terkho@mail.ru</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Чеченская Республика</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Разделы сайта</h3>
+                    <ul>
+                        <li><a href="/about">О нас</a></li>
+                        <li><a href="/projects">Проекты</a></li>
+                        <li><a href="/blog">Новости</a></li>
+                        <li><a href="/reports">Отчеты</a></li>
+                        <li><a href="/videos">Видео</a></li>
+                        <li><a href="/docs">Документы</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Деятельность</h3>
+                    <ul>
+                        <li><a href="/projects">Поисковые экспедиции</a></li>
+                        <li><a href="/reports">Архивные исследования</a></li>
+                        <li><a href="/about">Патриотическое воспитание</a></li>
+                        <li><a href="/contact">Помощь родственникам</a></li>
+                        <li><a href="/partners">Сотрудничество</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Социальные сети</h3>
+                    <ul>
+                        <li><a href="https://vk.com/public162517912" target="_blank"><i class="fab fa-vk"></i> ВКонтакте</a></li>
+                        <li><a href="https://ok.ru/profile/591215182136" target="_blank"><i class="fab fa-odnoklassniki"></i> Одноклассники</a></li>
+                        <li><a href="https://www.youtube.com/@poisk-chr" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></li>
+                        <li><a href="https://vk.com/isasardalov" target="_blank"><i class="fab fa-vk"></i> Личная страница</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Поисковое движение России - Чеченская Республика. Все права защищены.</p>
+                <p>Сайт создан в память о защитниках Отечества</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        function toggleNav() {
+            const nav = document.getElementById('nav');
+            nav.classList.toggle('active');
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Add fade-in class to elements and observe them
+        document.addEventListener('DOMContentLoaded', function() {
+            const elementsToAnimate = document.querySelectorAll('.service-card, .news-card, .stat-item');
+            elementsToAnimate.forEach(el => {
+                el.classList.add('fade-in');
+                observer.observe(el);
+            });
+
+            // Close mobile nav when clicking on links
+            document.querySelectorAll('.nav a').forEach(link => {
+                link.addEventListener('click', () => {
+                    document.getElementById('nav').classList.remove('active');
+                });
+            });
+
+            // Close mobile nav when clicking outside
+            document.addEventListener('click', (e) => {
+                const nav = document.getElementById('nav');
+                const navToggle = document.querySelector('.nav-toggle');
+                
+                if (!nav.contains(e.target) && !navToggle.contains(e.target)) {
+                    nav.classList.remove('active');
+                }
+            });
+        });
+
+        // Add loading animation for images
+        document.querySelectorAll('img').forEach(img => {
+            img.addEventListener('load', function() {
+                this.style.opacity = '1';
+            });
+        });
+
+        // Counter animation for stats
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-item h3');
+            counters.forEach(counter => {
+                const target = parseInt(counter.textContent.replace('+', ''));
+                let current = 0;
+                const increment = target / 50;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        counter.textContent = target + '+';
+                        clearInterval(timer);
+                    } else {
+                        counter.textContent = Math.floor(current) + '+';
+                    }
+                }, 30);
+            });
+        }
+
+        // Trigger counter animation when stats section is visible
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const statsSection = document.querySelector('.stats');
+            if (statsSection) {
+                statsObserver.observe(statsSection);
+            }
+        });
+    </script>
+</body>
+</html>
