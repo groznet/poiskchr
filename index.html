@@ -17,33 +17,36 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     
-    <!-- Fonts -->
+    <!-- Historical Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@400;600;700&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         :root {
-            /* Updated Color Palette */
-            --primary-color: #963434;        /* Main Primary Color */
-            --secondary-color: #8b4513;      /* Saddle Brown (Earth/Trenches) */
-            --accent-color: #C69658;         /* Warning/Messages Color */
-            --link-color: #2F537E;           /* Links/Buttons Color */
+            /* Historical Archive Color Palette */
+            --primary-color: #963434;        /* Deep burgundy red */
+            --secondary-color: #8b4513;      /* Antique brown */
+            --accent-color: #C69658;         /* Aged gold */
+            --link-color: #2F537E;           /* Vintage navy */
             --dark-gray: #34495e;            /* Charcoal */
             --light-gray: #bdc3c7;           /* Silver Gray */
-            --background-light: #DED5C8;     /* Body Neutral Color */
-            --text-dark: #963434;            /* Headings Color */
-            --text-light: #7f8c8d;           /* Light Text */
-            --memorial-red: #963434;         /* Memorial Red (same as primary) */
-            --victory-gold: #C69658;         /* Warning/Messages (was goldenrod) */
-            --heritage-green: #556b2f;       /* Dark Olive Green */
+            --background-light: #f5f2e8;     /* Aged paper background */
+            --paper-color: #fefcf6;          /* Old paper white */
+            --sepia-tone: #e8dcc0;           /* Sepia background */
+            --text-dark: #2c1810;            /* Dark brown text */
+            --text-light: #5a4a3a;           /* Medium brown text */
+            --memorial-red: #963434;         /* Memorial red */
+            --vintage-frame: #8b6914;        /* Antique brass frame */
+            --heritage-green: #556b2f;       /* Olive green */
             
-            /* Typography */
-            --font-primary: 'Roboto', sans-serif;
+            /* Typography - Historical fonts */
+            --font-primary: 'Crimson Text', serif;
             --font-display: 'Playfair Display', serif;
+            --font-vintage: 'Old Standard TT', serif;
             
             /* Spacing */
             --spacing-xs: 0.5rem;
@@ -52,15 +55,10 @@
             --spacing-lg: 2rem;
             --spacing-xl: 3rem;
             
-            /* Border Radius */
-            --radius-sm: 4px;
-            --radius-md: 8px;
-            --radius-lg: 12px;
-            
-            /* Shadows */
-            --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
-            --shadow-md: 0 4px 8px rgba(0,0,0,0.15);
-            --shadow-lg: 0 8px 16px rgba(0,0,0,0.2);
+            /* Archive-style effects */
+            --paper-shadow: 0 4px 8px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.1);
+            --vintage-shadow: inset 0 0 20px rgba(139, 105, 20, 0.1);
+            --frame-shadow: 0 6px 12px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.2);
         }
         
         * {
@@ -71,9 +69,29 @@
         
         body {
             font-family: var(--font-primary);
-            line-height: 1.6;
+            line-height: 1.7;
             color: var(--text-dark);
-            background-color: var(--background-light);
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(139, 105, 20, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(150, 52, 52, 0.1) 0%, transparent 50%),
+                linear-gradient(45deg, var(--background-light) 0%, var(--sepia-tone) 100%);
+            background-attachment: fixed;
+            position: relative;
+        }
+        
+        /* Vintage paper texture overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 25% 25%, transparent 20%, rgba(139, 105, 20, 0.02) 21%, rgba(139, 105, 20, 0.02) 34%, transparent 35%),
+                linear-gradient(0deg, transparent 24%, rgba(139, 105, 20, 0.03) 25%, rgba(139, 105, 20, 0.03) 26%, transparent 27%, transparent 74%, rgba(139, 105, 20, 0.03) 75%, rgba(139, 105, 20, 0.03) 76%, transparent 77%);
+            pointer-events: none;
+            z-index: -1;
         }
         
         .container {
@@ -82,14 +100,110 @@
             padding: 0 var(--spacing-sm);
         }
         
-        /* Header Styles */
+        /* Historical paper page effect */
+        .paper-page {
+            background: var(--paper-color);
+            box-shadow: var(--paper-shadow);
+            position: relative;
+            margin: var(--spacing-lg) 0;
+            border-radius: 2px;
+        }
+        
+        /* Curved page corners */
+        .paper-page::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(-45deg, transparent 46%, var(--sepia-tone) 47%, var(--sepia-tone) 48%, transparent 49%);
+            border-radius: 0 2px 0 0;
+        }
+        
+        /* Aged paper effect */
+        .paper-page::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--vintage-shadow);
+            border-radius: 2px;
+            pointer-events: none;
+        }
+        
+        /* Vintage photo frame */
+        .vintage-frame {
+            background: var(--vintage-frame);
+            padding: 8px;
+            box-shadow: var(--frame-shadow);
+            position: relative;
+            border-radius: 2px;
+            transform: rotate(-0.5deg);
+            transition: transform 0.3s ease;
+        }
+        
+        .vintage-frame:hover {
+            transform: rotate(0deg) scale(1.02);
+        }
+        
+        .vintage-frame::before {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            right: 4px;
+            bottom: 4px;
+            border: 1px solid rgba(139, 105, 20, 0.3);
+            pointer-events: none;
+        }
+        
+        .vintage-frame img,
+        .vintage-frame .frame-content {
+            display: block;
+            width: 100%;
+            border-radius: 1px;
+            filter: sepia(15%) contrast(1.1) brightness(0.95);
+        }
+        
+        /* Archive document styling */
+        .archive-document {
+            background: var(--paper-color);
+            border-left: 4px solid var(--accent-color);
+            box-shadow: var(--paper-shadow);
+            position: relative;
+            margin: var(--spacing-md) 0;
+            transform: rotate(0.2deg);
+        }
+        
+        .archive-document::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -4px;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, 
+                var(--accent-color) 0%, 
+                rgba(198, 150, 88, 0.7) 50%, 
+                var(--accent-color) 100%);
+        }
+        
+        /* Header Styles - Archive themed */
         .header {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-gray) 100%);
-            color: white;
+            background: 
+                linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="paper" patternUnits="userSpaceOnUse" width="100" height="100"><rect fill="%23963434"/><circle cx="20" cy="20" r="1" fill="rgba(139,105,20,0.1)"/><circle cx="80" cy="60" r="0.5" fill="rgba(139,105,20,0.15)"/></pattern></defs><rect width="100" height="100" fill="url(%23paper)"/></svg>');
+            color: var(--paper-color);
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: var(--shadow-md);
+            box-shadow: 
+                0 4px 8px rgba(0,0,0,0.3),
+                inset 0 1px 0 rgba(255,255,255,0.1);
+            border-bottom: 3px solid var(--accent-color);
         }
         
         .header-top {
@@ -201,16 +315,32 @@
             color: white;
         }
         
-        /* Hero Section */
+        /* Hero Section - Archive style */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23556b2f" width="1200" height="600"/><path fill="%23344d2e" opacity="0.3" d="M0,300 Q300,200 600,300 T1200,300 V600 H0 Z"/></svg>');
+            background: 
+                linear-gradient(rgba(44, 24, 16, 0.8), rgba(44, 24, 16, 0.6)), 
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="oldpaper" patternUnits="userSpaceOnUse" width="100" height="100"><rect fill="%23556b2f"/><circle cx="10" cy="10" r="0.8" fill="rgba(139,105,20,0.1)"/><circle cx="60" cy="30" r="0.5" fill="rgba(139,105,20,0.08)"/><circle cx="30" cy="70" r="0.6" fill="rgba(139,105,20,0.12)"/></pattern></defs><rect fill="url(%23oldpaper)" width="1200" height="600"/><path fill="%23344d2e" opacity="0.4" d="M0,300 Q300,200 600,300 T1200,300 V600 H0 Z"/></svg>');
             background-size: cover;
             background-position: center;
-            color: white;
+            color: var(--paper-color);
             padding: var(--spacing-xl) 0;
             min-height: 70vh;
             display: flex;
             align-items: center;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 30% 30%, rgba(139, 105, 20, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 70%, rgba(150, 52, 52, 0.1) 0%, transparent 50%);
+            pointer-events: none;
         }
         
         .hero-content {
@@ -224,7 +354,11 @@
             font-size: 3rem;
             font-weight: 700;
             margin-bottom: var(--spacing-md);
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            text-shadow: 
+                2px 2px 4px rgba(0,0,0,0.5),
+                0 0 10px rgba(198, 150, 88, 0.3);
+            position: relative;
+            z-index: 1;
         }
         
         .hero p {
@@ -254,14 +388,36 @@
         }
         
         .btn-primary {
-            background-color: var(--link-color);
-            color: white;
+            background: linear-gradient(135deg, var(--link-color), var(--primary-color));
+            color: var(--paper-color);
+            border: 2px solid var(--accent-color);
+            box-shadow: var(--paper-shadow);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .btn-primary:hover::before {
+            left: 100%;
         }
         
         .btn-primary:hover {
-            background-color: var(--primary-color);
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
             transform: translateY(-2px);
-            box-shadow: var(--shadow-md);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2), 0 4px 8px rgba(0,0,0,0.1);
         }
         
         .btn-secondary {
@@ -301,9 +457,14 @@
             color: var(--light-gray);
         }
         
-        /* About Section */
+        /* About Section - Archive style */
         .about {
             padding: var(--spacing-xl) 0;
+        }
+        
+        .about .paper-page {
+            padding: var(--spacing-xl);
+            transform: rotate(-0.2deg);
         }
         
         .about-content {
@@ -329,9 +490,6 @@
         
         .about-image {
             position: relative;
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-lg);
         }
         
         .about-image img {
@@ -340,10 +498,9 @@
             object-fit: cover;
         }
         
-        /* Services/Projects Section */
+        /* Services/Projects Section - Archive style */
         .services {
             padding: var(--spacing-xl) 0;
-            background-color: var(--background-light);
         }
         
         .section-header {
@@ -372,17 +529,33 @@
         }
         
         .service-card {
-            background: white;
+            background: var(--paper-color);
             padding: var(--spacing-lg);
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-sm);
+            box-shadow: var(--paper-shadow);
             transition: all 0.3s ease;
-            border-left: 4px solid var(--link-color);
+            border-left: 4px solid var(--accent-color);
+            position: relative;
+            transform: rotate(0.3deg);
+        }
+        
+        .service-card:nth-child(even) {
+            transform: rotate(-0.3deg);
         }
         
         .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
+            transform: rotate(0deg) translateY(-5px) scale(1.02);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2), 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .service-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--vintage-shadow);
+            pointer-events: none;
         }
         
         .service-icon {
@@ -421,26 +594,40 @@
         }
         
         .news-card {
-            background: white;
-            border-radius: var(--radius-lg);
+            background: var(--paper-color);
             overflow: hidden;
-            box-shadow: var(--shadow-sm);
+            box-shadow: var(--paper-shadow);
             transition: all 0.3s ease;
+            position: relative;
+            transform: rotate(-0.4deg);
+        }
+        
+        .news-card:nth-child(2n) {
+            transform: rotate(0.2deg);
+        }
+        
+        .news-card:nth-child(3n) {
+            transform: rotate(0.4deg);
         }
         
         .news-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
+            transform: rotate(0deg) translateY(-5px) scale(1.02);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2), 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .news-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--vintage-shadow);
+            pointer-events: none;
         }
         
         .news-image {
-            height: 200px;
-            background: linear-gradient(135deg, var(--heritage-green), var(--secondary-color));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 3rem;
+            position: relative;
         }
         
         .news-content {
@@ -737,15 +924,31 @@
     <!-- About Section -->
     <section class="about">
         <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>Наша миссия</h2>
-                    <p>Поисковое движение России в Чеченской Республике объединяет людей, стремящихся сохранить память о героях Великой Отечественной войны. Мы занимаемся поиском и перезахоронением останков погибших солдат, установлением их судеб и оказанием помощи родственникам.</p>
-                    <p>Наша работа - это не только поисковые экспедиции, но и патриотическое воспитание молодежи, ведение архивных исследований и просветительская деятельность.</p>
-                    <a href="about.html" class="btn btn-primary">Подробнее о нас</a>
-                </div>
-                <div class="about-image">
-                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'><rect fill='%23556b2f' width='600' height='400'/><circle fill='%23daa520' cx='300' cy='200' r='80' opacity='0.3'/><text x='300' y='210' text-anchor='middle' fill='white' font-size='20'>Поисковая работа</text></svg>" alt="Поисковая деятельность">
+            <div class="paper-page">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>Наша миссия</h2>
+                        <p>Поисковое движение России в Чеченской Республике объединяет людей, стремящихся сохранить память о героях Великой Отечественной войны. Мы занимаемся поиском и перезахоронением останков погибших солдат, установлением их судеб и оказанием помощи родственникам.</p>
+                        <p>Наша работа - это не только поисковые экспедиции, но и патриотическое воспитание молодежи, ведение архивных исследований и просветительская деятельность.</p>
+                        <a href="about.html" class="btn btn-primary">Подробнее о нас</a>
+                    </div>
+                    <div class="about-image vintage-frame">
+                        <div class="frame-content">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400' style="filter: sepia(25%) contrast(1.1) brightness(0.9)">
+                                <rect fill='%23556b2f' width='600' height='400'/>
+                                <circle fill='%23C69658' cx='300' cy='200' r='80' opacity='0.4'/>
+                                <text x='300' y='210' text-anchor='middle' fill='%23fefcf6' font-size='20' font-family='serif'>Поисковая работа</text>
+                                <!-- Vintage photo grain effect -->
+                                <defs>
+                                    <filter id="grain">
+                                        <feTurbulence baseFrequency="0.9" numOctaves="4" stitchTiles="stitch"/>
+                                        <feBlend mode="multiply" opacity="0.1"/>
+                                    </filter>
+                                </defs>
+                                <rect width="600" height="400" filter="url(#grain)" opacity="0.3"/>
+                            </svg>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -754,12 +957,13 @@
     <!-- Services Section -->
     <section class="services">
         <div class="container">
-            <div class="section-header">
-                <h2>Наша деятельность</h2>
-                <p>Основные направления работы регионального отделения Поискового движения России</p>
-            </div>
-            
-            <div class="services-grid">
+            <div class="paper-page" style="padding: var(--spacing-xl); transform: rotate(0.1deg);">
+                <div class="section-header">
+                    <h2>Наша деятельность</h2>
+                    <p>Основные направления работы регионального отделения Поискового движения России</p>
+                </div>
+                
+                <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-search"></i>
@@ -808,21 +1012,25 @@
                     <p>Взаимодействие с государственными органами, общественными организациями и международными поисковыми объединениями.</p>
                 </div>
             </div>
+            </div>
         </div>
     </section>
 
     <!-- News Section -->
     <section class="news">
         <div class="container">
-            <div class="section-header">
-                <h2>Последние новости</h2>
-                <p>Актуальная информация о деятельности нашего отделения и поисковых мероприятиях</p>
-            </div>
-            
-            <div class="news-grid">
+            <div class="paper-page" style="padding: var(--spacing-xl); transform: rotate(-0.15deg);">
+                <div class="section-header">
+                    <h2>Последние новости</h2>
+                    <p>Актуальная информация о деятельности нашего отделения и поисковых мероприятиях</p>
+                </div>
+                
+                <div class="news-grid">
                 <article class="news-card">
-                    <div class="news-image">
-                        <i class="fas fa-newspaper"></i>
+                    <div class="news-image vintage-frame" style="height: 180px; margin: 8px; padding: 4px;">
+                        <div style="height: 100%; background: linear-gradient(135deg, var(--heritage-green), var(--secondary-color)); display: flex; align-items: center; justify-content: center; color: var(--paper-color); font-size: 2.5rem; filter: sepia(20%) contrast(1.1) brightness(0.9);">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
                     </div>
                     <div class="news-content">
                         <div class="news-date">25 декабря 2024</div>
@@ -833,8 +1041,10 @@
                 </article>
                 
                 <article class="news-card">
-                    <div class="news-image">
-                        <i class="fas fa-award"></i>
+                    <div class="news-image vintage-frame" style="height: 180px; margin: 8px; padding: 4px;">
+                        <div style="height: 100%; background: linear-gradient(135deg, var(--memorial-red), var(--accent-color)); display: flex; align-items: center; justify-content: center; color: var(--paper-color); font-size: 2.5rem; filter: sepia(20%) contrast(1.1) brightness(0.9);">
+                            <i class="fas fa-award"></i>
+                        </div>
                     </div>
                     <div class="news-content">
                         <div class="news-date">20 декабря 2024</div>
@@ -845,8 +1055,10 @@
                 </article>
                 
                 <article class="news-card">
-                    <div class="news-image">
-                        <i class="fas fa-school"></i>
+                    <div class="news-image vintage-frame" style="height: 180px; margin: 8px; padding: 4px;">
+                        <div style="height: 100%; background: linear-gradient(135deg, var(--link-color), var(--heritage-green)); display: flex; align-items: center; justify-content: center; color: var(--paper-color); font-size: 2.5rem; filter: sepia(20%) contrast(1.1) brightness(0.9);">
+                            <i class="fas fa-school"></i>
+                        </div>
                     </div>
                     <div class="news-content">
                         <div class="news-date">15 декабря 2024</div>
@@ -857,8 +1069,9 @@
                 </article>
             </div>
             
-            <div class="text-center" style="margin-top: 2rem;">
-                <a href="blog.html" class="btn btn-primary">Все новости</a>
+                <div class="text-center" style="margin-top: 2rem;">
+                    <a href="blog.html" class="btn btn-primary">Все новости</a>
+                </div>
             </div>
         </div>
     </section>
@@ -866,10 +1079,12 @@
     <!-- Memorial Section -->
     <section class="memorial">
         <div class="container">
-            <div class="memorial-flame">🕯️</div>
-            <h2>Вечная память героям</h2>
-            <p>Каждый найденный солдат - это восстановленная связь времен, возвращенное имя и закрытая страница неизвестности для родных и близких. Мы работаем, чтобы ни один защитник Отечества не остался безымянным.</p>
-            <a href="reports.html" class="btn btn-secondary">Наши отчеты</a>
+            <div class="paper-page" style="padding: var(--spacing-xl); text-align: center; background: linear-gradient(135deg, var(--memorial-red), var(--secondary-color)); color: var(--paper-color); transform: rotate(-0.1deg);">
+                <div class="memorial-flame">🕯️</div>
+                <h2 style="color: var(--paper-color); text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Вечная память героям</h2>
+                <p style="color: var(--paper-color); text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">Каждый найденный солдат - это восстановленная связь времен, возвращенное имя и закрытая страница неизвестности для родных и близких. Мы работаем, чтобы ни один защитник Отечества не остался безымянным.</p>
+                <a href="reports.html" class="btn btn-secondary">Наши отчеты</a>
+            </div>
         </div>
     </section>
 
