@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас - Поисковое движение России | Чеченская Республика</title>
+    <meta name="description" content="Узнайте о деятельности регионального отделения Поискового движения России в Чеченской Республике. История, миссия, команда и достижения организации.">
+    <meta name="keywords" content="о поисковом движении чечня, история организации, миссия поисковики россии, команда поисковое движение">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://poisk-chr.ru/about.html">
+    <meta property="og:title" content="О нас - Поисковое движение России">
+    <meta property="og:description" content="История и миссия поискового движения в Чеченской Республике">
+    <meta property="og:image" content="https://poisk-chr.ru/assets/og-image.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            /* Updated Color Palette */
+            --primary-color: #963434;        /* Main Primary Color */
+            --secondary-color: #8b4513;      /* Saddle Brown (Earth/Trenches) */
+            --accent-color: #C69658;         /* Warning/Messages Color */
+            --link-color: #2F537E;           /* Links/Buttons Color */
+            --dark-gray: #34495e;            /* Charcoal */
+            --light-gray: #bdc3c7;           /* Silver Gray */
+            --background-light: #DED5C8;     /* Body Neutral Color */
+            --text-dark: #963434;            /* Headings Color */
+            --text-light: #7f8c8d;           /* Light Text */
+            --memorial-red: #963434;         /* Memorial Red (same as primary) */
+            --victory-gold: #C69658;         /* Warning/Messages (was goldenrod) */
+            --heritage-green: #556b2f;       /* Dark Olive Green */
+            
+            /* Typography */
+            --font-primary: 'Roboto', sans-serif;
+            --font-display: 'Playfair Display', serif;
+            
+            /* Spacing */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2rem;
+            --spacing-xl: 3rem;
+            
+            /* Border Radius */
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            
+            /* Shadows */
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 8px rgba(0,0,0,0.15);
+            --shadow-lg: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-primary);
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--background-light);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-sm);
+        }
+        
+        /* Header Styles */
+        .header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-gray) 100%);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .header-top {
+            background-color: rgba(0,0,0,0.1);
+            padding: var(--spacing-xs) 0;
+            font-size: 0.875rem;
+        }
+        
+        .header-top-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .contact-info a {
+            color: var(--light-gray);
+            text-decoration: none;
+            margin-right: var(--spacing-md);
+            transition: color 0.3s ease;
+        }
+        
+        .contact-info a:hover {
+            color: var(--accent-color);
+        }
+        
+        .social-links a {
+            color: var(--light-gray);
+            margin-left: var(--spacing-sm);
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+        
+        .header-main {
+            padding: var(--spacing-md) 0;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: var(--spacing-sm);
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+        
+        .logo-text h1 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+        
+        .logo-text p {
+            font-size: 0.875rem;
+            color: var(--light-gray);
+        }
+        
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        .nav {
+            display: flex;
+            list-style: none;
+            gap: var(--spacing-lg);
+        }
+        
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: var(--radius-sm);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .nav a:hover,
+        .nav a.active {
+            background-color: var(--link-color);
+            color: white;
+        }
+        
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><rect fill="%23556b2f" width="1200" height="400"/><path fill="%23344d2e" opacity="0.3" d="M0,200 Q300,100 600,200 T1200,200 V400 H0 Z"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: var(--spacing-xl) 0;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-md);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .page-header p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        
+        /* Breadcrumb */
+        .breadcrumb {
+            background-color: rgba(255,255,255,0.1);
+            padding: var(--spacing-sm) 0;
+        }
+        
+        .breadcrumb-nav {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+            font-size: 0.9rem;
+        }
+        
+        .breadcrumb-nav a {
+            color: var(--light-gray);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .breadcrumb-nav a:hover {
+            color: white;
+        }
+        
+        .breadcrumb-nav span {
+            color: var(--accent-color);
+        }
+        
+        /* Main Content */
+        .main-content {
+            padding: var(--spacing-xl) 0;
+        }
+        
+        /* Mission Section */
+        .mission-section {
+            background: white;
+            padding: var(--spacing-xl);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            margin-bottom: var(--spacing-xl);
+            text-align: center;
+        }
+        
+        .mission-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--link-color), var(--primary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--spacing-md);
+            color: white;
+            font-size: 2rem;
+        }
+        
+        .mission-section h2 {
+            font-family: var(--font-display);
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .mission-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--text-light);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* History Section */
+        .history-section {
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .section-header h2 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: var(--link-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+        
+        .timeline-item {
+            padding: var(--spacing-lg);
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background-color: var(--accent-color);
+            border: 4px solid white;
+            top: var(--spacing-lg);
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-item:nth-child(even)::after {
+            left: -10px;
+        }
+        
+        .timeline-content {
+            background: white;
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            position: relative;
+        }
+        
+        .timeline-date {
+            color: var(--accent-color);
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .timeline-content h3 {
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-sm);
+            font-size: 1.3rem;
+        }
+        
+        .timeline-content p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        
+        /* Values Section */
+        .values-section {
+            background: white;
+            padding: var(--spacing-xl);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
+        }
+        
+        .value-card {
+            text-align: center;
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-md);
+            background-color: var(--background-light);
+            border-left: 4px solid var(--link-color);
+            transition: transform 0.3s ease;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .value-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--link-color), var(--primary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--spacing-md);
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .value-card h3 {
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-sm);
+            font-size: 1.3rem;
+        }
+        
+        .value-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        
+        /* Team Section */
+        .team-section {
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+        }
+        
+        .team-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .team-photo {
+            height: 250px;
+            background: linear-gradient(135deg, var(--heritage-green), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+        }
+        
+        .team-info {
+            padding: var(--spacing-lg);
+        }
+        
+        .team-name {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .team-position {
+            color: var(--link-color);
+            font-weight: 500;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .team-description {
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .team-contact {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-sm);
+        }
+        
+        .team-contact a {
+            color: var(--link-color);
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+        
+        .team-contact a:hover {
+            color: var(--primary-color);
+        }
+        
+        /* Achievements Section */
+        .achievements-section {
+            background: white;
+            padding: var(--spacing-xl);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
+        }
+        
+        .achievement-item {
+            text-align: center;
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-md);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
+        
+        .achievement-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .achievement-text {
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        
+        /* Call to Action */
+        .cta-section {
+            background: linear-gradient(135deg, var(--memorial-red), var(--secondary-color));
+            color: white;
+            padding: var(--spacing-xl);
+            border-radius: var(--radius-lg);
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .cta-section h2 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: var(--spacing-lg);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: var(--spacing-sm) var(--spacing-lg);
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            font-weight: 500;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .btn-primary {
+            background-color: var(--link-color);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border-color: white;
+        }
+        
+        .btn-secondary:hover {
+            background-color: white;
+            color: var(--primary-color);
+        }
+        
+        .btn-group {
+            display: flex;
+            gap: var(--spacing-md);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: var(--spacing-xl) 0 var(--spacing-md);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .footer-section h3 {
+            color: var(--accent-color);
+            margin-bottom: var(--spacing-md);
+            font-size: 1.25rem;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .footer-section a {
+            color: var(--light-gray);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-section a:hover {
+            color: var(--accent-color);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid var(--dark-gray);
+            padding-top: var(--spacing-md);
+            text-align: center;
+            color: var(--light-gray);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: block;
+            }
+            
+            .nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: var(--primary-color);
+                flex-direction: column;
+                padding: var(--spacing-md);
+                box-shadow: var(--shadow-md);
+            }
+            
+            .nav.active {
+                display: flex;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: var(--spacing-md);
+            }
+            
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item::after {
+                left: 21px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0%;
+            }
+            
+            .timeline-item:nth-child(even)::after {
+                left: 21px;
+            }
+            
+            .header-top-content {
+                flex-direction: column;
+                gap: var(--spacing-xs);
+                text-align: center;
+            }
+            
+            .btn-group {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        
+        /* Utility Classes */
+        .text-center { text-align: center; }
+        .text-left { text-align: left; }
+        .text-right { text-align: right; }
+        
+        .mb-sm { margin-bottom: var(--spacing-sm); }
+        .mb-md { margin-bottom: var(--spacing-md); }
+        .mb-lg { margin-bottom: var(--spacing-lg); }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <div class="contact-info">
+                        <a href="mailto:isa-terkho@bk.ru"><i class="fas fa-envelope"></i> isa-terkho@bk.ru</a>
+                        <a href="tel:+7"><i class="fas fa-phone"></i> Связаться с нами</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://vk.com/public162517912" target="_blank" title="ВКонтакте"><i class="fab fa-vk"></i></a>
+                        <a href="https://ok.ru/profile/591215182136" target="_blank" title="Одноклассники"><i class="fab fa-odnoklassniki"></i></a>
+                        <a href="https://www.youtube.com/@poisk-chr" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="header-main">
+            <div class="container">
+                <div class="header-content">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="logo-text">
+                            <h1>Поиск-ЧР</h1>
+                            <p>Поисковое движение России</p>
+                        </div>
+                    </a>
+                    
+                    <button class="nav-toggle" onclick="toggleNav()">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    
+                    <nav class="nav" id="nav">
+                        <a href="index.html">Главная</a>
+                        <a href="about.html" class="active">О нас</a>
+                        <a href="projects.html">Проекты</a>
+                        <a href="blog.html">Новости</a>
+                        <a href="reports.html">Отчеты</a>
+                        <a href="videos.html">Видео</a>
+                        <a href="docs.html">Документы</a>
+                        <a href="partners.html">Партнеры</a>
+                        <a href="contact.html">Контакты</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>О нас</h1>
+            <p>Региональное отделение Поискового движения России в Чеченской Республике - организация, посвятившая свою деятельность увековечиванию памяти защитников Отечества</p>
+        </div>
+        
+        <div class="breadcrumb">
+            <div class="container">
+                <div class="breadcrumb-nav">
+                    <a href="index.html">Главная</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>О нас</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="main-content">
+        <div class="container">
+            <!-- Mission Section -->
+            <div class="mission-section">
+                <div class="mission-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h2>Наша миссия</h2>
+                <div class="mission-text">
+                    <p>Мы посвятили свою деятельность священному долгу - поиску и увековечиванию памяти защитников Отечества, павших в годы Великой Отечественной войны. Наша миссия заключается в том, чтобы ни один солдат не остался забытым, чтобы каждое имя было возвращено истории, а каждая семья получила возможность узнать правду о судьбе своих родных.</p>
+                </div>
+            </div>
+
+            <!-- History Section -->
+            <div class="history-section">
+                <div class="section-header">
+                    <h2>История нашей организации</h2>
+                    <p>Путь развития регионального отделения от первых шагов до признанной организации</p>
+                </div>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">2009 год</div>
+                            <h3>Создание отделения</h3>
+                            <p>Официальное создание регионального отделения Поискового движения России в Чеченской Республике. Первые шаги в организации поисковой деятельности.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">2010-2012</div>
+                            <h3>Первые экспедиции</h3>
+                            <p>Проведение первых поисковых экспедиций в Волгоградской и Ленинградской областях. Обучение волонтеров, формирование методической базы.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">2013-2015</div>
+                            <h3>Расширение деятельности</h3>
+                            <p>Увеличение числа участников, установление связей с архивами и музеями. Начало работы с образовательными учреждениями по патриотическому воспитанию.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">2016-2018</div>
+                            <h3>Признание и награды</h3>
+                            <p>Получение общественного признания за вклад в сохранение исторической памяти. Награждение активных участников государственными и общественными наградами.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-date">2019-2024</div>
+                            <h3>Современный этап</h3>
+                            <p>Применение современных технологий в поисковой работе, создание цифрового архива, активное взаимодействие с международными поисковыми организациями.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Values Section -->
+            <div class="values-section">
+                <div class="section-header">
+                    <h2>Наши ценности</h2>
+                    <p>Принципы, которыми мы руководствуемся в своей деятельности</p>
+                </div>
+                
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>Память</h3>
+                        <p>Сохранение исторической памяти о подвиге советского народа в Великой Отечественной войне и увековечивание имен павших героев.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h3>Уважение</h3>
+                        <p>Бережное отношение к останкам погибших солдат, уважение к их памяти и сочувствие к горю их родственников.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Единство</h3>
+                        <p>Объединение людей разных поколений и профессий в общем деле сохранения памяти и патриотического воспитания молодежи.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3>Правда</h3>
+                        <p>Стремление к исторической истине, объективное исследование событий войны и восстановление судеб пропавших без вести.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Образование</h3>
+                        <p>Просветительская деятельность, передача знаний о войне молодому поколению, воспитание патриотизма и гражданственности.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Сотрудничество</h3>
+                        <p>Взаимодействие с государственными органами, общественными организациями и международными поисковыми движениями.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Section -->
+            <div class="team-section">
+                <div class="section-header">
+                    <h2>Наша команда</h2>
+                    <p>Люди, которые посвятили себя благородному делу сохранения исторической памяти</p>
+                </div>
+                
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="team-photo">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="team-info">
+                            <div class="team-name">Исаев Ахмад</div>
+                            <div class="team-position">Руководитель отделения</div>
+                            <div class="team-description">
+                                Опытный поисковик с многолетним стажем. Координирует деятельность отделения, организует экспедиции и взаимодействует с государственными органами.
+                            </div>
+                            <div class="team-contact">
+                                <a href="mailto:isa-terkho@bk.ru" title="Email"><i class="fas fa-envelope"></i></a>
+                                <a href="https://vk.com/isasardalov" target="_blank" title="ВКонтакте"><i class="fab fa-vk"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="team-card">
+                        <div class="team-photo">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="team-info">
+                            <div class="team-name">Заместитель руководителя</div>
+                            <div class="team-position">Координатор экспедиций</div>
+                            <div class="team-description">
+                                Специалист по организации поисковых работ, ответственный за планирование экспедиций и обеспечение их безопасности.
+                            </div>
+                            <div class="team-contact">
+                                <a href="mailto:isa-terkho@mail.ru" title="Email"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="team-card">
+                        <div class="team-photo">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="team-info">
+                            <div class="team-name">Команда волонтеров</div>
+                            <div class="team-position">Активные участники</div>
+                            <div class="team-description">
+                                Более 100 активных волонтеров разных возрастов, объединенных общей целью сохранения памяти о защитниках Отечества.
+                            </div>
+                            <div class="team-contact">
+                                <a href="contact.html" title="Присоединиться"><i class="fas fa-user-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Achievements Section -->
+            <div class="achievements-section">
+                <div class="section-header">
+                    <h2>Наши достижения</h2>
+                    <p>Результаты 15 лет упорной работы по увековечиванию памяти защитников Отечества</p>
+                </div>
+                
+                <div class="achievements-grid">
+                    <div class="achievement-item">
+                        <div class="achievement-number">500+</div>
+                        <div class="achievement-text">Найденных солдат</div>
+                    </div>
+                    
+                    <div class="achievement-item">
+                        <div class="achievement-number">50+</div>
+                        <div class="achievement-text">Поисковых экспедиций</div>
+                    </div>
+                    
+                    <div class="achievement-item">
+                        <div class="achievement-number">100+</div>
+                        <div class="achievement-text">Активных волонтеров</div>
+                    </div>
+                    
+                    <div class="achievement-item">
+                        <div class="achievement-number">15</div>
+                        <div class="achievement-text">Лет деятельности</div>
+                    </div>
+                    
+                    <div class="achievement-item">
+                        <div class="achievement-number">200+</div>
+                        <div class="achievement-text">Установленных судеб</div>
+                    </div>
+                    
+                    <div class="achievement-item">
+                        <div class="achievement-number">25+</div>
+                        <div class="achievement-text">Торжественных перезахоронений</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="cta-section">
+                <h2>Присоединяйтесь к нам</h2>
+                <p>Станьте частью благородного дела сохранения исторической памяти. Каждый может внести свой вклад в увековечивание подвига защитников Отечества.</p>
+                <div class="btn-group">
+                    <a href="contact.html" class="btn btn-secondary">Стать волонтером</a>
+                    <a href="projects.html" class="btn btn-primary">Наши проекты</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> isa-terkho@bk.ru</li>
+                        <li><i class="fas fa-envelope"></i> isa-terkho@mail.ru</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Чеченская Республика</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Разделы сайта</h3>
+                    <ul>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="projects.html">Проекты</a></li>
+                        <li><a href="blog.html">Новости</a></li>
+                        <li><a href="reports.html">Отчеты</a></li>
+                        <li><a href="videos.html">Видео</a></li>
+                        <li><a href="docs.html">Документы</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Деятельность</h3>
+                    <ul>
+                        <li><a href="projects.html">Поисковые экспедиции</a></li>
+                        <li><a href="reports.html">Архивные исследования</a></li>
+                        <li><a href="about.html">Патриотическое воспитание</a></li>
+                        <li><a href="contact.html">Помощь родственникам</a></li>
+                        <li><a href="partners.html">Сотрудничество</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Социальные сети</h3>
+                    <ul>
+                        <li><a href="https://vk.com/public162517912" target="_blank"><i class="fab fa-vk"></i> ВКонтакте</a></li>
+                        <li><a href="https://ok.ru/profile/591215182136" target="_blank"><i class="fab fa-odnoklassniki"></i> Одноклассники</a></li>
+                        <li><a href="https://www.youtube.com/@poisk-chr" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></li>
+                        <li><a href="https://vk.com/isasardalov" target="_blank"><i class="fab fa-vk"></i> Личная страница</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Поисковое движение России - Чеченская Республика. Все права защищены.</p>
+                <p>Сайт создан в память о защитниках Отечества</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        function toggleNav() {
+            const nav = document.getElementById('nav');
+            nav.classList.toggle('active');
+        }
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Add fade-in class to elements and observe them
+        document.addEventListener('DOMContentLoaded', function() {
+            const elementsToAnimate = document.querySelectorAll('.value-card, .team-card, .achievement-item, .timeline-item');
+            elementsToAnimate.forEach(el => {
+                el.classList.add('fade-in');
+                observer.observe(el);
+            });
+
+            // Close mobile nav when clicking on links
+            document.querySelectorAll('.nav a').forEach(link => {
+                link.addEventListener('click', () => {
+                    document.getElementById('nav').classList.remove('active');
+                });
+            });
+
+            // Close mobile nav when clicking outside
+            document.addEventListener('click', (e) => {
+                const nav = document.getElementById('nav');
+                const navToggle = document.querySelector('.nav-toggle');
+                
+                if (!nav.contains(e.target) && !navToggle.contains(e.target)) {
+                    nav.classList.remove('active');
+                }
+            });
+        });
+
+        // Counter animation for achievements
+        function animateCounters() {
+            const counters = document.querySelectorAll('.achievement-number');
+            counters.forEach(counter => {
+                const target = parseInt(counter.textContent.replace('+', ''));
+                let current = 0;
+                const increment = target / 50;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        counter.textContent = target + (counter.textContent.includes('+') ? '+' : '');
+                        clearInterval(timer);
+                    } else {
+                        counter.textContent = Math.floor(current) + (counter.textContent.includes('+') ? '+' : '');
+                    }
+                }, 30);
+            });
+        }
+
+        // Trigger counter animation when achievements section is visible
+        const achievementsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    achievementsObserver.unobserve(entry.target);
+                }
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const achievementsSection = document.querySelector('.achievements-section');
+            if (achievementsSection) {
+                achievementsObserver.observe(achievementsSection);
+            }
+        });
+    </script>
+</body>
+</html>
