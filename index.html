@@ -27,17 +27,18 @@
     
     <style>
         :root {
-            /* WWII Historic Color Palette */
-            --primary-color: #2d3e50;        /* Dark Blue-Gray (Military) */
+            /* Updated Color Palette */
+            --primary-color: #963434;        /* Main Primary Color */
             --secondary-color: #8b4513;      /* Saddle Brown (Earth/Trenches) */
-            --accent-color: #cd853f;         /* Peru (Weathered Brass) */
+            --accent-color: #C69658;         /* Warning/Messages Color */
+            --link-color: #2F537E;           /* Links/Buttons Color */
             --dark-gray: #34495e;            /* Charcoal */
             --light-gray: #bdc3c7;           /* Silver Gray */
-            --background-light: #f8f9fa;     /* Off-white */
-            --text-dark: #2c3e50;            /* Dark Text */
+            --background-light: #DED5C8;     /* Body Neutral Color */
+            --text-dark: #963434;            /* Headings Color */
             --text-light: #7f8c8d;           /* Light Text */
-            --memorial-red: #8b0000;         /* Dark Red (Memorial) */
-            --victory-gold: #daa520;         /* Goldenrod (Victory) */
+            --memorial-red: #963434;         /* Memorial Red (same as primary) */
+            --victory-gold: #C69658;         /* Warning/Messages (was goldenrod) */
             --heritage-green: #556b2f;       /* Dark Olive Green */
             
             /* Typography */
@@ -112,7 +113,7 @@
         }
         
         .contact-info a:hover {
-            color: var(--victory-gold);
+            color: var(--accent-color);
         }
         
         .social-links a {
@@ -123,7 +124,7 @@
         }
         
         .social-links a:hover {
-            color: var(--victory-gold);
+            color: var(--accent-color);
         }
         
         .header-main {
@@ -147,7 +148,7 @@
         .logo-icon {
             width: 50px;
             height: 50px;
-            background: var(--victory-gold);
+            background: var(--accent-color);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -196,8 +197,8 @@
         
         .nav a:hover,
         .nav a.active {
-            background-color: var(--victory-gold);
-            color: var(--primary-color);
+            background-color: var(--link-color);
+            color: white;
         }
         
         /* Hero Section */
@@ -253,12 +254,12 @@
         }
         
         .btn-primary {
-            background-color: var(--victory-gold);
-            color: var(--primary-color);
+            background-color: var(--link-color);
+            color: white;
         }
         
         .btn-primary:hover {
-            background-color: var(--accent-color);
+            background-color: var(--primary-color);
             transform: translateY(-2px);
             box-shadow: var(--shadow-md);
         }
@@ -291,7 +292,7 @@
         .stat-item h3 {
             font-size: 2.5rem;
             font-weight: 700;
-            color: var(--victory-gold);
+            color: var(--accent-color);
             margin-bottom: var(--spacing-xs);
         }
         
@@ -376,7 +377,7 @@
             border-radius: var(--radius-lg);
             box-shadow: var(--shadow-sm);
             transition: all 0.3s ease;
-            border-left: 4px solid var(--victory-gold);
+            border-left: 4px solid var(--link-color);
         }
         
         .service-card:hover {
@@ -387,7 +388,7 @@
         .service-icon {
             width: 60px;
             height: 60px;
-            background: linear-gradient(135deg, var(--victory-gold), var(--accent-color));
+            background: linear-gradient(135deg, var(--link-color), var(--primary-color));
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -465,14 +466,14 @@
         }
         
         .read-more {
-            color: var(--victory-gold);
+            color: var(--link-color);
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s ease;
         }
         
         .read-more:hover {
-            color: var(--secondary-color);
+            color: var(--primary-color);
         }
         
         /* Memorial Section */
@@ -498,7 +499,7 @@
         
         .memorial-flame {
             font-size: 4rem;
-            color: var(--victory-gold);
+            color: var(--accent-color);
             margin-bottom: var(--spacing-md);
         }
         
@@ -517,7 +518,7 @@
         }
         
         .footer-section h3 {
-            color: var(--victory-gold);
+            color: var(--accent-color);
             margin-bottom: var(--spacing-md);
             font-size: 1.25rem;
         }
@@ -537,7 +538,7 @@
         }
         
         .footer-section a:hover {
-            color: var(--victory-gold);
+            color: var(--accent-color);
         }
         
         .footer-bottom {
@@ -665,7 +666,7 @@
         <div class="header-main">
             <div class="container">
                 <div class="header-content">
-                    <a href="/" class="logo">
+                    <a href="index.html" class="logo">
                         <div class="logo-icon">
                             <i class="fas fa-search"></i>
                         </div>
@@ -680,15 +681,15 @@
                     </button>
                     
                     <nav class="nav" id="nav">
-                        <a href="/" class="active">Главная</a>
-                        <a href="/about">О нас</a>
-                        <a href="/projects">Проекты</a>
-                        <a href="/blog">Новости</a>
-                        <a href="/reports">Отчеты</a>
-                        <a href="/videos">Видео</a>
-                        <a href="/docs">Документы</a>
-                        <a href="/partners">Партнеры</a>
-                        <a href="/contact">Контакты</a>
+                        <a href="index.html" class="active">Главная</a>
+                        <a href="about.html">О нас</a>
+                        <a href="projects.html">Проекты</a>
+                        <a href="blog.html">Новости</a>
+                        <a href="reports.html">Отчеты</a>
+                        <a href="videos.html">Видео</a>
+                        <a href="docs.html">Документы</a>
+                        <a href="partners.html">Партнеры</a>
+                        <a href="contact.html">Контакты</a>
                     </nav>
                 </div>
             </div>
@@ -702,8 +703,8 @@
                 <h2>Увековечиваем память защитников Отечества</h2>
                 <p>Региональное отделение Поискового движения России в Чеченской Республике ведет поиск и перезахоронение погибших солдат, сохраняя историческую память для будущих поколений.</p>
                 <div class="hero-buttons">
-                    <a href="/about" class="btn btn-primary">Узнать больше</a>
-                    <a href="/contact" class="btn btn-secondary">Присоединиться</a>
+                    <a href="about.html" class="btn btn-primary">Узнать больше</a>
+                    <a href="contact.html" class="btn btn-secondary">Присоединиться</a>
                 </div>
             </div>
         </div>
@@ -741,7 +742,7 @@
                     <h2>Наша миссия</h2>
                     <p>Поисковое движение России в Чеченской Республике объединяет людей, стремящихся сохранить память о героях Великой Отечественной войны. Мы занимаемся поиском и перезахоронением останков погибших солдат, установлением их судеб и оказанием помощи родственникам.</p>
                     <p>Наша работа - это не только поисковые экспедиции, но и патриотическое воспитание молодежи, ведение архивных исследований и просветительская деятельность.</p>
-                    <a href="/about" class="btn btn-primary">Подробнее о нас</a>
+                    <a href="about.html" class="btn btn-primary">Подробнее о нас</a>
                 </div>
                 <div class="about-image">
                     <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'><rect fill='%23556b2f' width='600' height='400'/><circle fill='%23daa520' cx='300' cy='200' r='80' opacity='0.3'/><text x='300' y='210' text-anchor='middle' fill='white' font-size='20'>Поисковая работа</text></svg>" alt="Поисковая деятельность">
@@ -857,7 +858,7 @@
             </div>
             
             <div class="text-center" style="margin-top: 2rem;">
-                <a href="/blog" class="btn btn-primary">Все новости</a>
+                <a href="blog.html" class="btn btn-primary">Все новости</a>
             </div>
         </div>
     </section>
@@ -868,7 +869,7 @@
             <div class="memorial-flame">🕯️</div>
             <h2>Вечная память героям</h2>
             <p>Каждый найденный солдат - это восстановленная связь времен, возвращенное имя и закрытая страница неизвестности для родных и близких. Мы работаем, чтобы ни один защитник Отечества не остался безымянным.</p>
-            <a href="/reports" class="btn btn-secondary">Наши отчеты</a>
+            <a href="reports.html" class="btn btn-secondary">Наши отчеты</a>
         </div>
     </section>
 
@@ -888,23 +889,23 @@
                 <div class="footer-section">
                     <h3>Разделы сайта</h3>
                     <ul>
-                        <li><a href="/about">О нас</a></li>
-                        <li><a href="/projects">Проекты</a></li>
-                        <li><a href="/blog">Новости</a></li>
-                        <li><a href="/reports">Отчеты</a></li>
-                        <li><a href="/videos">Видео</a></li>
-                        <li><a href="/docs">Документы</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="projects.html">Проекты</a></li>
+                        <li><a href="blog.html">Новости</a></li>
+                        <li><a href="reports.html">Отчеты</a></li>
+                        <li><a href="videos.html">Видео</a></li>
+                        <li><a href="docs.html">Документы</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
                     <h3>Деятельность</h3>
                     <ul>
-                        <li><a href="/projects">Поисковые экспедиции</a></li>
-                        <li><a href="/reports">Архивные исследования</a></li>
-                        <li><a href="/about">Патриотическое воспитание</a></li>
-                        <li><a href="/contact">Помощь родственникам</a></li>
-                        <li><a href="/partners">Сотрудничество</a></li>
+                        <li><a href="projects.html">Поисковые экспедиции</a></li>
+                        <li><a href="reports.html">Архивные исследования</a></li>
+                        <li><a href="about.html">Патриотическое воспитание</a></li>
+                        <li><a href="contact.html">Помощь родственникам</a></li>
+                        <li><a href="partners.html">Сотрудничество</a></li>
                     </ul>
                 </div>
                 
