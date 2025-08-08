@@ -1,1 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WWII Archives & Learning Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Ubuntu", "Cantarell", "Noto Sans", "Helvetica Neue", "Arial", "Apple Color Emoji", "Segoe UI Emoji"],
+            },
+            colors: {
+              primary: {
+                DEFAULT: "#1E5AB8",
+              },
+              secondary: {
+                lightBlue: "#4A90E2",
+                creamBeige: "#F5F1E8",
+                golden: "#D4A574",
+              },
+              neutrals: {
+                white: "#FFFFFF",
+                lightGray: "#F8F9FA",
+                textGray: "#333333",
+                borderGray: "#E0E0E0",
+              },
+            },
+            boxShadow: {
+              vintage: "inset 0 0 0 1px rgba(0,0,0,0.05), 0 10px 25px rgba(0,0,0,0.18)",
+              insetPaper: "inset 0 1px 0 rgba(255,255,255,0.6), inset 0 -1px 0 rgba(0,0,0,0.06)",
+            },
+            backgroundImage: {
+              blueTexture:
+                "linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 40%), radial-gradient(140% 100% at 10% 0%, #2A6ED5 0%, #1E5AB8 55%, #1A4C97 100%)",
+            },
+          },
+        },
+        corePlugins: {
+          container: false,
+        },
+      };
+    </script>
+
+    <style>
+      /* Page parchment background using layered gradients for an aged look */
+      body.paper-bg {
+        background-color: #F5F1E8; /* cream beige */
+        background-image:
+          radial-gradient(120% 100% at 50% 0%, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0) 55%),
+          radial-gradient(100% 120% at 100% 0%, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0) 50%),
+          radial-gradient(100% 120% at 0% 100%, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0) 50%),
+          linear-gradient(180deg, rgba(212,165,116,0.08) 0%, rgba(0,0,0,0.04) 100%);
+        background-blend-mode: multiply, normal, normal, normal;
+      }
+
+      /* Subtle fold lines across the page */
+      .paper-folds::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background-image:
+          linear-gradient(90deg, rgba(0,0,0,0.05) 0, rgba(0,0,0,0) 1px),
+          linear-gradient(180deg, rgba(0,0,0,0.05) 0, rgba(0,0,0,0) 1px);
+        background-size: 320px 1px, 1px 280px;
+        background-repeat: repeat;
+        mix-blend-mode: multiply;
+        opacity: 0.15;
+      }
+
+      /* Vintage image frame with subtle corner ornaments */
+      .vintage-frame {
+        position: relative;
+        background-color: #fffdf7;
+        border: 6px solid rgba(106, 85, 57, 0.6);
+        outline: 1px solid rgba(255, 255, 255, 0.6);
+        box-shadow: inset 0 0 0 2px rgba(255,255,255,0.5), 0 12px 25px rgba(0,0,0,0.22);
+      }
+      .vintage-frame::before,
+      .vintage-frame::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background:
+          radial-gradient(12px 12px at 10px 10px, rgba(106,85,57,0.4) 0 4px, transparent 5px),
+          radial-gradient(12px 12px at calc(100% - 10px) 10px, rgba(106,85,57,0.4) 0 4px, transparent 5px),
+          radial-gradient(12px 12px at 10px calc(100% - 10px), rgba(106,85,57,0.4) 0 4px, transparent 5px),
+          radial-gradient(12px 12px at calc(100% - 10px) calc(100% - 10px), rgba(106,85,57,0.4) 0 4px, transparent 5px);
+        opacity: 0.55;
+      }
+      .vintage-frame::after {
+        background:
+          radial-gradient(10px 10px at 10px 10px, rgba(255,255,255,0.9) 0 4px, transparent 5px),
+          radial-gradient(10px 10px at calc(100% - 10px) 10px, rgba(255,255,255,0.9) 0 4px, transparent 5px),
+          radial-gradient(10px 10px at 10px calc(100% - 10px), rgba(255,255,255,0.9) 0 4px, transparent 5px),
+          radial-gradient(10px 10px at calc(100% - 10px) calc(100% - 10px), rgba(255,255,255,0.9) 0 4px, transparent 5px);
+        mix-blend-mode: screen;
+        opacity: 0.5;
+      }
+
+      /* Watermark stamps and map lines */
+      .artifact-layer svg {
+        opacity: 0.12;
+        mix-blend-mode: multiply;
+        filter: sepia(40%) grayscale(30%);
+      }
+
+      /* Collapsible chevron animation */
+      .chevron {
+        transition: transform 200ms ease;
+      }
+      .chevron[aria-expanded="true"],
+      [aria-expanded="true"] .chevron {
+        transform: rotate(90deg);
+      }
+
+      /* Off-canvas animation */
+      .drawer-enter {
+        transform: translateX(-100%);
+      }
+      .drawer-enter-active {
+        transform: translateX(0);
+      }
+    </style>
+  </head>
+
+  <body class="paper-bg text-neutrals-textGray antialiased">
+    <!-- Page decorative artifacts (stamps, map lines) -->
+    <div class="artifact-layer pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+      <svg class="absolute -left-8 top-28 w-56 h-56" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="100" cy="100" r="88" stroke="#2f2f2f" stroke-width="3" stroke-dasharray="4 6" />
+        <text x="50%" y="50%" text-anchor="middle" dominant-baseline="central" font-size="20" font-weight="700" fill="#2f2f2f" style="letter-spacing:2px">ARCHIVE</text>
+        <text x="50%" y="70%" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#2f2f2f">WWII • 1939–1945</text>
+      </svg>
+      <svg class="absolute right-10 bottom-24 w-[520px] h-[220px] rotate-[-8deg]" viewBox="0 0 520 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M4 120C40 100 120 70 220 90C320 110 410 160 516 128" stroke="#3a3a3a" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-dasharray="2 10" />
+        <path d="M50 200C90 160 160 135 240 150C320 165 410 200 500 180" stroke="#3a3a3a" stroke-width="1" fill="none" opacity="0.8" />
+      </svg>
+    </div>
+
+    <!-- Header -->
+    <header class="relative bg-blueTexture text-white shadow-md">
+      <div class="absolute inset-0 opacity-[0.08] pointer-events-none" style="background-image: radial-gradient(2px 2px at 10px 10px, rgba(255,255,255,0.5) 2px, transparent 2px); background-size: 22px 22px;"></div>
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-5">
+        <div class="flex items-center justify-between gap-4">
+          <div class="flex items-center gap-4">
+            <div class="flex h-12 w-12 items-center justify-center rounded-full bg-white/15 ring-1 ring-white/30 shadow">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-7 w-7 text-white">
+                <path d="M12 2l2.39 7.36H22l-6.2 4.51L18.2 21 12 16.98 5.8 21l2.4-7.13L2 9.36h7.61L12 2z" />
+              </svg>
+            </div>
+            <div>
+              <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight">WWII Archives & Learning Center</h1>
+              <p class="text-white/85 text-sm sm:text-base mt-0.5">Primary sources, curated collections, and educational resources from the Second World War</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <button id="mobileMenuBtn" class="lg:hidden inline-flex items-center gap-2 rounded-md border border-white/30 bg-white/10 px-3 py-2 text-sm font-medium text-white hover:bg-white/15 focus:outline-none focus:ring-2 focus:ring-white/40">
+              <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+              Menu
+            </button>
+          </div>
+        </div>
+        <!-- Global Search -->
+        <div class="mt-5">
+          <label for="global-search" class="sr-only">Search the archive</label>
+          <div class="relative">
+            <input id="global-search" type="text" placeholder="Search documents, journals, photos, letters…" class="w-full rounded-md bg-white/95 py-3 pl-11 pr-4 text-[15px] text-neutrals-textGray placeholder:text-neutral-500 shadow focus:outline-none focus:ring-2 focus:ring-secondary-golden" />
+            <svg class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-neutral-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Layout -->
+    <div class="relative paper-folds">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex gap-8 py-8">
+          <!-- Sidebar (Desktop) -->
+          <aside id="sidebar" class="hidden lg:block w-72 shrink-0 self-start sticky top-0">
+            <nav aria-label="Primary" class="rounded-md bg-[rgba(255,255,255,0.75)] backdrop-blur-sm ring-1 ring-neutrals-borderGray shadow-insetPaper">
+              <div class="px-4 py-3 border-b border-neutrals-borderGray/70 bg-secondary-creamBeige/60">
+                <p class="text-[13px] uppercase tracking-wider text-neutral-700">Browse the Archive</p>
+              </div>
+
+              <ul class="divide-y divide-neutrals-borderGray/70">
+                <!-- Section: Collections -->
+                <li class="p-0">
+                  <button type="button" class="group flex w-full items-center justify-between px-4 py-3 text-left hover:bg-white/60 focus:outline-none" data-accordion-control aria-expanded="true" aria-controls="nav-collections">
+                    <span class="text-sm font-semibold text-neutral-800">Collections</span>
+                    <svg class="chevron h-4 w-4 text-neutral-700 group-hover:text-neutral-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M6.293 4.293a1 1 0 011.414 0l5 5a1 1 0 010 1.414l-5 5A1 1 0 016 14.586L10.586 10 6 5.414a1 1 0 01.293-1.121z" clip-rule="evenodd"/></svg>
+                  </button>
+                  <div id="nav-collections" class="px-4 pb-3">
+                    <ul class="mt-1 space-y-1">
+                      <li><a href="#featured" class="block rounded px-2 py-1.5 text-sm hover:bg-secondary-creamBeige/70">Featured Collections</a></li>
+                      <li><a href="#themes" class="block rounded px-2 py-1.5 text-sm hover:bg-secondary-creamBeige/70">Themes & Topics</a></li>
+                      <li><a href="#timelines" class="block rounded px-2 py-1.5 text-sm hover:bg-secondary-creamBeige/70">Timelines</a></li>
+                    </ul>
+                  </div>
+                </li>
+
+                <!-- Section: Primary Sources -->
+                <li class="p-0">
+                  <button type="button" class="group flex w-full items-center justify-between px-4 py-3 text-left hover:bg-white/60 focus:outline-none" data-accordion-control aria-expanded="true" aria-controls="nav-primary-sources">
+                    <span class="text-sm font-semibold text-neutral-800">Primary Sources</span>
+                    <svg class="chevron h-4 w-4 text-neutral-700 group-hover:text-neutral-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M6.293 4.293a1 1 0 011.414 0l5 5a1 1 0 010 1.414l-5 5A1 1 0 016 14.586L10.586 10 6 5.414a1 1 0 01.293-1.121z" clip-rule="evenodd"/></svg>
+                  </button>
+                  <div id="nav-primary-sources" class="px-4 pb-3">
+                    <ul class="mt-1 space-y-1">
+                      <li><a href="#documents" class="block rounded px-2 py-1.5 text-sm hover:bg-secondary-creamBeige/70">Documents</a></li>
+                      <li><a href="#journals" class="block rounded px-2 py-1.5 text-sm hover:bg-secondary-creamBeige/70">Journals & Diaries</a></li>
+                      <li><a href="#photos" class="block rounded px-2 py-1.5 text-sm hover:bg-secondary-creamBeige/70">Photographs</a></li>
+                      <li><a href="#letters" class="block rounded px-2 py-1.5 text-sm hover:bg-secondary-creamBeige/70">Letters & Correspondences</a></li>
+                    </ul>
+                  </div>
+                </li>
+
+                <!-- Section: For Educators -->
+                <li class="p-0">
+                  <button type="button" class="group flex w-full items-center justify-between px-4 py-3 text-left hover:bg-white/60 focus:outline-none" data-accordion-control aria-expanded="false" aria-controls="nav-educators">
+                    <span class="text-sm font-semibold text-neutral-800">For Educators</span>
+                    <svg class="chevron h-4 w-4 text-neutral-700 group-hover:text-neutral-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M6.293 4.293a1 1 0 011.414 0l5 5a1 1 0 010 1.414l-5 5A1 1 0 016 14.586L10.586 10 6 5.414a1 1 0 01.293-1.121z" clip-rule="evenodd"/></svg>
+                  </button>
+                  <div id="nav-educators" class="px-4 pb-3 hidden">
+                    <ul class="mt-1 space-y-1">
+                      <li><a href="#lesson-plans" class="block rounded px-2 py-1.5 text-sm hover:bg-secondary-creamBeige/70">Lesson Plans</a></li>
+                      <li><a href="#classroom" class="block rounded px-2 py-1.5 text-sm hover:bg-secondary-creamBeige/70">Classroom Activities</a></li>
+                      <li><a href="#guides" class="block rounded px-2 py-1.5 text-sm hover:bg-secondary-creamBeige/70">Research Guides</a></li>
+                    </ul>
+                  </div>
+                </li>
+
+                <!-- Section: About -->
+                <li class="p-0">
+                  <button type="button" class="group flex w-full items-center justify-between px-4 py-3 text-left hover:bg-white/60 focus:outline-none" data-accordion-control aria-expanded="false" aria-controls="nav-about">
+                    <span class="text-sm font-semibold text-neutral-800">About</span>
+                    <svg class="chevron h-4 w-4 text-neutral-700 group-hover:text-neutral-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M6.293 4.293a1 1 0 011.414 0l5 5a1 1 0 010 1.414l-5 5A1 1 0 016 14.586L10.586 10 6 5.414a1 1 0 01.293-1.121z" clip-rule="evenodd"/></svg>
+                  </button>
+                  <div id="nav-about" class="px-4 pb-3 hidden">
+                    <ul class="mt-1 space-y-1">
+                      <li><a href="#mission" class="block rounded px-2 py-1.5 text-sm hover:bg-secondary-creamBeige/70">Mission & History</a></li>
+                      <li><a href="#team" class="block rounded px-2 py-1.5 text-sm hover:bg-secondary-creamBeige/70">Team</a></li>
+                      <li><a href="#contribute" class="block rounded px-2 py-1.5 text-sm hover:bg-secondary-creamBeige/70">Contribute</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </aside>
+
+          <!-- Mobile Drawer -->
+          <div id="mobileDrawer" class="fixed inset-0 z-40 hidden lg:hidden" aria-hidden="true">
+            <div class="absolute inset-0 bg-black/40"></div>
+            <aside class="absolute inset-y-0 left-0 w-80 max-w-[85vw] bg-[rgba(255,255,255,0.9)] backdrop-blur-md ring-1 ring-neutrals-borderGray shadow-vintage transform -translate-x-full transition-transform duration-200 ease-out">
+              <div class="flex items-center justify-between px-4 py-3 border-b border-neutrals-borderGray/70 bg-secondary-creamBeige">
+                <p class="text-sm font-semibold text-neutral-800">Browse the Archive</p>
+                <button id="mobileDrawerClose" class="rounded p-1.5 text-neutral-700 hover:bg-white/60 focus:outline-none">
+                  <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
+              </div>
+              <nav class="p-2">
+                <ul class="divide-y divide-neutrals-borderGray/70">
+                  <li class="p-0">
+                    <button type="button" class="group flex w-full items-center justify-between px-3 py-3 text-left hover:bg-white/60" data-accordion-control aria-expanded="true" aria-controls="mnav-collections">
+                      <span class="text-sm font-semibold text-neutral-800">Collections</span>
+                      <svg class="chevron h-4 w-4 text-neutral-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M6.293 4.293a1 1 0 011.414 0l5 5a1 1 0 010 1.414l-5 5A1 1 0 016 14.586L10.586 10 6 5.414a1 1 0 01.293-1.121z" clip-rule="evenodd"/></svg>
+                    </button>
+                    <div id="mnav-collections" class="px-3 pb-3">
+                      <ul class="mt-1 space-y-1">
+                        <li><a href="#featured" class="block rounded px-2 py-1.5 text-sm hover:bg-secondary-creamBeige/70">Featured Collections</a></li>
+                        <li><a href="#themes" class="block rounded px-2 py-1.5 text-sm hover:bg-secondary-creamBeige/70">Themes & Topics</a></li>
+                        <li><a href="#timelines" class="block rounded px-2 py-1.5 text-sm hover:bg-secondary-creamBeige/70">Timelines</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="p-0">
+                    <button type="button" class="group flex w-full items-center justify-between px-3 py-3 text-left hover:bg-white/60" data-accordion-control aria-expanded="true" aria-controls="mnav-primary-sources">
+                      <span class="text-sm font-semibold text-neutral-800">Primary Sources</span>
+                      <svg class="chevron h-4 w-4 text-neutral-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M6.293 4.293a1 1 0 011.414 0l5 5a1 1 0 010 1.414l-5 5A1 1 0 016 14.586L10.586 10 6 5.414a1 1 0 01.293-1.121z" clip-rule="evenodd"/></svg>
+                    </button>
+                    <div id="mnav-primary-sources" class="px-3 pb-3">
+                      <ul class="mt-1 space-y-1">
+                        <li><a href="#documents" class="block rounded px-2 py-1.5 text-sm hover:bg-secondary-creamBeige/70">Documents</a></li>
+                        <li><a href="#journals" class="block rounded px-2 py-1.5 text-sm hover:bg-secondary-creamBeige/70">Journals & Diaries</a></li>
+                        <li><a href="#photos" class="block rounded px-2 py-1.5 text-sm hover:bg-secondary-creamBeige/70">Photographs</a></li>
+                        <li><a href="#letters" class="block rounded px-2 py-1.5 text-sm hover:bg-secondary-creamBeige/70">Letters & Correspondences</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="p-0">
+                    <button type="button" class="group flex w-full items-center justify-between px-3 py-3 text-left hover:bg-white/60" data-accordion-control aria-expanded="false" aria-controls="mnav-educators">
+                      <span class="text-sm font-semibold text-neutral-800">For Educators</span>
+                      <svg class="chevron h-4 w-4 text-neutral-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M6.293 4.293a1 1 0 011.414 0l5 5a1 1 0 010 1.414l-5 5A1 1 0 016 14.586L10.586 10 6 5.414a1 1 0 01.293-1.121z" clip-rule="evenodd"/></svg>
+                    </button>
+                    <div id="mnav-educators" class="px-3 pb-3 hidden">
+                      <ul class="mt-1 space-y-1">
+                        <li><a href="#lesson-plans" class="block rounded px-2 py-1.5 text-sm hover:bg-secondary-creamBeige/70">Lesson Plans</a></li>
+                        <li><a href="#classroom" class="block rounded px-2 py-1.5 text-sm hover:bg-secondary-creamBeige/70">Classroom Activities</a></li>
+                        <li><a href="#guides" class="block rounded px-2 py-1.5 text-sm hover:bg-secondary-creamBeige/70">Research Guides</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="p-0">
+                    <button type="button" class="group flex w-full items-center justify-between px-3 py-3 text-left hover:bg-white/60" data-accordion-control aria-expanded="false" aria-controls="mnav-about">
+                      <span class="text-sm font-semibold text-neutral-800">About</span>
+                      <svg class="chevron h-4 w-4 text-neutral-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M6.293 4.293a1 1 0 011.414 0l5 5a1 1 0 010 1.414l-5 5A1 1 0 016 14.586L10.586 10 6 5.414a1 1 0 01.293-1.121z" clip-rule="evenodd"/></svg>
+                    </button>
+                    <div id="mnav-about" class="px-3 pb-3 hidden">
+                      <ul class="mt-1 space-y-1">
+                        <li><a href="#mission" class="block rounded px-2 py-1.5 text-sm hover:bg-secondary-creamBeige/70">Mission & History</a></li>
+                        <li><a href="#team" class="block rounded px-2 py-1.5 text-sm hover:bg-secondary-creamBeige/70">Team</a></li>
+                        <li><a href="#contribute" class="block rounded px-2 py-1.5 text-sm hover:bg-secondary-creamBeige/70">Contribute</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </nav>
+            </aside>
+          </div>
+
+          <!-- Main Content -->
+          <main class="min-w-0 flex-1">
+            <!-- Hero -->
+            <section class="relative overflow-hidden rounded-lg bg-[rgba(255,255,255,0.8)] backdrop-blur-[2px] ring-1 ring-neutrals-borderGray shadow-vintage">
+              <div class="absolute -right-20 -top-14 rotate-12">
+                <svg class="h-40 w-40 text-secondary-golden/30" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <rect x="10" y="10" width="80" height="80" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/>
+                </svg>
+              </div>
+              <div class="p-6 sm:p-8 md:p-10">
+                <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-neutral-900">Explore WWII through primary sources</h2>
+                <p class="mt-2 text-[15px] leading-relaxed text-neutral-700">Discover digitized documents, journals, photographs, and letters that illuminate the lived experiences and decision-making that shaped the Second World War. Curated for students, educators, and researchers.</p>
+                <div class="mt-4 flex flex-wrap gap-3">
+                  <a href="#featured" class="inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-white shadow hover:bg-secondary-lightBlue focus:outline-none focus:ring-2 focus:ring-primary/40">
+                    <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M10.5 3a.5.5 0 00-1 0v8.793l-3.146-3.147a.5.5 0 10-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 10-.708-.708L10.5 11.793V3z"/></svg>
+                    Explore Collections
+                  </a>
+                  <a href="#guides" class="inline-flex items-center gap-2 rounded-md border border-neutral-300 bg-white/70 px-4 py-2 text-neutral-800 hover:bg-white focus:outline-none focus:ring-2 focus:ring-secondary-golden/40">
+                    Teaching Guides
+                  </a>
+                </div>
+              </div>
+            </section>
+
+            <!-- Featured Collections -->
+            <section id="featured" class="mt-8">
+              <div class="flex items-baseline justify-between">
+                <h3 class="text-lg sm:text-xl font-bold text-primary">Featured Collections</h3>
+                <a href="#" class="text-sm text-primary hover:underline">View all</a>
+              </div>
+              <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <article class="group overflow-hidden rounded-md bg-[rgba(255,255,255,0.85)] ring-1 ring-neutrals-borderGray shadow">
+                  <div class="vintage-frame overflow-hidden aspect-[4/3]">
+                    <img src="https://images.unsplash.com/photo-1543286386-7f9c1f0b90aa?q=80&w=1200&auto=format&fit=crop" alt="Soldiers during WWII" class="h-full w-full object-cover transition-transform duration-200 ease-out group-hover:scale-[1.03]" />
+                  </div>
+                  <div class="p-4">
+                    <h4 class="text-base font-semibold text-neutral-900">Frontline Photographs</h4>
+                    <p class="mt-1 text-sm text-neutral-700 leading-relaxed">A curated set of field photography documenting pivotal moments across European and Pacific theaters, 1939–1945.</p>
+                    <div class="mt-3 flex items-center gap-3 text-[12px] text-neutral-600">
+                      <span class="inline-flex items-center gap-1"><svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V5h2v4H9zm0 2h2v2H9v-2z"/></svg> 220 items</span>
+                      <span>Updated 2d ago</span>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="group overflow-hidden rounded-md bg-[rgba(255,255,255,0.85)] ring-1 ring-neutrals-borderGray shadow">
+                  <div class="vintage-frame overflow-hidden aspect-[4/3]">
+                    <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop" alt="WWII journals and diaries" class="h-full w-full object-cover transition-transform duration-200 ease-out group-hover:scale-[1.03]" />
+                  </div>
+                  <div class="p-4">
+                    <h4 class="text-base font-semibold text-neutral-900">Journals & Diaries</h4>
+                    <p class="mt-1 text-sm text-neutral-700 leading-relaxed">Personal accounts offering insight into daily life, morale, and reflections from soldiers and civilians alike.</p>
+                    <div class="mt-3 flex items-center gap-3 text-[12px] text-neutral-600">
+                      <span class="inline-flex items-center gap-1"><svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V5h2v4H9zm0 2h2v2H9v-2z"/></svg> 145 items</span>
+                      <span>Updated 5d ago</span>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="group overflow-hidden rounded-md bg-[rgba(255,255,255,0.85)] ring-1 ring-neutrals-borderGray shadow">
+                  <div class="vintage-frame overflow-hidden aspect-[4/3]">
+                    <img src="https://images.unsplash.com/photo-1527631120902-86c03c1d41eb?q=80&w=1200&auto=format&fit=crop" alt="WWII letters and correspondence" class="h-full w-full object-cover transition-transform duration-200 ease-out group-hover:scale-[1.03]" />
+                  </div>
+                  <div class="p-4">
+                    <h4 class="text-base font-semibold text-neutral-900">Letters & Correspondence</h4>
+                    <p class="mt-1 text-sm text-neutral-700 leading-relaxed">Candid letters between families, leaders, and servicemembers, charting the emotional landscape of wartime.</p>
+                    <div class="mt-3 flex items-center gap-3 text-[12px] text-neutral-600">
+                      <span class="inline-flex items-center gap-1"><svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 9V5h2v4H9zm0 2h2v2H9v-2z"/></svg> 380 items</span>
+                      <span>Updated 1w ago</span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <!-- Timelines / Themes -->
+            <section id="themes" class="mt-10">
+              <h3 class="text-lg sm:text-xl font-bold text-primary">Themes & Timelines</h3>
+              <div class="mt-4 grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div class="rounded-md bg-[rgba(255,255,255,0.85)] ring-1 ring-neutrals-borderGray shadow">
+                  <div class="p-4">
+                    <h4 class="text-base font-semibold text-neutral-900">European Theater Timeline</h4>
+                    <ol class="mt-2 space-y-2 text-sm">
+                      <li class="flex items-start gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-primary"></span><span>1939: Invasion of Poland marks the beginning of WWII in Europe</span></li>
+                      <li class="flex items-start gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-primary"></span><span>1941: Operation Barbarossa expands the Eastern Front</span></li>
+                      <li class="flex items-start gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-primary"></span><span>1944: D-Day landings in Normandy</span></li>
+                    </ol>
+                  </div>
+                </div>
+                <div class="rounded-md bg-[rgba(255,255,255,0.85)] ring-1 ring-neutrals-borderGray shadow">
+                  <div class="p-4">
+                    <h4 class="text-base font-semibold text-neutral-900">Pacific Theater Timeline</h4>
+                    <ol class="mt-2 space-y-2 text-sm">
+                      <li class="flex items-start gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-primary"></span><span>1941: Attack on Pearl Harbor</span></li>
+                      <li class="flex items-start gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-primary"></span><span>1942: Battle of Midway turns the tide</span></li>
+                      <li class="flex items-start gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-primary"></span><span>1945: Battles of Iwo Jima and Okinawa</span></li>
+                    </ol>
+                  </div>
+                </div>
+                <div class="rounded-md bg-[rgba(255,255,255,0.85)] ring-1 ring-neutrals-borderGray shadow">
+                  <div class="p-4">
+                    <h4 class="text-base font-semibold text-neutral-900">Home Front & Civilians</h4>
+                    <p class="mt-2 text-sm text-neutral-700 leading-relaxed">Explore rationing, propaganda, industrial production, and social change across nations affected by WWII.</p>
+                    <a href="#" class="mt-3 inline-flex items-center gap-1 text-sm text-primary hover:underline">Browse resources <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.293 4.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 11-1.414-1.414L14.586 10l-3.293-3.293a1 1 0 011.414-1.414z" clip-rule="evenodd"/></svg></a>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Latest Additions -->
+            <section id="latest" class="mt-10">
+              <div class="flex items-baseline justify-between">
+                <h3 class="text-lg sm:text-xl font-bold text-primary">Latest Additions</h3>
+                <a href="#" class="text-sm text-primary hover:underline">See archive log</a>
+              </div>
+              <div class="mt-3 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="rounded-md bg-[rgba(255,255,255,0.85)] ring-1 ring-neutrals-borderGray p-4 shadow">
+                  <div class="flex items-start gap-4">
+                    <div class="vintage-frame h-24 w-32 overflow-hidden">
+                      <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38?q=80&w=1200&auto=format&fit=crop" alt="Declassified memorandum" class="h-full w-full object-cover" />
+                    </div>
+                    <div class="min-w-0">
+                      <h4 class="truncate text-base font-semibold text-neutral-900">Declassified Memorandum: Logistics Report (1943)</h4>
+                      <p class="mt-1 text-sm text-neutral-700 line-clamp-3">Operational notes detailing supply lines and material readiness in the Mediterranean theater. Includes annotated maps.</p>
+                      <div class="mt-2 text-[12px] text-neutral-600">Added 3 days ago • Document</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="rounded-md bg-[rgba(255,255,255,0.85)] ring-1 ring-neutrals-borderGray p-4 shadow">
+                  <div class="flex items-start gap-4">
+                    <div class="vintage-frame h-24 w-32 overflow-hidden">
+                      <img src="https://images.unsplash.com/photo-1509020170936-9f39f46d9bf6?q=80&w=1200&auto=format&fit=crop" alt="Pilot diary" class="h-full w-full object-cover" />
+                    </div>
+                    <div class="min-w-0">
+                      <h4 class="truncate text-base font-semibold text-neutral-900">Pilot Diary Excerpts: Pacific Sorties (1944)</h4>
+                      <p class="mt-1 text-sm text-neutral-700 line-clamp-3">Daily entries describing weather, morale, and mission parameters from a Navy aviator stationed in the Pacific.</p>
+                      <div class="mt-2 text-[12px] text-neutral-600">Added 1 week ago • Journal</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Contribute CTA -->
+            <section id="contribute" class="mt-10">
+              <div class="relative overflow-hidden rounded-md bg-secondary-creamBeige ring-1 ring-neutrals-borderGray shadow">
+                <div class="absolute -left-6 -top-6 rotate-[18deg]">
+                  <svg class="h-24 w-24 text-secondary-golden/35" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <circle cx="50" cy="50" r="44" fill="none" stroke="currentColor" stroke-width="3" />
+                    <text x="50" y="55" text-anchor="middle" font-size="14" font-weight="700" fill="currentColor">APPROVED</text>
+                  </svg>
+                </div>
+                <div class="p-6 sm:p-8">
+                  <div class="md:flex md:items-center md:justify-between md:gap-8">
+                    <div>
+                      <h3 class="text-lg sm:text-xl font-bold text-neutral-900">Contribute materials or volunteer expertise</h3>
+                      <p class="mt-1 text-sm text-neutral-700">Help expand the collection. We welcome scanned documents, photographs, and oral histories, as well as subject-matter reviewers.</p>
+                    </div>
+                    <div class="mt-4 md:mt-0">
+                      <a href="#" class="inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-white shadow hover:bg-secondary-lightBlue focus:outline-none focus:ring-2 focus:ring-primary/40">Get involved</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="mt-12 mb-8 text-[13px] text-neutral-700">
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                <p>© <span id="year"></span> WWII Archives & Learning Center</p>
+                <nav class="flex flex-wrap gap-x-4 gap-y-1">
+                  <a href="#" class="hover:underline">Accessibility</a>
+                  <a href="#" class="hover:underline">Privacy</a>
+                  <a href="#" class="hover:underline">Terms</a>
+                  <a href="#" class="hover:underline">Contact</a>
+                </nav>
+              </div>
+            </footer>
+          </main>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Utility: toggle visibility with ARIA updates
+      function toggleSection(button, content) {
+        const expanded = button.getAttribute('aria-expanded') === 'true';
+        button.setAttribute('aria-expanded', String(!expanded));
+        if (content) {
+          content.classList.toggle('hidden', expanded);
+        }
+      }
+
+      // Initialize accordion controls (desktop + mobile)
+      document.querySelectorAll('[data-accordion-control]').forEach(function (btn) {
+        const controlsId = btn.getAttribute('aria-controls');
+        const content = controlsId ? document.getElementById(controlsId) : null;
+        btn.addEventListener('click', function () { toggleSection(btn, content); });
+      });
+
+      // Mobile drawer behavior
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileDrawer = document.getElementById('mobileDrawer');
+      const mobileDrawerClose = document.getElementById('mobileDrawerClose');
+      const drawerPanel = mobileDrawer ? mobileDrawer.querySelector('aside') : null;
+
+      function openDrawer() {
+        if (!mobileDrawer || !drawerPanel) return;
+        mobileDrawer.classList.remove('hidden');
+        requestAnimationFrame(function () {
+          drawerPanel.classList.remove('-translate-x-full');
+        });
+      }
+      function closeDrawer() {
+        if (!mobileDrawer || !drawerPanel) return;
+        drawerPanel.classList.add('-translate-x-full');
+        setTimeout(function () { mobileDrawer.classList.add('hidden'); }, 180);
+      }
+
+      if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', openDrawer);
+      if (mobileDrawerClose) mobileDrawerClose.addEventListener('click', closeDrawer);
+      if (mobileDrawer) mobileDrawer.addEventListener('click', function (e) {
+        if (e.target === mobileDrawer) closeDrawer();
+      });
+
+      // Current year in footer
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
