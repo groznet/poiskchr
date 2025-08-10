@@ -1,1 +1,261 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ВМК — Главная</title>
 
+    <!-- Tailwind config (CDN) -->
+    <script>
+      tailwind.config = {
+        theme: {
+          container: { center: true, padding: '1rem' },
+          extend: {
+            colors: {
+              brand: '#0b5cab',
+              brandDark: '#0a4f94',
+              accent: '#e5f0ff',
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <meta name="description" content="Учебный центр ВМК — программы дополнительного образования, курсы и новости." />
+  </head>
+  <body class="antialiased text-gray-900">
+    <!-- Site Header -->
+    <header x-data="{ open: false }" class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-200">
+      <div class="container flex h-16 items-center justify-between">
+        <a href="#" class="flex items-center gap-3">
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded bg-brand text-white font-semibold">В</span>
+          <span class="text-base md:text-lg font-semibold tracking-tight">Учебный центр ВМК</span>
+        </a>
+
+        <!-- Desktop nav -->
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="#about" class="hover:text-brand">О центре</a>
+          <a href="#programs" class="hover:text-brand">Программы</a>
+          <a href="#news" class="hover:text-brand">Новости</a>
+          <a href="#contacts" class="hover:text-brand">Контакты</a>
+        </nav>
+
+        <!-- Mobile menu button -->
+        <button @click="open = !open" aria-label="Открыть меню" class="md:hidden inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6" :class="{ 'hidden': open }"><path d="M3.75 6.75h16.5v1.5H3.75zM3.75 11.25h16.5v1.5H3.75zM3.75 15.75h16.5v1.5H3.75z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6" :class="{ 'hidden': !open }"><path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"/></svg>
+        </button>
+      </div>
+
+      <!-- Mobile nav -->
+      <div
+        x-show="open"
+        x-transition.opacity
+        @click.outside="open = false"
+        class="md:hidden border-t border-gray-200 bg-white"
+      >
+        <nav class="container py-2 text-sm">
+          <a href="#about" class="block px-2 py-3 hover:bg-gray-50 rounded">О центре</a>
+          <a href="#programs" class="block px-2 py-3 hover:bg-gray-50 rounded">Программы</a>
+          <a href="#news" class="block px-2 py-3 hover:bg-gray-50 rounded">Новости</a>
+          <a href="#contacts" class="block px-2 py-3 hover:bg-gray-50 rounded">Контакты</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-brand to-brandDark text-white">
+      <div class="absolute inset-0 opacity-10" aria-hidden="true">
+        <svg class="h-full w-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none"><path fill="#ffffff" fill-opacity="1" d="M0,128L48,149.3C96,171,192,213,288,229.3C384,245,480,235,576,224C672,213,768,203,864,176C960,149,1056,107,1152,96C1248,85,1344,107,1392,117.3L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+      </div>
+      <div class="relative container grid gap-8 py-16 md:grid-cols-2 md:py-24">
+        <div class="max-w-xl">
+          <h1 class="text-3xl font-bold leading-tight md:text-5xl">Образовательные программы ВМК МГУ</h1>
+          <p class="mt-4 text-white/90 md:text-lg">Курсы дополнительного образования, профессиональная переподготовка и повышение квалификации — очно и онлайн.</p>
+          <div class="mt-8 flex flex-wrap items-center gap-3">
+            <a href="#programs" class="inline-flex items-center justify-center rounded-md bg-white px-5 py-3 font-medium text-brand hover:bg-accent">Смотреть программы</a>
+            <a href="#about" class="inline-flex items-center justify-center rounded-md border border-white/40 px-5 py-3 font-medium text-white hover:bg-white/10">О центре</a>
+          </div>
+        </div>
+        <div class="md:justify-self-end">
+          <div class="rounded-xl bg-white/10 p-4 backdrop-blur-md ring-1 ring-white/20 md:p-6">
+            <form class="grid gap-3" @submit.prevent>
+              <label class="text-sm/6 font-medium text-white/90">Быстрый поиск</label>
+              <div class="grid grid-cols-1 gap-3 sm:grid-cols-3">
+                <input type="text" placeholder="Ключевое слово" class="col-span-2 rounded-md border-0 bg-white/95 px-3 py-2 text-gray-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-brand" />
+                <button class="rounded-md bg-black/70 px-4 py-2 font-medium text-white hover:bg-black/80">Найти</button>
+              </div>
+              <p class="text-xs text-white/70">Например: анализ данных, программирование, Python</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Placeholder sections to be filled next -->
+    <main>
+      <section id="programs" class="container py-16 md:py-20">
+        <h2 class="text-2xl md:text-3xl font-bold">Направления программ</h2>
+        <p class="mt-2 text-gray-600">Выберите направление обучения</p>
+        <div class="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <a href="#" class="group rounded-xl border border-gray-200 p-5 transition hover:border-brand/50 hover:shadow-sm">
+            <div class="flex items-start gap-4">
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-accent text-brand">
+                <!-- Icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5"><path d="M11.7 2.3a1 1 0 0 1 1.6 0l8 10A1 1 0 0 1 20.5 14H3.5a1 1 0 0 1-.8-1.7l9-10Z"/><path d="M12 6v14"/></svg>
+              </span>
+              <div class="flex-1">
+                <div class="flex items-center justify-between gap-3">
+                  <h3 class="text-base font-semibold group-hover:text-brand">Программирование</h3>
+                  <span class="text-xs text-gray-500">12 программ</span>
+                </div>
+                <p class="mt-1 text-sm text-gray-600">Python, веб‑разработка, алгоритмы</p>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="group rounded-xl border border-gray-200 p-5 transition hover:border-brand/50 hover:shadow-sm">
+            <div class="flex items-start gap-4">
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-accent text-brand">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-5 w-5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h15.75c.621 0 1.125.504 1.125 1.125v5.25A2.625 2.625 0 0 1 18.375 21h-12.75A2.625 2.625 0 0 1 3 18.375v-5.25Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M6 12V6.75A3.75 3.75 0 0 1 9.75 3h4.5A3.75 3.75 0 0 1 18 6.75V12"/></svg>
+              </span>
+              <div class="flex-1">
+                <div class="flex items-center justify-between gap-3">
+                  <h3 class="text-base font-semibold group-hover:text-brand">Аналитика и данные</h3>
+                  <span class="text-xs text-gray-500">9 программ</span>
+                </div>
+                <p class="mt-1 text-sm text-gray-600">Data Science, ML, визуализация</p>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="group rounded-xl border border-gray-200 p-5 transition hover:border-brand/50 hover:shadow-sm">
+            <div class="flex items-start gap-4">
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-accent text-brand">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5"><path d="M12 2a1 1 0 0 1 1 1v2.06a8.005 8.005 0 0 1 6.94 6.94H22a1 1 0 1 1 0 2h-2.06A8.005 8.005 0 0 1 13 20.94V23a1 1 0 1 1-2 0v-2.06A8.005 8.005 0 0 1 3.06 14H1a1 1 0 1 1 0-2h2.06A8.005 8.005 0 0 1 11 5.06V3a1 1 0 0 1 1-1Z"/></svg>
+              </span>
+              <div class="flex-1">
+                <div class="flex items-center justify-between gap-3">
+                  <h3 class="text-base font-semibold group-hover:text-brand">Математика</h3>
+                  <span class="text-xs text-gray-500">7 программ</span>
+                </div>
+                <p class="mt-1 text-sm text-gray-600">Теория вероятностей, статистика</p>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="group rounded-xl border border-gray-200 p-5 transition hover:border-brand/50 hover:shadow-sm">
+            <div class="flex items-start gap-4">
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-accent text-brand">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5"><path d="M4.5 6.75A2.25 2.25 0 0 1 6.75 4.5h10.5A2.25 2.25 0 0 1 19.5 6.75v10.5A2.25 2.25 0 0 1 17.25 19.5H6.75A2.25 2.25 0 0 1 4.5 17.25V6.75Z"/><path d="M7.5 7.5h9v9h-9z"/></svg>
+              </span>
+              <div class="flex-1">
+                <div class="flex items-center justify-between gap-3">
+                  <h3 class="text-base font-semibold group-hover:text-brand">Искусственный интеллект</h3>
+                  <span class="text-xs text-gray-500">5 программ</span>
+                </div>
+                <p class="mt-1 text-sm text-gray-600">ML, DL, практические кейсы</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section id="news" class="bg-gray-50 py-16 md:py-20">
+        <div class="container">
+          <h2 class="text-2xl md:text-3xl font-bold">Новости и события</h2>
+          <div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
+            <article class="group overflow-hidden rounded-xl border border-gray-200 bg-white transition hover:shadow-sm">
+              <div class="aspect-[16/9] w-full bg-gray-200"></div>
+              <div class="p-5">
+                <div class="text-xs text-gray-500">12 фев 2025</div>
+                <h3 class="mt-1 text-base font-semibold leading-snug">
+                  <a href="#" class="hover:text-brand">Запуск набора на программу по анализу данных</a>
+                </h3>
+                <p class="mt-2 text-sm text-gray-600">Открыта регистрация на весенний поток. Формат — онлайн и очно.</p>
+              </div>
+            </article>
+            <article class="group overflow-hidden rounded-xl border border-gray-200 bg-white transition hover:shadow-sm">
+              <div class="aspect-[16/9] w-full bg-gray-200"></div>
+              <div class="p-5">
+                <div class="text-xs text-gray-500">5 фев 2025</div>
+                <h3 class="mt-1 text-base font-semibold leading-snug">
+                  <a href="#" class="hover:text-brand">Вебинар: Современные подходы к ML в индустрии</a>
+                </h3>
+                <p class="mt-2 text-sm text-gray-600">Приглашаем на открытый вебинар с преподавателями-практиками.</p>
+              </div>
+            </article>
+            <article class="group overflow-hidden rounded-xl border border-gray-200 bg-white transition hover:shadow-sm">
+              <div class="aspect-[16/9] w-full bg-gray-200"></div>
+              <div class="p-5">
+                <div class="text-xs text-gray-500">28 янв 2025</div>
+                <h3 class="mt-1 text-base font-semibold leading-snug">
+                  <a href="#" class="hover:text-brand">Итоги зимней сессии</a>
+                </h3>
+                <p class="mt-2 text-sm text-gray-600">Подводим итоги, делимся результатами и планами на следующий семестр.</p>
+              </div>
+            </article>
+          </div>
+          <div class="mt-8">
+            <a href="#" class="inline-flex items-center gap-2 text-sm font-medium text-brand hover:underline">
+              Все новости
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4"><path fill-rule="evenodd" d="M4.5 12a.75.75 0 0 1 .75-.75h11.69l-3.22-3.22a.75.75 0 1 1 1.06-1.06l4.5 4.5a.75.75 0 0 1 0 1.06l-4.5 4.5a.75.75 0 0 1-1.06-1.06l3.22-3.22H5.25A.75.75 0 0 1 4.5 12Z" clip-rule="evenodd"/></svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacts" class="container py-16 md:py-20">
+        <h2 class="text-2xl md:text-3xl font-bold">Контакты</h2>
+        <div class="mt-4 grid gap-6 md:grid-cols-3">
+          <div class="rounded-lg border border-gray-200 p-4">
+            <div class="text-sm text-gray-600">Адрес</div>
+            <div class="mt-1 font-medium">Москва, Ленинские горы</div>
+          </div>
+          <div class="rounded-lg border border-gray-200 p-4">
+            <div class="text-sm text-gray-600">Email</div>
+            <div class="mt-1 font-medium">vmkedu@yandex.ru</div>
+          </div>
+          <div class="rounded-lg border border-gray-200 p-4">
+            <div class="text-sm text-gray-600">Телефон</div>
+            <div class="mt-1 font-medium">+7 (495) 932 9808</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-200 bg-white">
+      <div class="container py-10 text-sm">
+        <div class="grid gap-8 md:grid-cols-4">
+          <div class="md:col-span-2">
+            <div class="flex items-center gap-3">
+              <span class="inline-flex h-8 w-8 items-center justify-center rounded bg-brand text-white font-semibold">В</span>
+              <span class="font-semibold">Учебный центр ВМК</span>
+            </div>
+            <p class="mt-3 max-w-md text-gray-600">Дополнительное профессиональное образование на базе ВМК МГУ. Современные программы и преподаватели-практики.</p>
+          </div>
+          <nav>
+            <div class="font-semibold text-gray-700">Разделы</div>
+            <ul class="mt-3 space-y-2">
+              <li><a class="hover:text-brand" href="#about">О центре</a></li>
+              <li><a class="hover:text-brand" href="#programs">Программы</a></li>
+              <li><a class="hover:text-brand" href="#news">Новости</a></li>
+              <li><a class="hover:text-brand" href="#contacts">Контакты</a></li>
+            </ul>
+          </nav>
+          <div>
+            <div class="font-semibold text-gray-700">Связаться</div>
+            <ul class="mt-3 space-y-2 text-gray-700">
+              <li>Email: <a class="hover:text-brand" href="mailto:vmkedu@yandex.ru">vmkedu@yandex.ru</a></li>
+              <li>Телефон: <a class="hover:text-brand" href="tel:+74959329808">+7 (495) 932 9808</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-8 flex items-center justify-between text-gray-500">
+          <p>© 2025 ВМК. Все права защищены.</p>
+          <p>Сделано с TailwindCSS & Alpine.js</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
