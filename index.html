@@ -1,1 +1,492 @@
+<!DOCTYPE html>
+<html lang="ru" class="h-full">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PoiskCHR — Поисковое движение России – Чеченская Республика</title>
+  <meta name="description" content="Официальный сайт регионального отделения Поискового движения России в Чеченской Республике. Поиск и перезахоронение солдат, архивная работа, отчёты, проекты, помощь родственникам пропавших без вести." />
+  <meta name="keywords" content="поисковое движение чечня, поисковики россии, поиск солдат вов, поиск без вести пропавших, военные захоронения чечня" />
+  <meta name="robots" content="index,follow" />
+  <meta name="author" content="Поисковое движение России – Чеченская Республика" />
+  <meta name="theme-color" content="#963434" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="PoiskCHR" />
+  <meta property="og:title" content="Поисковое движение России – Чеченская Республика" />
+  <meta property="og:description" content="Официальный сайт регионального отделения Поискового движения России в Чеченской Республике." />
+  <!-- Optional: update to actual domain and image when available -->
+  <!-- <meta property="og:url" content="https://poisk-chr.ru" /> -->
+  <!-- <meta property="og:image" content="https://poisk-chr.ru/og-image.jpg" /> -->
+  <meta name="twitter:card" content="summary" />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#963434',
+            secondary: '#DED5C8',
+            accent: '#2F537E',
+            paper: '#DED5C8',
+            heading: '#222222',
+            body: '#444444',
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji'],
+            heading: ['Montserrat', 'Inter', 'ui-sans-serif', 'system-ui'],
+          },
+          maxWidth: {
+            page: '88rem',
+          },
+          boxShadow: {
+            inset1: 'inset 0 0 0 1px rgba(0,0,0,0.10)',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    [x-cloak] { display: none !important; }
+    html, body { background-color: #DED5C8; }
+  </style>
+  <link rel="icon" href="/favicon.ico" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Поисковое движение России – Чеченская Республика",
+    "alternateName": "PoiskCHR",
+    "url": "https://example.com/", 
+    "email": "isa-terkho@bk.ru",
+    "logo": "https://example.com/logo.png",
+    "sameAs": [
+      "https://vk.com/isasardalov",
+      "https://vk.com/public162517912",
+      "https://www.youtube.com/@poisk-chr",
+      "https://ok.ru/profile/591215182136"
+    ],
+    "areaServed": {
+      "@type": "AdministrativeArea",
+      "name": "Чеченская Республика, Россия"
+    },
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "isa-terkho@bk.ru",
+        "availableLanguage": ["ru"]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="min-h-full text-body font-sans bg-paper">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-white text-heading px-3 py-2 border border-heading">Перейти к содержимому</a>
+
+  <!-- Top bar -->
+  <div class="border-b border-heading/20 bg-[#e9e1d6]">
+    <div class="mx-auto max-w-page px-4 sm:px-6 lg:px-8 py-2 text-sm flex items-center justify-between">
+      <div class="flex items-center gap-2 text-heading">
+        <span class="inline-flex items-center border border-primary px-2 py-0.5 text-xs tracking-wide font-semibold uppercase text-primary">Статус: Разработка</span>
+        <span class="hidden sm:inline text-body">Официальный сайт регионального отделения ПДР — Чеченская Республика</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a class="text-heading hover:underline" href="mailto:isa-terkho@bk.ru">isa-terkho@bk.ru</a>
+        <nav class="hidden md:flex items-center gap-3 text-heading">
+          <a href="https://vk.com/isasardalov" aria-label="VK" class="hover:underline" target="_blank" rel="noopener">VK</a>
+          <a href="https://www.youtube.com/@poisk-chr" aria-label="YouTube" class="hover:underline" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://ok.ru/profile/591215182136" aria-label="Одноклассники" class="hover:underline" target="_blank" rel="noopener">OK</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header x-data="{open:false}" class="border-b-2 border-primary/25 shadow-inset1 bg-paper">
+    <div class="mx-auto max-w-page px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between py-4">
+        <a href="/" class="flex items-center gap-3">
+          <div class="h-10 w-10 grid place-content-center border-2 border-primary text-primary font-heading font-bold">PC</div>
+          <div class="leading-tight">
+            <div class="font-heading text-xl text-heading tracking-wide uppercase">PoiskCHR</div>
+            <div class="text-xs text-body">Поисковое движение России — Чеченская Республика</div>
+          </div>
+        </a>
+        <nav class="hidden lg:flex items-center gap-6 text-heading">
+          <a href="/" class="hover:underline">Главная</a>
+          <a href="/projects" class="hover:underline">Проекты</a>
+          <a href="/blog" class="hover:underline">Новости</a>
+          <a href="/reports" class="hover:underline">Отчёты</a>
+          <a href="/partners" class="hover:underline">Партнёры</a>
+          <a href="/videos" class="hover:underline">Видео</a>
+          <a href="/docs" class="hover:underline">Документы</a>
+          <a href="/about" class="hover:underline">О нас</a>
+          <a href="/contact" class="hover:underline">Контакты</a>
+        </nav>
+        <div class="hidden lg:flex items-center gap-3">
+          <a href="/contact" class="inline-block px-4 py-2 border-2 border-primary text-primary font-semibold uppercase tracking-wide">Подать заявку</a>
+        </div>
+        <button @click="open=!open" class="lg:hidden border-2 border-primary text-primary px-3 py-2" aria-controls="mnav" :aria-expanded="open.toString()">
+          <span class="sr-only">Открыть меню</span>Меню
+        </button>
+      </div>
+      <div id="mnav" x-cloak x-show="open" class="lg:hidden border-t border-heading/20 py-3">
+        <nav class="grid gap-2 text-heading">
+          <a href="/" class="px-2 py-2 hover:underline">Главная</a>
+          <a href="/projects" class="px-2 py-2 hover:underline">Проекты</a>
+          <a href="/blog" class="px-2 py-2 hover:underline">Новости</a>
+          <a href="/reports" class="px-2 py-2 hover:underline">Отчёты</a>
+          <a href="/partners" class="px-2 py-2 hover:underline">Партнёры</a>
+          <a href="/videos" class="px-2 py-2 hover:underline">Видео</a>
+          <a href="/docs" class="px-2 py-2 hover:underline">Документы</a>
+          <a href="/about" class="px-2 py-2 hover:underline">О нас</a>
+          <a href="/contact" class="px-2 py-2 hover:underline">Контакты</a>
+          <a href="/contact" class="px-2 py-2 border-2 border-primary text-primary text-center uppercase font-semibold">Подать заявку</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="relative">
+    <!-- Hero -->
+    <section class="bg-paper">
+      <div class="mx-auto max-w-page px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        <div class="grid lg:grid-cols-2 gap-8 items-start">
+          <div>
+            <h1 class="font-heading text-3xl sm:text-4xl lg:text-5xl text-heading uppercase leading-tight">Поисковое движение России — Чеченская Республика</h1>
+            <p class="mt-4 text-body max-w-2xl">Мы сохраняем память о героях, проводим поисковые экспедиции и архивные исследования, помогаем родственникам найти информацию о пропавших защитниках Отечества, публикуем проекты, отчёты и материалы для патриотического воспитания.</p>
+            <div class="mt-6 flex flex-wrap items-center gap-3">
+              <a href="/about" class="px-5 py-3 border-2 border-primary bg-primary text-white font-semibold uppercase tracking-wide">О движении</a>
+              <a href="/contact" class="px-5 py-3 border-2 border-primary text-primary font-semibold uppercase tracking-wide">Присоединиться</a>
+            </div>
+          </div>
+          <div class="border-2 border-primary/40 shadow-inset1 bg-[#e9e1d6] p-4">
+            <div class="aspect-[4/3] w-full grid place-content-center text-center text-heading">
+              <div class="border border-heading/30 w-full h-full grid place-content-center">
+                <div>
+                  <div class="font-heading text-2xl uppercase">Архив Памяти</div>
+                  <p class="mt-2 text-body">Документы, журналы, фотографии, письма времён ВОВ</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <div class="border-2 border-primary/30 bg-white/50 p-4 text-center">
+            <div class="font-heading text-2xl text-heading">120+</div>
+            <div class="text-xs uppercase tracking-wide text-body">Экспедиций</div>
+          </div>
+          <div class="border-2 border-primary/30 bg-white/50 p-4 text-center">
+            <div class="font-heading text-2xl text-heading">800+</div>
+            <div class="text-xs uppercase tracking-wide text-body">Найдено бойцов</div>
+          </div>
+          <div class="border-2 border-primary/30 bg-white/50 p-4 text-center">
+            <div class="font-heading text-2xl text-heading">2500+</div>
+            <div class="text-xs uppercase tracking-wide text-body">Архивных дел</div>
+          </div>
+          <div class="border-2 border-primary/30 bg-white/50 p-4 text-center">
+            <div class="font-heading text-2xl text-heading">300+</div>
+            <div class="text-xs uppercase tracking-wide text-body">Волонтёров</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search Help CTA -->
+    <section class="border-y-2 border-primary/25 bg-[#e9e1d6]">
+      <div class="mx-auto max-w-page px-4 sm:px-6 lg:px-8 py-8">
+        <div class="grid lg:grid-cols-3 gap-6 items-start">
+          <div class="lg:col-span-2">
+            <h2 class="font-heading text-2xl text-heading uppercase">Поиск пропавших защитников</h2>
+            <p class="mt-2 text-body max-w-3xl">Если вы ищете сведения о пропавшем без вести участнике войны, заполните форму или напишите нам. Мы подскажем возможные источники и порядок обращения в архивы.</p>
+          </div>
+          <div class="border-2 border-primary/40 bg-white/60 p-4">
+            <form action="mailto:isa-terkho@bk.ru" method="post" class="grid gap-3" aria-label="Форма запроса информации">
+              <label class="grid text-sm">
+                <span class="mb-1 text-heading">ФИО бойца</span>
+                <input required name="name" type="text" class="border-2 border-heading/30 bg-white px-3 py-2 outline-none" placeholder="Иванов Иван Иванович" />
+              </label>
+              <label class="grid text-sm">
+                <span class="mb-1 text-heading">Год рождения (если известен)</span>
+                <input name="birth" type="text" class="border-2 border-heading/30 bg-white px-3 py-2 outline-none" placeholder="1919" />
+              </label>
+              <label class="grid text-sm">
+                <span class="mb-1 text-heading">Ваш e‑mail</span>
+                <input required name="email" type="email" class="border-2 border-heading/30 bg-white px-3 py-2 outline-none" placeholder="name@example.ru" />
+              </label>
+              <label class="grid text-sm">
+                <span class="mb-1 text-heading">Сообщение</span>
+                <textarea name="message" rows="3" class="border-2 border-heading/30 bg-white px-3 py-2 outline-none" placeholder="Добавьте известные сведения: место призыва, часть, фронт и т.п."></textarea>
+              </label>
+              <button type="submit" class="mt-1 px-4 py-2 border-2 border-primary bg-primary text-white font-semibold uppercase tracking-wide">Отправить запрос</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="bg-paper">
+      <div class="mx-auto max-w-page px-4 sm:px-6 lg:px-8 py-12">
+        <div class="flex items-end justify-between gap-4">
+          <h2 class="font-heading text-2xl text-heading uppercase">Проекты</h2>
+          <a href="/projects" class="text-heading hover:underline">Все проекты</a>
+        </div>
+        <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Card -->
+          <article class="border-2 border-primary/30 bg-white/60 p-4 flex flex-col">
+            <div class="aspect-[4/3] w-full border border-heading/30 bg-[#f2eee8]"></div>
+            <h3 class="mt-3 font-heading text-lg text-heading uppercase">«Вахта Памяти»</h3>
+            <p class="mt-2 text-body">Ежегодные экспедиции по обнаружению и перезахоронению останков воинов, погибших в годы Великой Отечественной войны.</p>
+            <a href="/project/1" class="mt-3 inline-block px-3 py-2 border-2 border-primary text-primary uppercase font-semibold">Подробнее</a>
+          </article>
+          <article class="border-2 border-primary/30 bg-white/60 p-4 flex flex-col">
+            <div class="aspect-[4/3] w-full border border-heading/30 bg-[#f2eee8]"></div>
+            <h3 class="mt-3 font-heading text-lg text-heading uppercase">Архивные исследования</h3>
+            <p class="mt-2 text-body">Систематизация документов, писем и журналов боевых действий для восстановления судеб пропавших бойцов.</p>
+            <a href="/project/2" class="mt-3 inline-block px-3 py-2 border-2 border-primary text-primary uppercase font-semibold">Подробнее</a>
+          </article>
+          <article class="border-2 border-primary/30 bg-white/60 p-4 flex flex-col">
+            <div class="aspect-[4/3] w-full border border-heading/30 bg-[#f2eee8]"></div>
+            <h3 class="mt-3 font-heading text-lg text-heading uppercase">Патриотическое воспитание</h3>
+            <p class="mt-2 text-body">Лекции, выставки, школьные и студенческие программы, посвящённые сохранению исторической памяти.</p>
+            <a href="/project/3" class="mt-3 inline-block px-3 py-2 border-2 border-primary text-primary uppercase font-semibold">Подробнее</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- News -->
+    <section class="bg-[#e9e1d6] border-y-2 border-primary/25">
+      <div class="mx-auto max-w-page px-4 sm:px-6 lg:px-8 py-12">
+        <div class="flex items-end justify-between gap-4">
+          <h2 class="font-heading text-2xl text-heading uppercase">Новости</h2>
+          <a href="/blog" class="text-heading hover:underline">Все новости</a>
+        </div>
+        <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <article class="border-2 border-primary/30 bg-white/70 p-4 flex flex-col">
+            <div class="aspect-[16/9] w-full border border-heading/30 bg-[#f2eee8]"></div>
+            <h3 class="mt-3 font-heading text-lg text-heading uppercase">Итоги весенней экспедиции</h3>
+            <p class="mt-2 text-body">Обнаружены и с почестями перезахоронены останки 12 бойцов. Продолжается работа по установлению личностей.</p>
+            <a href="/blog/?p=101" class="mt-auto inline-block px-3 py-2 border-2 border-primary text-primary uppercase font-semibold">Читать</a>
+          </article>
+          <article class="border-2 border-primary/30 bg-white/70 p-4 flex flex-col">
+            <div class="aspect-[16/9] w-full border border-heading/30 bg-[#f2eee8]"></div>
+            <h3 class="mt-3 font-heading text-lg text-heading uppercase">Новые партнёры проекта</h3>
+            <p class="mt-2 text-body">Подписано соглашение о сотрудничестве с образовательными учреждениями республики.</p>
+            <a href="/blog/?p=102" class="mt-auto inline-block px-3 py-2 border-2 border-primary text-primary uppercase font-semibold">Читать</a>
+          </article>
+          <article class="border-2 border-primary/30 bg-white/70 p-4 flex flex-col">
+            <div class="aspect-[16/9] w-full border border-heading/30 bg-[#f2eee8]"></div>
+            <h3 class="mt-3 font-heading text-lg text-heading uppercase">Выставка «Последние письма»</h3>
+            <p class="mt-2 text-body">Письма с фронта, документы и фотографии представлены в региональной библиотеке.</p>
+            <a href="/blog/?p=103" class="mt-auto inline-block px-3 py-2 border-2 border-primary text-primary uppercase font-semibold">Читать</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reports (Gallery) -->
+    <section class="bg-paper">
+      <div class="mx-auto max-w-page px-4 sm:px-6 lg:px-8 py-12">
+        <div class="flex items-end justify-between gap-4">
+          <h2 class="font-heading text-2xl text-heading uppercase">Отчёты</h2>
+          <a href="/reports" class="text-heading hover:underline">Все отчёты</a>
+        </div>
+        <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="aspect-square border-2 border-primary/30 bg-[#f2eee8]"></div>
+          <div class="aspect-square border-2 border-primary/30 bg-[#f2eee8]"></div>
+          <div class="aspect-square border-2 border-primary/30 bg-[#f2eee8]"></div>
+          <div class="aspect-square border-2 border-primary/30 bg-[#f2eee8]"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Videos -->
+    <section class="bg-[#e9e1d6] border-y-2 border-primary/25">
+      <div class="mx-auto max-w-page px-4 sm:px-6 lg:px-8 py-12">
+        <div class="flex items-end justify-between gap-4">
+          <h2 class="font-heading text-2xl text-heading uppercase">Видео</h2>
+          <a href="/videos" class="text-heading hover:underline">Все видео</a>
+        </div>
+        <div class="mt-6 grid lg:grid-cols-2 gap-6 items-start">
+          <div class="w-full border-2 border-primary/40 bg-white/70 p-2">
+            <div class="relative w-full" style="padding-top: 56.25%">
+              <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed?listType=user_uploads&list=poisk-chr" title="Видео PoiskCHR" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="text-body">
+            <p>Видео с экспедиций, мероприятий и интервью доступны на нашем канале.</p>
+            <a href="https://www.youtube.com/@poisk-chr" target="_blank" rel="noopener" class="mt-4 inline-block px-4 py-2 border-2 border-primary text-primary uppercase font-semibold">Перейти на YouTube</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Documents -->
+    <section class="bg-paper">
+      <div class="mx-auto max-w-page px-4 sm:px-6 lg:px-8 py-12">
+        <div class="flex items-end justify-between gap-4">
+          <h2 class="font-heading text-2xl text-heading uppercase">Документы</h2>
+          <a href="/docs" class="text-heading hover:underline">Все документы</a>
+        </div>
+        <ul class="mt-6 grid md:grid-cols-2 gap-3">
+          <li class="border-2 border-primary/30 bg-white/60 p-4 flex items-center justify-between">
+            <div>
+              <div class="font-heading text-heading uppercase">Устав организации</div>
+              <div class="text-sm text-body">PDF, 1.2 МБ</div>
+            </div>
+            <a href="/docs/charter.pdf" class="px-3 py-2 border-2 border-primary text-primary uppercase font-semibold">Скачать</a>
+          </li>
+          <li class="border-2 border-primary/30 bg-white/60 p-4 flex items-center justify-between">
+            <div>
+              <div class="font-heading text-heading uppercase">Годовой отчёт</div>
+              <div class="text-sm text-body">PDF, 2.4 МБ</div>
+            </div>
+            <a href="/docs/report.pdf" class="px-3 py-2 border-2 border-primary text-primary uppercase font-semibold">Скачать</a>
+          </li>
+          <li class="border-2 border-primary/30 bg-white/60 p-4 flex items-center justify-between">
+            <div>
+              <div class="font-heading text-heading uppercase">Методические материалы</div>
+              <div class="text-sm text-body">PDF, 3.1 МБ</div>
+            </div>
+            <a href="/docs/methods.pdf" class="px-3 py-2 border-2 border-primary text-primary uppercase font-semibold">Скачать</a>
+          </li>
+          <li class="border-2 border-primary/30 bg-white/60 p-4 flex items-center justify-between">
+            <div>
+              <div class="font-heading text-heading uppercase">Нормативные акты</div>
+              <div class="text-sm text-body">PDF, 850 КБ</div>
+            </div>
+            <a href="/docs/laws.pdf" class="px-3 py-2 border-2 border-primary text-primary uppercase font-semibold">Скачать</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Partners -->
+    <section class="bg-[#e9e1d6] border-y-2 border-primary/25">
+      <div class="mx-auto max-w-page px-4 sm:px-6 lg:px-8 py-12">
+        <div class="flex items-end justify-between gap-4">
+          <h2 class="font-heading text-2xl text-heading uppercase">Партнёры</h2>
+          <a href="/partners" class="text-heading hover:underline">Все партнёры</a>
+        </div>
+        <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div class="h-20 border-2 border-primary/30 bg-white/70 grid place-content-center text-sm text-heading">Логотип</div>
+          <div class="h-20 border-2 border-primary/30 bg-white/70 grid place-content-center text-sm text-heading">Логотип</div>
+          <div class="h-20 border-2 border-primary/30 bg-white/70 grid place-content-center text-sm text-heading">Логотип</div>
+          <div class="h-20 border-2 border-primary/30 bg-white/70 grid place-content-center text-sm text-heading">Логотип</div>
+          <div class="h-20 border-2 border-primary/30 bg-white/70 grid place-content-center text-sm text-heading">Логотип</div>
+          <div class="h-20 border-2 border-primary/30 bg-white/70 grid place-content-center text-sm text-heading">Логотип</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="bg-paper">
+      <div class="mx-auto max-w-page px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid lg:grid-cols-2 gap-8 items-start">
+          <div>
+            <h2 class="font-heading text-2xl text-heading uppercase">Связаться с нами</h2>
+            <p class="mt-2 text-body">Задайте вопрос, предложите сотрудничество или присоединяйтесь к движению.</p>
+            <ul class="mt-4 text-body">
+              <li><span class="font-semibold text-heading">E‑mail:</span> <a class="hover:underline" href="mailto:isa-terkho@bk.ru">isa-terkho@bk.ru</a></li>
+              <li class="mt-1"><span class="font-semibold text-heading">VK:</span> <a class="hover:underline" href="https://vk.com/public162517912" target="_blank" rel="noopener">vk.com/public162517912</a></li>
+              <li class="mt-1"><span class="font-semibold text-heading">YouTube:</span> <a class="hover:underline" href="https://www.youtube.com/@poisk-chr" target="_blank" rel="noopener">youtube.com/@poisk-chr</a></li>
+              <li class="mt-1"><span class="font-semibold text-heading">OK:</span> <a class="hover:underline" href="https://ok.ru/profile/591215182136" target="_blank" rel="noopener">ok.ru/profile/591215182136</a></li>
+            </ul>
+          </div>
+          <div class="border-2 border-primary/40 bg-white/60 p-4">
+            <form action="mailto:isa-terkho@bk.ru" method="post" class="grid gap-3" aria-label="Контактная форма">
+              <label class="grid text-sm">
+                <span class="mb-1 text-heading">Ваше имя</span>
+                <input required name="from_name" type="text" class="border-2 border-heading/30 bg-white px-3 py-2 outline-none" placeholder="Ваше имя" />
+              </label>
+              <label class="grid text-sm">
+                <span class="mb-1 text-heading">Ваш e‑mail</span>
+                <input required name="from_email" type="email" class="border-2 border-heading/30 bg-white px-3 py-2 outline-none" placeholder="name@example.ru" />
+              </label>
+              <label class="grid text-sm">
+                <span class="mb-1 text-heading">Тема</span>
+                <select name="subject" class="border-2 border-heading/30 bg-white px-3 py-2 outline-none">
+                  <option>Вступление в движение</option>
+                  <option>Поиск информации о родственнике</option>
+                  <option>Партнёрство</option>
+                  <option>Другое</option>
+                </select>
+              </label>
+              <label class="grid text-sm">
+                <span class="mb-1 text-heading">Сообщение</span>
+                <textarea required name="message" rows="4" class="border-2 border-heading/30 bg-white px-3 py-2 outline-none" placeholder="Ваше сообщение"></textarea>
+              </label>
+              <button type="submit" class="mt-1 px-4 py-2 border-2 border-primary bg-primary text-white font-semibold uppercase tracking-wide">Отправить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mt-8 border-t-2 border-primary/25 bg-[#e9e1d6]">
+    <div class="mx-auto max-w-page px-4 sm:px-6 lg:px-8 py-10">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center gap-3">
+            <div class="h-10 w-10 grid place-content-center border-2 border-primary text-primary font-heading font-bold">PC</div>
+            <div class="leading-tight">
+              <div class="font-heading text-lg text-heading uppercase">PoiskCHR</div>
+              <div class="text-xs text-body">Поисковое движение России — ЧР</div>
+            </div>
+          </div>
+          <p class="mt-3 text-body">Сохраняем историческую правду, помогаем семьям и воспитываем поколение, знающее своих героев.</p>
+        </div>
+        <div>
+          <div class="font-heading text-heading uppercase">Разделы</div>
+          <ul class="mt-3 space-y-2 text-body">
+            <li><a class="hover:underline" href="/projects">Проекты</a></li>
+            <li><a class="hover:underline" href="/blog">Новости</a></li>
+            <li><a class="hover:underline" href="/reports">Отчёты</a></li>
+            <li><a class="hover:underline" href="/partners">Партнёры</a></li>
+            <li><a class="hover:underline" href="/videos">Видео</a></li>
+            <li><a class="hover:underline" href="/docs">Документы</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="font-heading text-heading uppercase">О движении</div>
+          <ul class="mt-3 space-y-2 text-body">
+            <li><a class="hover:underline" href="/about">О нас</a></li>
+            <li><a class="hover:underline" href="/contact">Контакты</a></li>
+            <li><a class="hover:underline" href="/contact">Подать заявку</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="font-heading text-heading uppercase">Контакты</div>
+          <ul class="mt-3 space-y-2 text-body">
+            <li>Email: <a class="hover:underline" href="mailto:isa-terkho@bk.ru">isa-terkho@bk.ru</a></li>
+            <li>VK: <a class="hover:underline" href="https://vk.com/public162517912" target="_blank" rel="noopener">vk.com/public162517912</a></li>
+            <li>YouTube: <a class="hover:underline" href="https://www.youtube.com/@poisk-chr" target="_blank" rel="noopener">youtube.com/@poisk-chr</a></li>
+            <li>OK: <a class="hover:underline" href="https://ok.ru/profile/591215182136" target="_blank" rel="noopener">ok.ru/profile/591215182136</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-8 border-t border-heading/20 pt-4 text-sm text-body flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div>© <span x-data="{y: new Date().getFullYear()}" x-text="y">2025</span> Поисковое движение России – Чеченская Республика</div>
+        <div class="flex items-center gap-4">
+          <a href="/privacy" class="hover:underline">Политика конфиденциальности</a>
+          <a href="/terms" class="hover:underline">Пользовательское соглашение</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</body>
+</html>
