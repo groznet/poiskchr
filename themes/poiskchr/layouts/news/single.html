@@ -1,0 +1,89 @@
+{{ define "main" }}
+<style>
+    .post-content  {
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+
+</style>
+<article class="mx-auto max-w-5xl">
+    <header class="mb-2">
+        <!-- Breadcrumb -->
+        {{ partial "breadcrumb.html" . }}
+    </header>
+
+    <!-- Title and Date -->
+    <header class="mb-4">
+        <h1 class="text-3xl font-semibold">{{ .Title }}</h1>
+
+        <p class="flex items-center text-sm text-gray-600 mt-2 gap-6">
+            <span class="flex items-center gap-1">
+                <i class="far fa-clock"></i>
+                {{ .Date.Format "02-Янв-2006" }}
+            </span>
+
+            <span class="flex items-center gap-1">
+                <i class="fas fa-eye text-xs"></i>
+                {{ add 50 (mod (.Date.Unix | int) 150) }} читали
+            </span>
+
+        </p>
+    </header>
+
+    <!-- Featured Image -->
+    {{ $cdn := .Site.Params.cdn }}
+    {{ $dir := replace .File.Dir "\\" "/" -1 }}
+    {{ $featured := printf "%s/%sfeatured.jpg" $cdn $dir }}
+
+    <div class="mb-6 overflow-hidden">
+        <img src="{{ $featured }}" alt="{{ .Title }}" class="w-full h-full object-cover">
+    </div>
+
+
+    <!-- Summary / Intro -->
+    {{ if .Params.summary }}
+    <p class="mb-6 text-base leading-relaxed text-gray-700">{{ .Params.summary }}</p>
+    {{ end }}
+
+    <!-- Content -->
+    <div class="post-content prose max-w-full text-gray-800">
+        {{ .Content }}
+    </div>
+
+    <!-- Gallery -->
+    <!-- 
+    This gallery setup works with remote images. 
+
+    1. A Node script (`scripts/generate-gallery.js`) runs before the Hugo build (via npm). 
+    It scans each post folder (`news/YYYY/MM/post-slug/images/`) and generates a `gallery.json` 
+    listing all image filenames.
+
+    2. Hugo reads `gallery.json` from the post bundle and constructs the gallery using the CDN URL. 
+
+    - Supports any number of images per post.
+    - Fully automatic, keeps templates clean, and works with images stored separately from the site.
+    -->
+
+
+    {{ $cdn := .Site.Params.cdn }}
+    {{ $dir := replace .File.Dir "\\" "/" }}
+
+    {{ $gallery := .Resources.GetMatch "gallery.json" | transform.Unmarshal }}
+
+    {{ if $gallery.images }}
+    <section class="mt-8">
+        <h2 class="text-xl font-semibold mb-4">Галерея</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {{ range $gallery.images }}
+                <figure class="overflow-hidden rounded-md">
+                    <a href="{{ printf "%s/%simages/%s" $cdn $dir . }}" target="_self" rel="noopener">
+                        <img src="{{ printf "%s/%simages/%s" $cdn $dir . }}" alt="{{ $.Title }}" class="w-full h-auto object-cover">
+                    </a>
+                </figure>
+            {{ end }}
+        </div>
+    </section>
+    {{ end }}
+
+</article>
+{{ end }}

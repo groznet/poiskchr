@@ -1,0 +1,53 @@
+<!-- Header -->
+<div class="absolute inset-0 opacity-[0.08] pointer-events-none" style="background-image: radial-gradient(2px 2px at 10px 10px, rgba(255,255,255,0.5) 2px, transparent 2px); background-size: 22px 22px;"></div>
+
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-5">
+    <!-- Top: Logo + Menu button -->
+    <div class="flex items-center justify-between gap-4">
+        <div class="flex items-center gap-4">
+            <!-- <div class="flex h-12 w-12 items-center justify-center rounded-full bg-white/15 ring-1 ring-white/30 shadow">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-7 w-7 text-white">
+                    <path d="M12 2l2.39 7.36H22l-6.2 4.51L18.2 21 12 16.98 5.8 21l2.4-7.13L2 9.36h7.61L12 2z" />
+                </svg>
+            </div> -->
+            <div>
+                <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight">
+                    Поисковое Движение России по ЧР
+                </h1>
+                <p class="text-white/85 text-sm sm:text-base mt-0.5">
+                    Региональное отделение Поискового движения России по Чеченской Республике
+                </p>
+            </div>
+        </div>
+        <div class="flex items-center gap-2">
+            <button id="mobileMenuBtn" class="lg:hidden inline-flex items-center gap-2 rounded-md border border-white/30 bg-white/10 px-3 py-2 text-sm font-medium text-white hover:bg-white/15 focus:outline-none focus:ring-2 focus:ring-white/40">
+                <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                Menu
+            </button>
+        </div>
+    </div>
+
+    <!-- ✅ Main Navigation -->
+    <nav class="flex mt-4 items-center gap-6 text-white text-sm font-medium overflow-x-auto whitespace-nowrap w-full pb-2">
+        <!-- show main.menu -->
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.main }}
+            <a href="{{ .URL | relURL }}" class="hover:text-secondary-golden {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}text-secondary-golden{{ end }}">
+                {{ .Name }}
+            </a>
+        {{ end }}
+    </nav>
+
+    <!-- Global Search -->
+    <div class="mt-5">
+        <label for="global-search" class="sr-only">Поиск по архиву</label>
+        <div class="relative">
+            <input id="global-search" type="text" placeholder="Поиск документов, журналов, фотографий, писем…" class="w-full rounded-md bg-white/95 py-3 pl-11 pr-4 text-[15px] text-neutrals-textGray placeholder:text-neutral-500 shadow focus:outline-none focus:ring-2 focus:ring-secondary-golden" />
+            <svg class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-neutral-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15z" />
+            </svg>
+        </div>
+    </div>
+</div>

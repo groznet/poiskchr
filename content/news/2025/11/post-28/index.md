@@ -1,0 +1,47 @@
+---
+title: "Архивный десант в работе"
+date: 2025-11-30T13:51:47
+draft: false
+---
+
+<!-- wp:paragraph -->
+<p>Команда проекта «Ушедшие в бессмертие» продолжает работу по установлению судеб погибших и пропавших без вести бойцов и командиров Красной Армии бойцов подземного гарнизона Аджимушкайских каменоломен и участников обороны Брестской крепости.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>В фондах Архивного управления Правительства Чеченской Республики изучаются дела, в которых возможно наличие какой-либо информации, необходимой для уточнения по конкретным спискам участников Великой Отечественной войны, и включения в содержание книги, планируемой издать к 85-летию начала обороны Брестской крепости. Отрадно то, что есть ряд положительных ответов,- говорит Руководитель проекта - член Общественной палаты РФ и ЧР – Председатель Совета Регионального отделения «Поисковое движение России» в ЧР Иса Сардалов.- Данная работа будет продолжена в архивах и музеях Республики Ингушетия, где также ингушские поисковики и исследователи провели масштабную работу по исследованию и изучению интересуемого нас периода.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Следует отметить, что данные мероприятия проводятся в рамках исполнения протокольных поручений Главы Чеченской Республики Героя России Рамзана Кадырова на средства Фонда президентских грантов при непосредственной финансовой, материальной и информационной поддержке ООД «Поискового движения России», Общественной палаты Российской Федерации и Чеченской Республики, Юнармии РИ, Поискового отряда «Патриот» РИ.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>ПоисковикиРФ #ПоисковикиЧР #КомандаКРА #ПоискРФ #ПоискЧР #ПатриотыРоссии #Ингушетия #Фондпрезидентскихгрантов #ОбщественнаяпалатаРФ #ОбщественнаяпалатаЧР #ОфицерыРоссии #Регион95 #ГГНТУ #ТерскийРубеж #Чечня #ЧГУ #ЧГПУ #ПатриотЧР #Аджимушкай #ПоисковоедвижениевЧеченскойРеспублике #Судьбасолдата #СтуденческийдесантЧГУ #Терроризм #Грозный #ПатриотыЧечни #Малгобек #Дагестан</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:gallery {"linkTo":"none"} -->
+<figure class="wp-block-gallery has-nested-images columns-default is-cropped"><!-- wp:image {"id":32985,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="https://poisk-chr.ru/wp-content/uploads/2025/12/jcwE_7EUrIzK6P1bvYvlThE-CkKyeDajGYMg5V_BJe7odA0FKZbFrNNkufBmUEzNb13OvJl5HnToX9Gw4QT7vNib.jpg" alt="" class="wp-image-32985"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:image {"id":32986,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="https://poisk-chr.ru/wp-content/uploads/2025/12/q6foDc8IcnalJx-smS_MAMu5eAyfo_JIg2GDStml9XzFcA12xjuIn2vL35pOnrC3URX-DFbjdOxo4SQgQ6MWmcFZ.jpg" alt="" class="wp-image-32986"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:image {"id":32988,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="https://poisk-chr.ru/wp-content/uploads/2025/12/qJYChDIT93_2V8BT8hPIqcXpkmkH_MNBP2QTwAmiu4uf_-LnyviV2OoJXEyXT9JGu84OsuaAHsvHt2QmtlVWiRy.jpg" alt="" class="wp-image-32988"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:image {"id":32987,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="https://poisk-chr.ru/wp-content/uploads/2025/12/Z_qjwdZGyX-5mAABdlkhCpyOLDPKgdebZvBgyl3jxEyPswwtbFtPwAdXnBOsACjDgKz3v7RVvqhtQ2gk38mIzd_.jpg" alt="" class="wp-image-32987"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:image {"id":32989,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="https://poisk-chr.ru/wp-content/uploads/2025/12/CppeVtf7_4tgyEWYmtUjYhCwTxdZPwa3pqflXHOLf-RdhhRKOvtcKoO7hYZWvjBexYq5wJWYJ8Ta_MtbfFeKtvLT.jpg" alt="" class="wp-image-32989"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:image {"id":32990,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="https://poisk-chr.ru/wp-content/uploads/2025/12/dF4q7dZ926QD0c5G3XF5FAZHV8o0OBcAp0qEdbsjHKPajaP9vhvxeMP55qred2xSrOiPgAay1kyuSfA61pbsGFTd.jpg" alt="" class="wp-image-32990"/></figure>
+<!-- /wp:image --></figure>
+<!-- /wp:gallery -->

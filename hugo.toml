@@ -1,0 +1,141 @@
+##############################################
+# Hugo Configuration (hugo.toml)
+# Refined for Poisk-CHR
+##############################################
+
+baseURL = "/"
+languageCode = "ru"
+title = "Поисковое движение по ЧР"
+theme = "poiskchr"
+enableRobotsTXT = true
+canonifyURLs = true
+pluralizeListTitles = false
+ignoreLogs = ["error-remote-getjson"]
+removePathAccents = true
+
+# --- PAGINATION SETTINGS (Updated) ---
+[pagination]
+  pagerSize = 9
+
+# --- LANGUAGE SETTINGS ---
+defaultContentLanguage = "ru"
+hasCJKLanguage = false
+
+summaryLength = 70
+
+# Build behavior
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+##############################################
+# CONTENT RENDERING OPTIONS
+##############################################
+
+[markup.goldmark.renderer]
+  unsafe = true                  # Allows HTML (like <iframe> or <br>) inside Markdown files
+
+##############################################
+# SITE PARAMETERS (theme variables)
+##############################################
+
+[params]
+  siteName = "Поисковое движение ЧР"
+  siteDescription = "Официальный сайт регионального поискового движения"
+  author = "Команда Poisk-CHR"
+  copyright = "© 2025"
+  cdn = "https://files.groznet.com/poiskchr"
+
+  defaultImage = "/images/og-default.jpg"
+  dateFormat = "02.01.2006"      # Russian date format
+
+  # Contact info
+  email = "isa-terkho@bk.ru"
+  phone = "+7 (000) 000-00-00"   # UPDATE THIS
+  address = "Грозный, Чеченская Республика"
+
+  # Appearance
+  [params.theme]
+    layout = "default"
+    colorScheme = "light"
+    logo = "/images/logo.png"
+    favicon = "/favicon.ico"
+
+  # Socials
+  [[params.social]]
+    name = "VK"
+    icon = "vk"
+    url = "https://vk.com/public162517912"
+
+  [[params.social]]
+    name = "Instagram"
+    icon = "instagram"
+    url = "https://instagram.com/isasardalov"
+
+  [[params.social]]
+    name = "YouTube"
+    icon = "youtube"
+    url = "https://www.youtube.com/@poisk-chr"
+
+##############################################
+# TAXONOMIES
+##############################################
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  # author = "authors"           # Commented out: Enable only if you need specific pages for different writers
+
+##############################################
+# MENUS (main navigation)
+##############################################
+
+[menu]
+
+  [[menu.main]]
+    name = "Главная"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    name = "О Нас"
+    url = "/about/"
+    weight = 2
+
+  [[menu.main]]
+    name = "Проекты"
+    url = "/projects/"
+    weight = 3
+
+  [[menu.main]]
+    name = "Новости"
+    url = "/news/"
+    weight = 4
+
+  [[menu.main]]
+    name = "Отчёты"
+    url = "/reports/"
+    weight = 5
+
+  [[menu.main]]
+    name = "Видео"
+    url = "/videos/"
+    weight = 6
+
+  [[menu.main]]
+    name = "Партнёры"
+    url = "/partners/"
+    weight = 7
+
+  [[menu.main]]
+    name = "Документы"
+    url = "/docs/"
+    weight = 8
+
+  [[menu.main]]
+    name = "Контакты"
+    url = "/contact/"
+    weight = 9
+
+# Optional: To get the /news/2025/01/slug/ format you requested
+[permalinks]
+  news = "/news/:year/:month/:slug/"

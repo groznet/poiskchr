@@ -1,0 +1,79 @@
+---
+title: "В стенах Филиала Московского государственного университета в городе Грозный состоялся круглый стол на тему «Народы России в защите Отечества»"
+date: 2025-12-21T00:55:34
+draft: false
+---
+
+<!-- wp:paragraph -->
+<p>В работе круглого стола приняли участие представители органов государственной власти республики, историки, студенты.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Обсуждались вопросы установления судеб солдат и командиров Красной Армии, погибших и пропавших без вести на различных фронтах Великой Отечественной войны, и увековечения их памяти.<br>В преддверии окончания Года Защитника Отечества наша команда, команда проекта «Вахта Памяти «Терский Рубеж», организовала и провела несколько мероприятий со студентами высших и среднеспециальных учебных заведений нашей республики,- говорит Руководитель проекта член Общественной палаты РФ и ЧР – Председатель Совета Регионального отделения «Поисковое движение России» в ЧР Иса Сардалов. - Наш проект является непрерывным, долгосрочным комплексом мероприятий по увековечению памяти павших при защите Отечества в годы Великой Отечественной войны 1941-1945гг. и совершенствованию системы патриотического воспитания молодёжи посредством привлечения их к поисковым и патриотическим мероприятиям организации.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Как пояснил Иса Сардалов, основными целями и задачами проекта являются организация и проведение экспедиций по поиску незахороненных останков солдат РККА, погибших и пропавших без вести в 1942-1943 гг. при обороне Крыма и в битве за Кавказ на территории республик, краев и областей Северного Кавказа, привлечение молодежи к участию в мероприятиях героико-патриотической направленности, создание правильного общественного мнения в отношении истории войн. Проект включает в себя комплекс организационных, методических, поисковых, архивно-исследовательских, мемориальных мероприятий по увековечению памяти павших при защите Отечества, и нацелен на воспитание патриотических ценностей и национальной гордости у детей, подростков и молодежи, сохранение исторической памяти о событиях Великой Отечественной войны 1941-1945 гг., а также на восстановление исторической справедливости.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Хочется особо подчеркнуть, что одним из основных партнеров нашего проекта является Центральный архив Министерства обороны РФ, представители которого в этот раз приняли участие на наших мероприятиях, выступили с докладами и передали копии части документов, которые были изучены нами в ходе исследовательской работы в фондах главного архива Министерства обороны РФ. Здесь же была презентована и недавно вышедшая вторая книга многотомной монографии «Битва за Кавказ: факты, события, документы, - добавил Иса Сардалов.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>В завершении мероприятия принимавший участие в работе круглого стола Помощник Главы Чеченской Республики Тимур Алиев и Иса Сардалов высоко оценили уровень знания истории студентами Филиала Московского государственного университета в городе Грозный.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Многих из присутствующих здесь ребят я знаю лично, не раз принимали вместе участие и в различных интеллектуальных играх, и конкурсных работах, где они побеждали более подготовленные команды. Поэтому с уверенностью могу сказать, что они займут в ближайшее время достойное место среди волонтеров и окажут помощь и содействие в работе по поиску и установлению судеб солдат и командиров Красной Армии, погибших и пропавших без вести на различных фронтах Великой Отечественной войны и увековечения их памяти, - сказал Тимур Алиев.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>А в завершении мероприятия Тимур Алиев и Иса Сардалов поблагодарили руководство МГУ за организацию встречи и договорились в ближайшее время более детально обсудить вопросы совместной деятельности.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Следует отметить, что данные мероприятия проводятся в рамках исполнения протокольных поручений Главы Чеченской Республики Героя России Рамзана Кадырова на средства Фонда президентских грантов при непосредственной финансовой, материальной и информационной поддержке ООД «Поискового движения России», Общественной палаты Российской Федерации и Чеченской Республики, Юнармии РИ, Поискового отряда «Патриот» РИ.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>ПоисковикиРФ #ПоисковикиЧР #КомандаКРА #ПоискРФ #ПоискЧР #ПатриотыРоссии #Ингушетия #Фондпрезидентскихгрантов #ОбщественнаяпалатаРФ #ОбщественнаяпалатаЧР #ОфицерыРоссии #Регион95 #ГГНТУ #ТерскийРубеж #Чечня #ЧГУ #ЧГПУ #ПатриотЧР #Аджимушкай #ПоисковоедвижениевЧеченскойРеспублике #Судьбасолдата #СтуденческийдесантЧГУ #Терроризм #Грозный #ПатриотыЧечни #Малгобек #Дагестан</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:gallery {"linkTo":"none"} -->
+<figure class="wp-block-gallery has-nested-images columns-default is-cropped"><!-- wp:image {"id":33069,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="https://poisk-chr.ru/wp-content/uploads/2025/12/krwwvgKJwYFeQpKduiJ08Sk-uUv4en8GsdDCWvhrf1Jc-CU8-YoDbtwJGkeR8amnWJXyqzDFkFCZqqkZuNWzqUnO.jpg" alt="" class="wp-image-33069"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:image {"id":33066,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="https://poisk-chr.ru/wp-content/uploads/2025/12/uQVPh9xsHHtrksPfrtYlMLqMVkw7ekYS72mMJaHm7h3FrZKlGB6BVIp6HfjkTTRQUupWHUIfVGJlInx7bkbrScXJ.jpg" alt="" class="wp-image-33066"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:image {"id":33067,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="https://poisk-chr.ru/wp-content/uploads/2025/12/Vv4EEyRzwLu7H-uBPscAe2q84q1ZSUkUVOVyq4lT3CPlOLPFaoLOBCAwpg-mrmF08BDZS5tVfk_zMdVHpemCI6bL.jpg" alt="" class="wp-image-33067"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:image {"id":33064,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="https://poisk-chr.ru/wp-content/uploads/2025/12/Wh0_ibRHWUZqBgM4FcPK59_iNhCGC8DSOGJMHeD8J3tkd1UylR53sG3ZsPrlpJa7X7QZgPWNBO7Nayf8NtR0dL2y.jpg" alt="" class="wp-image-33064"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:image {"id":33071,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="https://poisk-chr.ru/wp-content/uploads/2025/12/ZkTJTMtZTMXc2miTRD2WfzOVsJhAarWufU8H4X1MnT2bG9joxJIAnCAM8jHToeEqCAqeuNh_WiyZogQQTxHDlWCH.jpg" alt="" class="wp-image-33071"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:image {"id":33072,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="https://poisk-chr.ru/wp-content/uploads/2025/12/zR99DOOjqcDiDP9addB5pJ2IS7SOO31a92kIgUklZXIBo2pp-zUOOw2D9Pmjact5ne30Ltj1DqP2-1_R4-TpgBwU.jpg" alt="" class="wp-image-33072"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:image {"id":33070,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="https://poisk-chr.ru/wp-content/uploads/2025/12/5EX1rQ4rHFfqON7IpzCiBSar9pgSxTnueDXHWlZG6kv99c1XipIFB8pMCWIubJVN9-R5-n0zvHvdaTzyFSze01oq.jpg" alt="" class="wp-image-33070"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:image {"id":33065,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="https://poisk-chr.ru/wp-content/uploads/2025/12/6yRLWU6-Srt7FYZuezOgLdm2-8iOD5X8Q9sh0-wUgU_-MJ-oqRmki9rYtq_J-9YoCDqz9tF3r3qnWRr16wr2yVVR.jpg" alt="" class="wp-image-33065"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:image {"id":33068,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="https://poisk-chr.ru/wp-content/uploads/2025/12/ifR2nHlHn8gjnG28AHWo2gvemaljS94ZuVeVrEa4aQi6evFna37Q6KTeOfEfzVyUqoRCdajfw_1Fgz80iDcNM8_Z.jpg" alt="" class="wp-image-33068"/></figure>
+<!-- /wp:image --></figure>
+<!-- /wp:gallery -->

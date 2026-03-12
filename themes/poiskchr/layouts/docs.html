@@ -1,0 +1,22 @@
+{{ define "main" }}
+<section class="mx-auto">
+    <header class="mb-6">
+        <!-- Breadcrumb -->
+        {{ partial "breadcrumb.html" . }}
+        <h1 class="text-3xl font-semibold">{{ .Title }}</h1>
+    </header>
+
+    <p class="mt-4 text-base leading-relaxed">
+        {{ .Content }}
+    </p>
+
+    <!-- Example document list -->
+    <div class="mt-8 grid gap-4">
+        {{ range .Resources.Match "*.pdf" }}
+        <a href="{{ .RelPermalink }}" target="_blank" class="block px-4 py-2 border rounded hover:bg-gray-100">
+            {{ .Name }}
+        </a>
+        {{ end }}
+    </div>
+</section>
+{{ end }}

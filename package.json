@@ -1,0 +1,18 @@
+{
+  "name": "poiskchr26",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "node scripts/generate-gallery.js",
+    "build": "npm run prepare && hugo",
+    "upload": "bash scripts/upload-images.sh"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.13.6",
+    "cheerio": "^1.2.0"
+  }
+}

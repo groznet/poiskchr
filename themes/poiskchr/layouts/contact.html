@@ -1,0 +1,77 @@
+{{ define "main" }}
+<section class="mx-auto">
+    <!-- Title -->
+    <header class="mb-6">
+        <!-- Breadcrumb -->
+        {{ partial "breadcrumb.html" . }}
+        <h1 class="text-3xl font-semibold">{{ .Title }}</h1>
+    </header>
+
+    <p class="mt-3 text-base leading-relaxed">
+        Мы открыты для сотрудничества, архивных запросов и участия в поисковых проектах.
+        Свяжитесь с нами удобным способом или отправьте сообщение через форму.
+    </p>
+
+    <!-- Contact Info -->
+    <!-- Convert icons to light versions -->
+    <div class="mt-8 grid gap-6 sm:grid-cols-2">
+        <div class="flex flex-col gap-1">
+            <h2 class="font-medium">Электронная почта</h2>
+            <a href="mailto:{{ site.Params.email }}">
+                <i class="far fa-envelope"></i> {{ site.Params.email }}
+            </a>
+        </div>
+
+        <div class="flex flex-col gap-1">
+            <h2 class="font-medium">Телефон</h2>
+            <p><i class="fas fa-phone"></i> {{ site.Params.phone }}</p>
+        </div>
+
+        <div class="flex flex-col gap-1">
+            <h2 class="font-medium">Адрес</h2>
+            <p><i class="fas fa-map-marker-alt"></i> {{ site.Params.address }}</p>
+        </div>
+
+        <div class="flex flex-col gap-1">
+            <h2 class="font-medium">Социальные сети</h2>
+            <ul class="flex flex-col gap-1">
+                {{ range site.Params.social }}
+                <li>
+                    <a href="{{ .url }}" target="_blank" rel="noopener">
+                        {{ .name }}
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="mt-12">
+        <h2 class="text-xl font-medium">Написать сообщение</h2>
+
+        <form action="https://formspree.io/f/your-id" method="POST" class="mt-5 grid gap-5">
+
+            <div class="grid gap-2">
+                <label for="name">Ваше имя</label>
+                <input disabled id="name" name="name" type="text" class="px-3 py-2 bg-gray-200" required>
+            </div>
+
+            <div class="grid gap-2">
+                <label for="email">Email</label>
+                <input disabled id="email" name="email" type="email" class="px-3 py-2 bg-gray-200" required>
+            </div>
+
+            <div class="grid gap-2">
+                <label for="message">Сообщение</label>
+                <textarea disabled id="message" name="message" rows="5" class="px-3 py-2 bg-gray-200" required></textarea>
+            </div>
+
+            <button disabled type="submit" class="px-5 py-2 bg-blue-600 text-white hover:bg-blue-700">
+                Отправить
+            </button>
+        </form>
+    </div>
+
+</section>
+{{ end }}

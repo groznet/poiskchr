@@ -1,0 +1,240 @@
+<!-- <div class="absolute inset-0 bg-black/40"></div> -->
+<aside class="absolute inset-y-0 left-0 w-80 max-w-[85vw] bg-[rgba(255,255,255,0.9)] backdrop-blur-md ring-1 ring-neutrals-borderGray shadow-vintage transform -translate-x-full transition-transform duration-200 ease-out">
+    <div class="flex items-center justify-between px-4 py-3 border-b border-neutrals-borderGray/70 bg-secondary-creamBeige">
+    <p class="text-sm font-semibold text-neutral-800">Просмотреть архив</p>
+    <button id="mobileDrawerClose" class="rounded p-1.5 text-neutral-700 hover:bg-white/60 focus:outline-none">
+        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+    </div>
+<nav class="p-2">
+    <ul class="divide-y divide-neutrals-borderGray/70">
+
+        <!-- NEWS ARCHIVE (Years + Months) -->
+<li class="p-0">
+    <!-- Main toggle -->
+    <button type="button"
+            class="group flex w-full items-center justify-between px-3 py-3 text-left hover:bg-white/60"
+            data-accordion-control
+            aria-expanded="false"
+            aria-controls="mnav-years">
+        <span class="text-sm font-semibold text-neutral-800">Архив новостей</span>
+        <svg class="chevron h-4 w-4 text-neutral-700"
+             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd"
+                  d="M6.293 4.293a1 1 0 011.414 0l5 5a1 1 0 010 1.414l-5 5A1 1 0 016 14.586L10.586 10 6 5.414a1 1 0 01.293-1.121z"
+                  clip-rule="evenodd"/>
+        </svg>
+    </button>
+
+    <div id="mnav-years" class="px-3 pb-3 hidden">
+        {{ $news := where .Site.RegularPages "Section" "news" }}
+        {{ $years := $news.GroupByDate "2006" }}
+        {{ $latest := (index $years 0).Key }}
+
+        {{ $visible := first 3 $years }}
+        {{ $older := after 3 $years }}
+
+        <ul class="mt-1 space-y-2">
+
+            <!-- Visible years (latest 3) -->
+            {{ $months := dict
+                "January" "Январь" "February" "Февраль" "March" "Март" "April" "Апрель"
+                "May" "Май" "June" "Июнь" "July" "Июль" "August" "Август"
+                "September" "Сентябрь" "October" "Октябрь" "November" "Ноябрь" "December" "Декабрь"
+            }}
+            {{ range $year := $visible }}
+            {{ $open := eq $year.Key $latest }}
+
+            <li>
+                <button type="button"
+                        class="group flex w-full items-center justify-between py-2"
+                        data-accordion-control
+                        aria-expanded="{{ if $open }}true{{ else }}false{{ end }}"
+                        aria-controls="y-{{ $year.Key }}">
+                    <span class="text-sm font-semibold text-neutral-700">{{ $year.Key }}</span>
+
+                    <svg class="chevron h-4 w-4 text-neutral-700"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M6.293 4.293a1 1 0 011.414 0l5 5a1 1 0 010 1.414l-5 5A1 1 0 016 14.586L10.586 10 6 5.414a1 1 0 01.293-1.121z"
+                            clip-rule="evenodd"/>
+                    </svg>
+                </button>
+
+                <div id="y-{{ $year.Key }}" class="ml-2 pb-2 {{ if not $open }}hidden{{ end }}">
+                    <ul class="space-y-1">
+                        {{ range $m := $year.Pages.GroupByDate "January" }}
+                        {{ $translated := index $months $m.Key }}
+                        <li>
+                            <a href="/news/{{ $year.Key }}/{{ printf "%02d" (index $m.Pages 0).Date.Month }}/"
+                            class="block rounded px-2 py-1.5 text-sm hover:bg-secondary-creamBeige/70">
+                                {{ $translated }} ({{ len $m.Pages }})
+                            </a>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </div>
+            </li>
+            {{ end }}
+
+
+            <!-- Older years toggle -->
+            {{ if gt (len $older) 0 }}
+            <li>
+                <button type="button"
+                        class="group flex w-full items-center py-2"
+                        data-accordion-control
+                        aria-expanded="false"
+                        aria-controls="older-y">
+                    
+                    <img src="/images/history.svg" alt="" class="w-4 h-4 mr-2">
+                    <span class="text-sm font-semibold text-neutral-700">Старые годы</span>
+
+                    <svg class="chevron h-4 w-4 text-neutral-700"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M6.293 4.293a1 1 0 011.414 0l5 5a1 1 0 010 1.414l-5 5A1 1 0 016 14.586L10.586 10 6 5.414a1 1 0 01.293-1.121z"
+                            clip-rule="evenodd"/>
+                    </svg>
+                </button>
+
+                <div id="older-y" class="ml-2 pb-2 hidden">
+                    <ul class="space-y-1">
+
+                        {{ $months := dict
+                            "January" "Январь" "February" "Февраль" "March" "Март" "April" "Апрель"
+                            "May" "Май" "June" "Июнь" "July" "Июль" "August" "Август"
+                            "September" "Сентябрь" "October" "Октябрь" "November" "Ноябрь" "December" "Декабрь"
+                        }}
+
+                        {{ range $year := $older }}
+                        <li>
+                            <button type="button"
+                                    class="group flex w-full items-center justify-between py-2"
+                                    data-accordion-control
+                                    aria-expanded="false"
+                                    aria-controls="y-{{ $year.Key }}">
+                                <span class="text-sm font-semibold text-neutral-700">{{ $year.Key }}</span>
+
+                                <svg class="chevron h-4 w-4 text-neutral-700"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M6.293 4.293a1 1 0 011.414 0l5 5a1 1 0 010 1.414l-5 5A1 1 0 016 14.586L10.586 10 6 5.414a1 1 0 01.293-1.121z"
+                                        clip-rule="evenodd"/>
+                                </svg>
+                            </button>
+
+                            <div id="y-{{ $year.Key }}" class="ml-2 pb-2 hidden">
+                                <ul class="space-y-1">
+                                    {{ range $m := $year.Pages.GroupByDate "January" }}
+                                    {{ $translated := index $months $m.Key }}
+                                    <li>
+                                        <a href="/news/{{ $year.Key }}/{{ printf "%02d" (index $m.Pages 0).Date.Month }}/"
+                                        class="block rounded px-2 py-1.5 text-sm hover:bg-secondary-creamBeige/70">
+                                            {{ $translated }} ({{ len $m.Pages }})
+                                        </a>
+                                    </li>
+                                    {{ end }}
+                                </ul>
+                            </div>
+                        </li>
+                        {{ end }}
+
+                    </ul>
+                </div>
+            </li>
+            {{ end }}
+
+        </ul>
+    </div>
+</li>
+
+
+        <!-- MEDIA COLLECTIONS -->
+        <li class="p-0">
+            <button type="button"
+                class="group flex w-full items-center justify-between px-3 py-3 text-left hover:bg-white/60"
+                data-accordion-control
+                aria-expanded="false"
+                aria-controls="mnav-media">
+                <span class="text-sm font-semibold text-neutral-800">Медиа коллекции</span>
+                <svg class="chevron h-4 w-4 text-neutral-700"
+                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                     fill="currentColor">
+                    <path fill-rule="evenodd"
+                          d="M6.293 4.293a1 1 0 011.414 0l5 5a1 1 0 010 1.414l-5 5A1 1 0 016 14.586L10.586 10 6 5.414a1 1 0 01.293-1.121z"
+                          clip-rule="evenodd"/>
+                </svg>
+            </button>
+
+            <div id="mnav-media" class="px-3 pb-3 hidden">
+                <ul class="mt-1 space-y-1">
+                    <li><a href="/photos/" class="block rounded px-2 py-1.5 text-sm hover:bg-secondary-creamBeige/70">Фотоэкспедиции</a></li>
+                    <li><a href="/videos/" class="block rounded px-2 py-1.5 text-sm hover:bg-secondary-creamBeige/70">Архив видео</a></li>
+                    <li><a href="/maps/" class="block rounded px-2 py-1.5 text-sm hover:bg-secondary-creamBeige/70">Карты местности</a></li>
+                    <li><a href="/docs/" class="block rounded px-2 py-1.5 text-sm hover:bg-secondary-creamBeige/70">Скан-копии документов</a></li>
+                </ul>
+            </div>
+        </li>
+
+        <!-- TAGS -->
+        <li class="p-0">
+            <button type="button"
+                class="group flex w-full items-center justify-between px-3 py-3 text-left hover:bg-white/60"
+                data-accordion-control
+                aria-expanded="false"
+                aria-controls="mnav-tags">
+                <span class="text-sm font-semibold text-neutral-800">Теги</span>
+                <svg class="chevron h-4 w-4 text-neutral-700" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                          d="M6.293 4.293a1 1 0 011.414 0l5 5a1 1 0 010 1.414l-5 5A1 1 0 016 14.586L10.586 10 6 5.414a1 1 0 01.293-1.121z"
+                          clip-rule="evenodd"/>
+                </svg>
+            </button>
+
+            <div id="mnav-tags" class="px-3 pb-3 hidden">
+                <div class="mt-2 flex-wrap gap-2">
+                    {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+                    {{ $count := len $taxonomy.Pages }}
+                    {{ $size := cond (gt $count 20) "text-base"
+                            (cond (gt $count 10) "text-sm"
+                            (cond (gt $count 5)  "text-xs"
+                            "text-[11px]")) }}
+
+                    <a href="{{ "/tags/" | relURL }}{{ $name | urlize }}/"
+                        class="{{ $size }} px-2 py-1 rounded hover:bg-secondary-creamBeige/70">
+                        {{ $name }}
+                    </a>
+                    {{ end }}
+                </div>
+            </div>
+        </li>
+
+        <!-- CATEGORIES -->
+        <li class="p-0">
+            <button type="button"
+                class="group flex w-full items-center justify-between px-3 py-3 text-left hover:bg-white/60"
+                data-accordion-control
+                aria-expanded="false"
+                aria-controls="mnav-categories">
+                <span class="text-sm font-semibold text-neutral-800">Рубрики</span>
+                <svg class="chevron h-4 w-4 text-neutral-700" ...></svg>
+            </button>
+
+            <div id="mnav-categories" class="px-3 pb-3 hidden">
+                <ul class="mt-1 space-y-1">
+                    <li><a href="/news/" class="block rounded px-2 py-1.5 text-sm hover:bg-secondary-creamBeige/70">Новости</a></li>
+                    <li><a href="/projects/" class="block rounded px-2 py-1.5 text-sm hover:bg-secondary-creamBeige/70">Проекты</a></li>
+                    <li><a href="#" class="block rounded px-2 py-1.5 text-sm hover:bg-secondary-creamBeige/70">Документы</a></li>
+                    <li><a href="#" class="block rounded px-2 py-1.5 text-sm hover:bg-secondary-creamBeige/70">История</a></li>
+                    <li><a href="#" class="block rounded px-2 py-1.5 text-sm hover:bg-secondary-creamBeige/70">Память и Поиск</a></li>
+                    <li><a href="#" class="block rounded px-2 py-1.5 text-sm hover:bg-secondary-creamBeige/70">Экспедиции</a></li>
+                </ul>
+            </div>
+        </li>
+
+    </ul>
+</nav>
+
+</aside>

@@ -1,0 +1,32 @@
+---
+categories:
+- главная-рубрика
+date: 2023-05-05
+slug: 2023-05-05-post-6
+title: В преддверии подготовки к празднованию очередной годовщины Победы над фашистской
+  Германией
+---
+
+В преддверии подготовки к празднованию очередной годовщины Победы над фашистской Германией Мовла Гайраханов в МБОУ СОШ N 15 г.Грозный провел профилактическое мероприятие с учащимися 9-х классов.
+
+Мероприятие проводилось методом групповой работы по теме "Моя мечта".
+
+В ходе встречи было проведено анкетирование участников мероприятия, по вопросам достижения мечты и цели.
+
+Мовла Гайраханов один из самых активных членов команды проекта «Ушедшие в бессмертие», участник боевых действий, является экспертом по борьбе с наркоманией федерального уровня, руководит Региональным отделением «Офицеры России» в Чеченской Республике. Имеет огромный опыт работы с молодежью, и, как правило, всегда находит понимание и общий язык с ними. With the help of purchase my house, you can quickly and simply sell your House. They will take care of everything for you, beginning with the first evaluation and ending with the closure. Visit [https://www.home-investors.net/florida/investors-that-buy-houses-fort-walton-beach-fl/](https://www.home-investors.net/florida/investors-that-buy-houses-fort-walton-beach-fl/).
+
+Мероприятие проводилось с участием и при организационной поддержке антинаркотической комиссии Мэрии г. Грозный, префектуры Ахматовского района, специалистов ГБУ РНД ,УНК МВД по ЧР и РЦРДО.  
+Ни одно мероприятие, проводимое Мовлой Гайрахановым, не проходит без обсуждения вопросов сохранения исторической памяти и работы по увековечению памяти погибших защитников Отечества.
+
+Homeowners who are selling their houses stand to benefit greatly from the help provided by businesses that are experts in acquiring residential real estate. They make the process of selling a property simple for their customers by offering competitive rates, superior service, and a simplified sales procedure. Visit [https://www.cashoffers.com/north-carolina/cash-offer-chapel-hill-nc/](https://www.cashoffers.com/north-carolina/cash-offer-chapel-hill-nc/).
+
+И на сей раз основной блок вопрос касался именно Великой Отечественной войны, о роли и участии выходцев из Чечено-Ингушской АССР.
+
+Участники мероприятия поблагодарили гостей за полезную встречу.  
+Следует отметить, что данные мероприятия проводятся в рамках исполнения протокольных поручений Главы Чеченской Республики Героя России Рамзана Кадырова на средства Фонда президентских грантов при непосредственной финансовой, материальной и информационной поддержке ООД «Поискового движения России», Общественной палаты Российской Федерации и Чеченской Республики.
+
+[#ПоисковикиРФ](https://vk.com/feed?section=search&q=%23%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%D0%BE%D0%B2%D0%B8%D0%BA%D0%B8%D0%A0%D0%A4)[#ПоисковикиЧР](https://vk.com/feed?section=search&q=%23%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%D0%BE%D0%B2%D0%B8%D0%BA%D0%B8%D0%A7%D0%A0)[#КомандаКРА](https://vk.com/feed?section=search&q=%23%D0%9A%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%B0%D0%9A%D0%A0%D0%90)[#ПоискРФ](https://vk.com/feed?section=search&q=%23%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%D0%A0%D0%A4)[#ПоискЧР](https://vk.com/feed?section=search&q=%23%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%D0%A7%D0%A0)[#ПатриотыРоссии](https://vk.com/feed?section=search&q=%23%D0%9F%D0%B0%D1%82%D1%80%D0%B8%D0%BE%D1%82%D1%8B%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8)[#Ингушетия](https://vk.com/feed?section=search&q=%23%D0%98%D0%BD%D0%B3%D1%83%D1%88%D0%B5%D1%82%D0%B8%D1%8F)[#Фондпрезидентскихгрантов](https://vk.com/feed?section=search&q=%23%D0%A4%D0%BE%D0%BD%D0%B4%D0%BF%D1%80%D0%B5%D0%B7%D0%B8%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%D1%85%D0%B3%D1%80%D0%B0%D0%BD%D1%82%D0%BE%D0%B2)[#ОбщественнаяпалатаРФ](https://vk.com/feed?section=search&q=%23%D0%9E%D0%B1%D1%89%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F%D0%BF%D0%B0%D0%BB%D0%B0%D1%82%D0%B0%D0%A0%D0%A4)[#ОбщественнаяпалатаЧР](https://vk.com/feed?section=search&q=%23%D0%9E%D0%B1%D1%89%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F%D0%BF%D0%B0%D0%BB%D0%B0%D1%82%D0%B0%D0%A7%D0%A0)[#ОфицерыРоссии](https://vk.com/feed?section=search&q=%23%D0%9E%D1%84%D0%B8%D1%86%D0%B5%D1%80%D1%8B%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8)[#Регион95](https://vk.com/feed?section=search&q=%23%D0%A0%D0%B5%D0%B3%D0%B8%D0%BE%D0%BD95)[#ГГНТУ](https://vk.com/feed?section=search&q=%23%D0%93%D0%93%D0%9D%D0%A2%D0%A3)[#ТерскийРубеж](https://vk.com/feed?section=search&q=%23%D0%A2%D0%B5%D1%80%D1%81%D0%BA%D0%B8%D0%B9%D0%A0%D1%83%D0%B1%D0%B5%D0%B6)[#Чечня](https://vk.com/feed?section=search&q=%23%D0%A7%D0%B5%D1%87%D0%BD%D1%8F)[#ЧГУ](https://vk.com/feed?section=search&q=%23%D0%A7%D0%93%D0%A3)[#ЧГПУ](https://vk.com/feed?section=search&q=%23%D0%A7%D0%93%D0%9F%D0%A3)[#ПатриотЧР](https://vk.com/feed?section=search&q=%23%D0%9F%D0%B0%D1%82%D1%80%D0%B8%D0%BE%D1%82%D0%A7%D0%A0)[#Аджимушкай](https://vk.com/feed?section=search&q=%23%D0%90%D0%B4%D0%B6%D0%B8%D0%BC%D1%83%D1%88%D0%BA%D0%B0%D0%B9)[#ПоисковоедвижениевЧеченскойРеспублике](https://vk.com/feed?section=search&q=%23%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%D0%BE%D0%B2%D0%BE%D0%B5%D0%B4%D0%B2%D0%B8%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%D0%B2%D0%A7%D0%B5%D1%87%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%B9%D0%A0%D0%B5%D1%81%D0%BF%D1%83%D0%B1%D0%BB%D0%B8%D0%BA%D0%B5)[#Судьбасолдата](https://vk.com/feed?section=search&q=%23%D0%A1%D1%83%D0%B4%D1%8C%D0%B1%D0%B0%D1%81%D0%BE%D0%BB%D0%B4%D0%B0%D1%82%D0%B0)[#СтуденческийдесантЧГУ](https://vk.com/feed?section=search&q=%23%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9%D0%B4%D0%B5%D1%81%D0%B0%D0%BD%D1%82%D0%A7%D0%93%D0%A3)[#Терроризм](https://vk.com/feed?section=search&q=%23%D0%A2%D0%B5%D1%80%D1%80%D0%BE%D1%80%D0%B8%D0%B7%D0%BC)[#Грозный](https://vk.com/feed?section=search&q=%23%D0%93%D1%80%D0%BE%D0%B7%D0%BD%D1%8B%D0%B9)[#ПатриотыЧечни](https://vk.com/feed?section=search&q=%23%D0%9F%D0%B0%D1%82%D1%80%D0%B8%D0%BE%D1%82%D1%8B%D0%A7%D0%B5%D1%87%D0%BD%D0%B8)[#Малгобек](https://vk.com/feed?section=search&q=%23%D0%9C%D0%B0%D0%BB%D0%B3%D0%BE%D0%B1%D0%B5%D0%BA)[#маоонацсовет](https://vk.com/feed?section=search&q=%23%D0%BC%D0%B0%D0%BE%D0%BE%D0%BD%D0%B0%D1%86%D1%81%D0%BE%D0%B2%D0%B5%D1%82)[#ЮнармияРИ](https://vk.com/feed?section=search&q=%23%D0%AE%D0%BD%D0%B0%D1%80%D0%BC%D0%B8%D1%8F%D0%A0%D0%98)[#Дагестан](https://vk.com/feed?section=search&q=%23%D0%94%D0%B0%D0%B3%D0%B5%D1%81%D1%82%D0%B0%D0%BD)
+
+[](https://poisk-chr.ru/wp-content/uploads/2023/05/6QW2STAdJLE.jpg)
+
+[](https://poisk-chr.ru/wp-content/uploads/2023/05/yPQOwno4zNs.jpg)

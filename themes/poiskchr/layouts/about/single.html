@@ -1,0 +1,35 @@
+{{ define "main" }}
+
+<article class="mx-auto">
+
+    <!-- Title -->
+    <header class="mb-6">
+        <!-- Breadcrumb -->
+        {{ partial "breadcrumb.html" . }}
+        <h1 class="text-3xl font-semibold">{{ .Title }}</h1>
+    </header>
+
+    <!-- Content -->
+    <div class="mb-8">
+        {{ .Content }}
+    </div>
+
+    <!-- Optional subpages (sections) -->
+    {{ if .Pages }}
+    <section class="mt-12">
+        <h2 class="text-2xl font-semibold mb-4">Разделы</h2>
+        <div class="space-y-4">
+            {{ range .Pages }}
+            <div class="p-4 rounded-md bg-[rgba(255,255,255,0.85)] ring-1 ring-neutrals-borderGray shadow">
+                <h3 class="text-xl font-semibold mb-1">
+                    <a href="{{ .RelPermalink }}" class="hover:underline">{{ .Title }}</a>
+                </h3>
+                <p class="text-gray-700">{{ .Summary }}</p>
+            </div>
+            {{ end }}
+        </div>
+    </section>
+    {{ end }}
+
+</article>
+{{ end }}

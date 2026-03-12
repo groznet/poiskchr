@@ -1,0 +1,49 @@
+{{ define "main" }}
+<section class="mx-auto max-w-5xl">
+
+    <!-- Header -->
+    <header class="mb-6">
+        {{ partial "breadcrumb.html" . }}      
+        <h1 class="text-3xl font-semibold">{{ .Title }}</h1>
+        {{ with .Content }}
+        <div class="prose max-w-none mt-4">
+            {{ . }}
+        </div>
+        {{ end }}
+    </header>
+
+    <!-- Projects Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        {{ range .Pages }}
+        <article class="flex flex-col">
+            <!-- Featured image -->
+            {{ with .Resources.GetMatch "featured*" }}
+            <a href="{{ .Page.RelPermalink }}" class="block aspect-[16/9] overflow-hidden rounded-md">
+                <img src="{{ .RelPermalink }}" alt="{{ $.Title }}" class="w-full h-full object-cover">
+            </a>
+            {{ end }}
+
+            <!-- Title -->
+            <h2 class="mt-3 text-xl font-semibold">
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            </h2>
+
+            <!-- Summary -->
+            {{ if .Params.summary }}
+            <p class="mt-2 text-sm leading-relaxed text-neutral-700">
+                {{ .Params.summary }}
+            </p>
+            {{ end }}
+
+            <!-- Read More -->
+            <a href="{{ .RelPermalink }}" class="mt-3 text-sm underline underline-offset-2 hover:no-underline">
+                Подробнее →
+            </a>
+        </article>
+        {{ end }}
+
+    </div>
+
+</section>
+{{ end }}
