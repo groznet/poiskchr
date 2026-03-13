@@ -1,4 +1,4 @@
-This script is a **pre-processor** for your Hugo static site generator. Since you want to keep large image files off GitHub and your local machine, the script acts as a bridge: it "looks" at your remote storage, sees what is there, and writes a local "map" (`gallery.json`) so Hugo knows how to link those remote files.
+This script `generate-gallery-remote.js` is a **pre-processor** for your Hugo static site generator. Since you want to keep large image files off GitHub and your local machine, the script acts as a bridge: it "looks" at your remote storage, sees what is there, and writes a local "map" (`gallery.json`) so Hugo knows how to link those remote files.
 
 ---
 
