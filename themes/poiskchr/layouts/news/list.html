@@ -1,95 +1,322 @@
 {{ define "main" }}
 <section id="featured" class="mx-auto">
-    <!-- Title -->
-    <header class="mb-2">
-        <!-- Breadcrumb -->
+    <!-- Header & Controls -->
+    <header class="mb-6">
         {{ partial "breadcrumb.html" . }}
-    </header>
-    <div class="flex items-baseline justify-between">
-        <h1 class="text-2xl md:text-3xl font-semibold">{{ .Title }} {{ .Date.Format "2006" }}</h1>
-        <a href="/news/" class="text-sm text-primary hover:underline">Все новости</a>
-    </div>
+        
+        {{/* Extract year and month from section path if present */}}
+        {{ $path := split (trim .RelPermalink "/") "/" }}
+        {{ $year := "" }}
+        {{ $monthNum := "" }}
+        {{ $monthName := "" }}
 
-    <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-        {{ $posts := slice }}
-
-        {{ if eq .CurrentSection .Site.GetPage "section" "news" }}
-            {{ $posts = sort (where .Site.RegularPages "Section" "news") "Date" "desc" }}
-        {{ else }}
-            {{ $posts = sort .Pages "Date" "desc" }}
+        {{ if ge (len $path) 2 }}
+            {{ $year = index $path 1 }}
+        {{ end }}
+        {{ if ge (len $path) 3 }}
+            {{ $monthNum = index $path 2 }}
+            {{/* Map month numbers to Russian names */}}
+            {{ $months := dict "01" "Январь" "02" "Февраль" "03" "Март" "04" "Апрель" "05" "Май" "06" "Июнь" "07" "Июль" "08" "Август" "09" "Сентябрь" "10" "Октябрь" "11" "Ноябрь" "12" "Декабрь" }}
+            {{ $monthName = index $months $monthNum }}
         {{ end }}
 
-        {{ $paginator := .Paginate $posts 9 }}
+        <div class="flex items-center justify-between border-b border-gray-200 pb-3 mt-2">
+            <div>
+                <h1 class="text-2xl md:text-3xl font-semibold font-serif flex items-center gap-2.5">
+                    <i class="fa-solid fa-newspaper text-primary"></i>
+                    <span>
+                        {{ if $monthName }}
+                            Архив за {{ $monthName }} {{ $year }}
+                        {{ else if $year }}
+                            Архив за {{ $year }} год
+                        {{ else }}
+                            Новости
+                        {{ end }}
+                    </span>
+                </h1>
 
+                <!-- Dynamic Description -->
+                <p class="text-sm text-neutral-500 mt-1">
+                    {{ if $monthName }}
+                        Все публикации и материалы за {{ $monthName | lower }} {{ $year }} года.
+                    {{ else if $year }}
+                        Полный архив новостей за {{ $year }} год.
+                    {{ else }}
+                        Последние события, обновления и новости.
+                    {{ end }}
+                </p>
+            </div>
+
+            <!-- View Switcher Toggle -->
+            <div class="inline-flex p-1 bg-gray-100 rounded-lg ring-1 ring-gray-200/60" role="group" aria-label="Вид отображения">
+                <button 
+                    id="view-grid-btn"
+                    type="button" 
+                    onclick="switchNewsView('grid')"
+                    class="p-1.5 px-2.5 text-xs font-medium rounded-md transition-all duration-150 flex items-center gap-1.5 text-gray-500 hover:text-gray-900 aria-selected:bg-white aria-selected:text-primary aria-selected:shadow-sm"
+                    aria-label="Сетка"
+                    aria-selected="true"
+                >
+                    <i class="fa-solid fa-border-all text-sm"></i>
+                    <span class="hidden sm:inline">Сетка</span>
+                </button>
+                
+                <button 
+                    id="view-list-btn"
+                    type="button" 
+                    onclick="switchNewsView('list')"
+                    class="p-1.5 px-2.5 text-xs font-medium rounded-md transition-all duration-150 flex items-center gap-1.5 text-gray-500 hover:text-gray-900 aria-selected:bg-white aria-selected:text-primary aria-selected:shadow-sm"
+                    aria-label="Список"
+                    aria-selected="false"
+                >
+                    <i class="fa-solid fa-list text-sm"></i>
+                    <span class="hidden sm:inline">Список</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cards Container -->
+    {{ $posts := slice }}
+
+    {{ if eq .RelPermalink "/news/" }}
+        {{/* On main /news/, get all individual articles from all year/month folders */}}
+        {{ $posts = where .Site.RegularPages "Section" "news" }}
+    {{ else }}
+        {{/* On year (/news/2026/) or month (/news/2026/03/) pages, fetch posts within that specific branch */}}
+        {{ $posts = .RegularPagesRecursive }}
+    {{ end }}
+
+    {{ $posts = sort $posts "Date" "desc" }}
+
+    {{ $paginator := .Paginate $posts 9 }}
+
+    <div id="news-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 transition-all">
         {{ range $paginator.Pages }}
 
+        {{/* Dynamic Image Selection Logic from mytheme */}}
+        {{ $imgSrc := "" }}
 
-        <article class="group overflow-hidden rounded-md bg-[rgba(255,255,255,0.85)] ring-1 ring-neutrals-borderGray shadow">
-            <div class="overflow-hidden aspect-[4/3]">
-                <a href="{{ .Permalink }}">
-                    {{ $cdn := .Site.Params.cdn }}
-                    {{ $dir := replace .File.Dir "\\" "/" -1 }}
-                    {{ $featured := printf "%s/%sfeatured.jpg" $cdn $dir }}
+        {{/* 1. Try Remote gallery.json */}}
+        {{ if .File }}
+            {{ $galleryJson := printf "%sgallery.json" .File.Dir }}
+            {{ if fileExists $galleryJson }}
+                {{ $gData := unmarshal (readFile $galleryJson) }}
+                {{ $imgSrc = $gData.featured_image }}
+            {{ end }}
+        {{ end }}
 
-                    <img 
-                        src="{{ $featured }}" 
-                        alt="{{ .Title }}" 
-                        class="h-full w-full object-cover transition-transform duration-200 ease-out group-hover:scale-[1.03]"
-                        onerror="this.onerror=null;this.src='/images/post-placeholder.jpg';"
-                    />
-                </a>
+        {{/* 2. Fallback to Local Bundle or Params */}}
+        {{ if not $imgSrc }}
+            {{ $featuredImg := .Resources.GetMatch "{featured,cover,main,index}*.{jpg,jpeg,png,webp,gif,avif,svg}" }}
+            {{ $anyImg := index (.Resources.ByType "image") 0 }}
 
-            </div>
-            <div class="p-4">
-                <h4 class="text-base font-semibold text-neutral-900">
-                    <a href="{{ .Permalink }}">{{ .Title }}</a>
-                </h4>
-                <p class="mt-1 text-sm text-neutral-700 leading-relaxed">
-                    {{ .Params.summary }}
-                </p>
-                <div class="mt-3 flex justify-between text-[12px] text-neutral-600">
-                    {{ $months := dict "Jan" "Янв" "Feb" "Фев" "Mar" "Мар" "Apr" "Апр" "May" "Май" "Jun" "Июн" "Jul" "Июл" "Aug" "Авг" "Sep" "Сен" "Oct" "Окт" "Nov" "Ноя" "Dec" "Дек" }}
+            {{ if $featuredImg }}
+                {{ $imgSrc = $featuredImg.RelPermalink }}
+            {{ else if $anyImg }}
+                {{ $imgSrc = $anyImg.RelPermalink }}
+            {{ else if .Params.image }}
+                {{ $imgSrc = .Params.image | relURL }}
+            {{ else }}
+                {{ $imgSrc = "/images/post-placeholder.jpg" }}
+            {{ end }}
+        {{ end }}
+
+        {{ $category := .Params.category | default "Новости" }}
+
+        <article class="news-card group flex flex-col justify-between">
+            <div class="news-card-body flex flex-col h-full">
+                <!-- Image Container -->
+                <div class="news-card-image overflow-hidden aspect-[4/3] relative bg-gray-100 shrink-0">
+                    <a href="{{ .Permalink }}" class="block h-full w-full">
+                        <img 
+                            src="{{ $imgSrc }}" 
+                            alt="{{ .Title }}" 
+                            class="h-full w-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.02]"
+                            onerror="this.onerror=null;this.src='/images/post-placeholder.jpg';"
+                            loading="lazy"
+                        />
+                    </a>
                     
-                    <!-- Fake random reads indicator -->
-                    <span><i class="fas fa-eye text-xs"></i> {{ add 50 (mod (now.Unix | int) 150) }}</span>
+                    <!-- Category Badge -->
+                    <span class="news-card-category absolute top-2 left-2 bg-black/60 backdrop-blur-sm text-white text-[11px] font-medium px-2 py-0.5 rounded">
+                        {{ $category }}
+                    </span>
+                </div>
+
+                <!-- Content -->
+                <div class="py-2.5 flex flex-col flex-grow justify-between">
+                    <div>
+                        <h2 class="text-base font-semibold font-serif text-neutral-900 group-hover:text-primary transition-colors line-clamp-2">
+                            <a href="{{ .Permalink }}">{{ .Title }}</a>
+                        </h2>
+                        <!-- Excerpt: Controlled via CSS -->
+                        <p class="news-card-excerpt mt-1.5 text-sm text-neutral-600 leading-relaxed line-clamp-3">
+                            {{ (.Params.summary | default .Summary) | truncate 75 "..." }}
+                        </p>
+                    </div>
+
+                    <!-- Meta / Footer -->
+                    <div class="mt-2.5 flex items-center justify-between text-xs text-neutral-500">
+                        <div class="flex items-center gap-3">
+                            <!-- Date -->
+                            <span class="flex items-center gap-1.5">
+                                <i class="fa-regular fa-calendar text-primary/80"></i>
+                                <time datetime="{{ .Date.Format "2006-01-02" }}">
+                                    {{ .Date.Format "02.01.2006" }}
+                                </time>
+                            </span>
+
+                            <!-- Reading Time -->
+                            <span title="Время чтения" class="flex items-center gap-1">
+                                <i class="fa-regular fa-clock text-xs"></i> {{ .ReadingTime }} мин
+                            </span>
+                        </div>
+
+                        <!-- Views (Hidden in list mode via CSS) -->
+                        <span title="Просмотры" class="news-card-views flex items-center gap-1">
+                            <i class="fa-regular fa-eye text-xs"></i> {{ add 50 (mod (now.Unix | int) 150) }}
+                        </span>
+                    </div>
                 </div>
             </div>
         </article>
         {{ end }}
-
     </div>
 
     <!-- Pagination -->
     {{ if gt $paginator.TotalPages 1 }}
-    <nav class="mt-8 flex justify-center" aria-label="Pagination">
-        <ul class="flex items-center gap-2 m-0 p-0 list-none">
+    <nav class="mt-10 flex justify-center" aria-label="Навигация по страницам">
+        <ul class="flex items-center gap-1 m-0 p-0 list-none text-sm font-medium">
+            
+            <!-- Previous Page -->
             {{ if $paginator.HasPrev }}
             <li>
-                <a href="{{ $paginator.Prev.URL }}" class="px-3 py-2 text-sm rounded hover:bg-gray-100 no-underline">
-                    <i class="fas fa-chevron-left text-xs"></i> Назад
+                <a href="{{ $paginator.Prev.URL }}" class="px-3 py-2 rounded border border-gray-200 hover:bg-gray-100 flex items-center gap-1.5 text-gray-700 transition-colors" aria-label="Предыдущая страница">
+                    <i class="fa-solid fa-chevron-left text-xs"></i>
+                    <span class="hidden sm:inline">Назад</span>
                 </a>
             </li>
             {{ end }}
+
+            <!-- Page Numbers with Ellipsis -->
+            {{ $currentPage := $paginator.PageNumber }}
+            {{ $totalPages := $paginator.TotalPages }}
 
             {{ range $paginator.Pagers }}
+                {{ $pageNum := .PageNumber }}
+                
+                {{/* Always show 1st, last, current, and 1 page before/after current */}}
+                {{ $showPage := or (eq $pageNum 1) (eq $pageNum $totalPages) (and (ge $pageNum (sub $currentPage 1)) (le $pageNum (add $currentPage 1))) }}
+
+                {{ if $showPage }}
+                    <li>
+                        <a href="{{ .URL }}" class="px-3.5 py-2 rounded border transition-colors {{ if eq . $paginator }}bg-primary border-primary text-white{{ else }}border-gray-200 text-gray-700 hover:bg-gray-100{{ end }}">
+                            {{ $pageNum }}
+                        </a>
+                    </li>
+                {{ else if or (eq $pageNum (sub $currentPage 2)) (eq $pageNum (add $currentPage 2)) }}
+                    {{/* Show ellipsis for skipped ranges */}}
+                    <li>
+                        <span class="px-2 py-2 text-gray-400 select-none">…</span>
+                    </li>
+                {{ end }}
+            {{ end }}
+
+            <!-- Next Page -->
+            {{ if $paginator.HasNext }}
             <li>
-                <a href="{{ .URL }}" class="px-3 py-2 text-sm rounded no-underline {{ if eq . $paginator }}bg-primary text-white{{ else }}hover:bg-gray-100{{ end }}">
-                    {{ .PageNumber }}
+                <a href="{{ $paginator.Next.URL }}" class="px-3 py-2 rounded border border-gray-200 hover:bg-gray-100 flex items-center gap-1.5 text-gray-700 transition-colors" aria-label="Следующая страница">
+                    <span class="hidden sm:inline">Вперед</span>
+                    <i class="fa-solid fa-chevron-right text-xs"></i>
                 </a>
             </li>
             {{ end }}
 
-            {{ if $paginator.HasNext }}
-            <li>
-                <a href="{{ $paginator.Next.URL }}" class="px-3 py-2 text-sm rounded hover:bg-gray-100 no-underline">
-                    Вперед <i class="fas fa-chevron-right text-xs"></i>
-                </a>
-            </li>
-            {{ end }}
         </ul>
     </nav>
     {{ end }}
-    
 </section>
+
+<!-- CSS & JS -->
+<style>
+    /* Excerpt: Hidden by default in Grid view */
+    .news-card-excerpt {
+        display: none;
+    }
+
+    /* Excerpt: Show only in List view */
+    #news-container.view-list .news-card-excerpt {
+        display: -webkit-box;
+    }
+
+    /* List View Overrides */
+    #news-container.view-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    #news-container.view-list .news-card-body {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    @media (max-width: 639px) {
+        #news-container.view-list .news-card-body {
+            flex-direction: column;
+            gap: 0;
+        }
+    }
+
+    #news-container.view-list .news-card-image {
+        width: 240px;
+        aspect-ratio: 16 / 10;
+    }
+
+    @media (max-width: 639px) {
+        #news-container.view-list .news-card-image {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+        }
+    }
+
+    /* Hide views count in List View */
+    #news-container.view-list .news-card-views {
+        display: none !important;
+    }
+</style>
+
+<script>
+    function switchNewsView(mode) {
+        const container = document.getElementById('news-container');
+        const gridBtn = document.getElementById('view-grid-btn');
+        const listBtn = document.getElementById('view-list-btn');
+
+        if (!container || !gridBtn || !listBtn) return;
+
+        if (mode === 'list') {
+            container.classList.remove('grid', 'grid-cols-1', 'sm:grid-cols-2', 'lg:grid-cols-3');
+            container.classList.add('view-list');
+            
+            gridBtn.setAttribute('aria-selected', 'false');
+            listBtn.setAttribute('aria-selected', 'true');
+            localStorage.setItem('news_view_preference', 'list');
+        } else {
+            container.classList.remove('view-list');
+            container.classList.add('grid', 'grid-cols-1', 'sm:grid-cols-2', 'lg:grid-cols-3');
+            
+            gridBtn.setAttribute('aria-selected', 'true');
+            listBtn.setAttribute('aria-selected', 'false');
+            localStorage.setItem('news_view_preference', 'grid');
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const savedView = localStorage.getItem('news_view_preference');
+        if (savedView === 'list') {
+            switchNewsView('list');
+        }
+    });
+</script>
 {{ end }}

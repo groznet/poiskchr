@@ -3,18 +3,25 @@
     <header class="mb-6">
         <!-- Breadcrumb -->
         {{ partial "breadcrumb.html" . }}
-        <h1 class="text-3xl font-semibold">{{ .Title }}</h1>
+        <h1 class="text-3xl font-semibold font-serif flex items-center gap-3">
+            <i class="fa-solid fa-folder-open text-primary"></i>
+            <span>{{ .Title }}</span>
+        </h1>
     </header>
 
-    <p class="mt-4 text-base leading-relaxed">
+    <div class="mt-4 text-base leading-relaxed">
         {{ .Content }}
-    </p>
+    </div>
 
-    <!-- Example document list -->
+    <!-- Document list -->
     <div class="mt-8 grid gap-4">
         {{ range .Resources.Match "*.pdf" }}
-        <a href="{{ .RelPermalink }}" target="_blank" class="block px-4 py-2 border rounded hover:bg-gray-100">
-            {{ .Name }}
+        <a href="{{ .RelPermalink }}" target="_blank" rel="noopener" class="flex items-center justify-between px-4 py-3 border border-neutrals-borderGray rounded-lg bg-white/80 hover:bg-secondary-creamBeige/50 hover:border-primary transition-all group shadow-sm">
+            <div class="flex items-center gap-3">
+                <i class="fa-solid fa-file-pdf text-red-600 text-xl"></i>
+                <span class="font-medium text-neutrals-textGray group-hover:text-primary transition-colors">{{ .Name }}</span>
+            </div>
+            <i class="fa-solid fa-arrow-down-long text-gray-400 group-hover:text-primary transition-colors"></i>
         </a>
         {{ end }}
     </div>

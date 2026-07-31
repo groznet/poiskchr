@@ -1,15 +1,21 @@
 {{ define "main" }}
 <section class="mx-auto max-w-5xl">
-
-    <!-- Header -->
+<section class="mx-auto">
     <header class="mb-6">
-        {{ partial "breadcrumb.html" . }}      
-        <h1 class="text-3xl font-semibold">{{ .Title }}</h1>
-        {{ with .Content }}
-        <div class="prose max-w-none mt-4">
-            {{ . }}
+        <!-- Breadcrumb -->
+        {{ partial "breadcrumb.html" . }}
+        <h1 class="text-3xl font-semibold font-serif flex items-center gap-3">
+            <i class="fa-solid fa-folder-open text-primary"></i>
+            <span>{{ .Title }}</span>
+        </h1>
+    </header>
+
+            {{ with .Content }}
+            <div class="prose prose-neutral max-w-none text-sm md:text-base mt-4">
+                {{ . }}
+            </div>
+            {{ end }}
         </div>
-        {{ end }}
     </header>
 
     <!-- Projects Grid -->

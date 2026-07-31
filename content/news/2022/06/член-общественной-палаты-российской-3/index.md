@@ -1,0 +1,35 @@
+---
+title: "Член Общественной палаты Российской Федерации Иса Сардалов"
+slug: 'chlen-obshchestvennoi-palaty-rossiiskoi-federatsii-isa'
+date: 2022-06-30
+categories: 
+  - "главная-рубрика"
+coverImage: "m0rDqOnly9c.jpg"
+---
+
+Член Общественной палаты Российской Федерации Иса Сардалов вместе с представителями РО ООД "Поисковое движение России" в Чеченской Республике в городе Воронеж побывал на могиле Героя Советского Союза, уроженца станицы Петропавловской Чечено-Ингушской АССР, Чевола Никофора Дмитриевича.
+
+Наша справка:  
+Чевола Никофор Дмитриевич, родился 10 (23 августа) 1909 года в станице Петропавловская в семье крестьянина. Русский. Член ВКП(б) с 1932 года. Окончил 8 классов. Работал бригадиром тракторной бригады в совхозе.
+
+В РККА с 1931 года. Окончил Киевское артиллерийское училище в 1936 году. Участник освободительного похода в Бессарабию и Северную Буковину в 1940 году.
+
+На фронте в Великую Отечественную войну с 1941 года. 8-я отдельная гвардейская истребительная противотанковая артиллерийская бригада (40-я армия 1-й Украинский фронт) под командованием гвардии полковника Чеволы отличилась в боях 25 января 1944 года в деревне Цибулев.
+
+Бригада в течение суток сдерживала натиск врага, уничтожив при этом 342 танка, 76 бронетранспортёров и 62 орудия противника. Звание Героя Советского Союза присвоено 1 июля 1944 года.
+
+За время войны комбриг Чевола был одиннадцать раз упомянут в благодарственных в приказах Верховного Главнокомандующего.
+
+Участвовал в Параде Победы в Москве 24 июня 1945 года.
+
+После войны продолжал службу в армии. В 1946 окончил ВАК при Военной академии имени Ф. Э. Дзержинского.
+
+С 1956 в запасе. Жил в Воронеже. Умер 13 сентября 1993 года. Похоронен на Левобережном кладбище.
+
+Найти могилу Героя помогли представители РО ООД "Поисковое движение России" в Воронежской области, за что им огромное спасибо!
+
+Вечная память Героям Отечества!
+
+[#ПоисковикиРФ](https://vk.com/feed?section=search&q=%23%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%D0%BE%D0%B2%D0%B8%D0%BA%D0%B8%D0%A0%D0%A4)[#ПоисковикиЧР](https://vk.com/feed?section=search&q=%23%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%D0%BE%D0%B2%D0%B8%D0%BA%D0%B8%D0%A7%D0%A0)[#КомандаКРА](https://vk.com/feed?section=search&q=%23%D0%9A%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%B0%D0%9A%D0%A0%D0%90)[#ПоискРФ](https://vk.com/feed?section=search&q=%23%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%D0%A0%D0%A4)[#ПоискЧР](https://vk.com/feed?section=search&q=%23%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%D0%A7%D0%A0)[#ПатриотыРоссии](https://vk.com/feed?section=search&q=%23%D0%9F%D0%B0%D1%82%D1%80%D0%B8%D0%BE%D1%82%D1%8B%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8)[#Ингушетия](https://vk.com/feed?section=search&q=%23%D0%98%D0%BD%D0%B3%D1%83%D1%88%D0%B5%D1%82%D0%B8%D1%8F)[#Фондпрезидентскихгрантов](https://vk.com/feed?section=search&q=%23%D0%A4%D0%BE%D0%BD%D0%B4%D0%BF%D1%80%D0%B5%D0%B7%D0%B8%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%D1%85%D0%B3%D1%80%D0%B0%D0%BD%D1%82%D0%BE%D0%B2)[#ОбщественнаяпалатаРФ](https://vk.com/feed?section=search&q=%23%D0%9E%D0%B1%D1%89%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F%D0%BF%D0%B0%D0%BB%D0%B0%D1%82%D0%B0%D0%A0%D0%A4)[#ОбщественнаяпалатаЧР](https://vk.com/feed?section=search&q=%23%D0%9E%D0%B1%D1%89%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F%D0%BF%D0%B0%D0%BB%D0%B0%D1%82%D0%B0%D0%A7%D0%A0)[#ОфицерыРоссии](https://vk.com/feed?section=search&q=%23%D0%9E%D1%84%D0%B8%D1%86%D0%B5%D1%80%D1%8B%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8)[#Регион95](https://vk.com/feed?section=search&q=%23%D0%A0%D0%B5%D0%B3%D0%B8%D0%BE%D0%BD95)[#ГГНТУ](https://vk.com/feed?section=search&q=%23%D0%93%D0%93%D0%9D%D0%A2%D0%A3)[#ТерскийРубеж](https://vk.com/feed?section=search&q=%23%D0%A2%D0%B5%D1%80%D1%81%D0%BA%D0%B8%D0%B9%D0%A0%D1%83%D0%B1%D0%B5%D0%B6)[#Чечня](https://vk.com/feed?section=search&q=%23%D0%A7%D0%B5%D1%87%D0%BD%D1%8F)[#ЧГУ](https://vk.com/feed?section=search&q=%23%D0%A7%D0%93%D0%A3)[#ЧГПУ](https://vk.com/feed?section=search&q=%23%D0%A7%D0%93%D0%9F%D0%A3)[#ПатриотЧР](https://vk.com/feed?section=search&q=%23%D0%9F%D0%B0%D1%82%D1%80%D0%B8%D0%BE%D1%82%D0%A7%D0%A0)[#ПоисковоедвижениевЧеченскойРеспублике](https://vk.com/feed?section=search&q=%23%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%D0%BE%D0%B2%D0%BE%D0%B5%D0%B4%D0%B2%D0%B8%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%D0%B2%D0%A7%D0%B5%D1%87%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%B9%D0%A0%D0%B5%D1%81%D0%BF%D1%83%D0%B1%D0%BB%D0%B8%D0%BA%D0%B5)[#СтуденческийдесантЧГУ](https://vk.com/feed?section=search&q=%23%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9%D0%B4%D0%B5%D1%81%D0%B0%D0%BD%D1%82%D0%A7%D0%93%D0%A3)[#Судьбасолдата](https://vk.com/feed?section=search&q=%23%D0%A1%D1%83%D0%B4%D1%8C%D0%B1%D0%B0%D1%81%D0%BE%D0%BB%D0%B4%D0%B0%D1%82%D0%B0)[#Грозный](https://vk.com/feed?section=search&q=%23%D0%93%D1%80%D0%BE%D0%B7%D0%BD%D1%8B%D0%B9)[#ЦАМО](https://vk.com/feed?section=search&q=%23%D0%A6%D0%90%D0%9C%D0%9E)[#ПатриотыЧечни](https://vk.com/feed?section=search&q=%23%D0%9F%D0%B0%D1%82%D1%80%D0%B8%D0%BE%D1%82%D1%8B%D0%A7%D0%B5%D1%87%D0%BD%D0%B8)[#Малгобек](https://vk.com/feed?section=search&q=%23%D0%9C%D0%B0%D0%BB%D0%B3%D0%BE%D0%B1%D0%B5%D0%BA)[#маоонацсовет](https://vk.com/feed?section=search&q=%23%D0%BC%D0%B0%D0%BE%D0%BE%D0%BD%D0%B0%D1%86%D1%81%D0%BE%D0%B2%D0%B5%D1%82)[#ЮнармияРИ](https://vk.com/feed?section=search&q=%23%D0%AE%D0%BD%D0%B0%D1%80%D0%BC%D0%B8%D1%8F%D0%A0%D0%98)[#Дагестан](https://vk.com/feed?section=search&q=%23%D0%94%D0%B0%D0%B3%D0%B5%D1%81%D1%82%D0%B0%D0%BD)[#Воронеж](https://vk.com/feed?section=search&q=%23%D0%92%D0%BE%D1%80%D0%BE%D0%BD%D0%B5%D0%B6)
+
+![](https://terskiyrubezh.ru/wp-content/uploads/2022/06/NS5JHexVTXc.jpg)

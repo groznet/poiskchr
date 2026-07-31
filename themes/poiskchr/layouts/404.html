@@ -1,0 +1,36 @@
+{{ define "main" }}
+<section class="mx-auto max-w-2xl py-12 md:py-20 text-center">
+    <!-- Icon / Visual -->
+    <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 text-primary mb-6">
+        <i class="fa-solid fa-triangle-exclamation text-4xl"></i>
+    </div>
+
+    <!-- Error Code & Title -->
+    <h1 class="text-6xl font-bold font-serif text-neutral-900 tracking-tight">404</h1>
+    <h2 class="text-xl md:text-2xl font-semibold text-neutral-800 mt-3">Страница не найдена</h2>
+
+    <!-- Description -->
+    <p class="mt-4 text-sm md:text-base text-neutral-600 leading-relaxed max-w-md mx-auto">
+        К сожалению, запрашиваемая страница не существует или была перемещена по другому адресу.
+    </p>
+
+    <!-- Call to Actions -->
+    <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
+        <a 
+            href="/" 
+            class="w-full sm:w-auto px-5 py-2.5 bg-primary text-white text-sm font-medium rounded-md hover:bg-primary/90 transition-colors flex items-center justify-center gap-2"
+        >
+            <i class="fa-solid fa-house text-xs"></i>
+            <span>На главную</span>
+        </a>
+
+        <a 
+            href="/news/" 
+            class="w-full sm:w-auto px-5 py-2.5 border border-gray-300 text-neutral-700 text-sm font-medium rounded-md hover:bg-gray-50 transition-colors flex items-center justify-center gap-2"
+        >
+            <i class="fa-solid fa-newspaper text-xs text-neutral-500"></i>
+            <span> Все новости</span>
+        </a>
+    </div>
+</section>
+{{ end }}

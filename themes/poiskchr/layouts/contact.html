@@ -4,7 +4,10 @@
     <header class="mb-6">
         <!-- Breadcrumb -->
         {{ partial "breadcrumb.html" . }}
-        <h1 class="text-3xl font-semibold">{{ .Title }}</h1>
+        <h1 class="text-3xl font-semibold font-serif flex items-center gap-3">
+            <i class="fa-solid fa-file-lines text-primary"></i>
+            <span>{{ .Title }}</span>
+        </h1>
     </header>
 
     <p class="mt-3 text-base leading-relaxed">
@@ -17,19 +20,26 @@
     <div class="mt-8 grid gap-6 sm:grid-cols-2">
         <div class="flex flex-col gap-1">
             <h2 class="font-medium">Электронная почта</h2>
-            <a href="mailto:{{ site.Params.email }}">
-                <i class="far fa-envelope"></i> {{ site.Params.email }}
+            <a href="mailto:{{ site.Params.email }}" class="hover:underline flex items-center gap-2">
+                <i class="fa-regular fa-envelope text-primary"></i> 
+                <span>{{ site.Params.email }}</span>
             </a>
         </div>
 
         <div class="flex flex-col gap-1">
             <h2 class="font-medium">Телефон</h2>
-            <p><i class="fas fa-phone"></i> {{ site.Params.phone }}</p>
+            <p class="flex items-center gap-2">
+                <i class="fa-solid fa-phone text-primary"></i> 
+                <span>{{ site.Params.phone }}</span>
+            </p>
         </div>
 
         <div class="flex flex-col gap-1">
             <h2 class="font-medium">Адрес</h2>
-            <p><i class="fas fa-map-marker-alt"></i> {{ site.Params.address }}</p>
+            <p class="flex items-center gap-2">
+                <i class="fa-solid fa-location-dot text-primary"></i> 
+                <span>{{ site.Params.address }}</span>
+            </p>
         </div>
 
         <div class="flex flex-col gap-1">
@@ -37,40 +47,80 @@
             <ul class="flex flex-col gap-1">
                 {{ range site.Params.social }}
                 <li>
-                    <a href="{{ .url }}" target="_blank" rel="noopener">
-                        {{ .name }}
+                    <a href="{{ .url }}" target="_blank" rel="noopener" class="hover:underline flex items-center gap-2">
+                        {{ if .icon }}
+                            <i class="{{ .icon }} text-primary"></i>
+                        {{ else }}
+                            <i class="fa-solid fa-link text-primary"></i>
+                        {{ end }}
+                        <span>{{ .name }}</span>
                     </a>
                 </li>
                 {{ end }}
             </ul>
         </div>
-    </div>
+    </div>    
 
     <!-- Contact Form -->
     <div class="mt-12">
-        <h2 class="text-xl font-medium">Написать сообщение</h2>
+        <h2 class="text-xl font-medium mb-5">Написать сообщение</h2>
 
-        <form action="https://formspree.io/f/your-id" method="POST" class="mt-5 grid gap-5">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            
+            <!-- Form Container (Disabled / Decorative) -->
+            <form class="lg:col-span-7 grid gap-5 bg-white/80 p-6 rounded-lg border border-neutrals-borderGray shadow-sm opacity-75">
 
-            <div class="grid gap-2">
-                <label for="name">Ваше имя</label>
-                <input disabled id="name" name="name" type="text" class="px-3 py-2 bg-gray-200" required>
+                <div class="grid gap-2">
+                    <label for="name" class="text-sm font-medium text-gray-500">Ваше имя</label>
+                    <input disabled id="name" type="text" placeholder="Форма отключена" class="px-3 py-2 bg-gray-100 border border-gray-300 rounded cursor-not-allowed">
+                </div>
+
+                <div class="grid gap-2">
+                    <label for="email" class="text-sm font-medium text-gray-500">Email</label>
+                    <input disabled id="email" type="email" placeholder="Форма отключена" class="px-3 py-2 bg-gray-100 border border-gray-300 rounded cursor-not-allowed">
+                </div>
+
+                <div class="grid gap-2">
+                    <label for="message" class="text-sm font-medium text-gray-500">Сообщение</label>
+                    <textarea disabled id="message" rows="4" placeholder="Отправка сообщений временно недоступна" class="px-3 py-2 bg-gray-100 border border-gray-300 rounded cursor-not-allowed"></textarea>
+                </div>
+
+                <button disabled type="button" class="px-5 py-2.5 bg-gray-400 text-white font-medium rounded cursor-not-allowed">
+                    Отправка недоступна
+                </button>
+            </form>
+
+            <!-- Side Notice: Legal Disclaimer -->
+            <div class="lg:col-span-5 bg-secondary-creamBeige/60 border border-secondary-golden/40 rounded-lg p-5 text-sm text-neutrals-textGray shadow-sm">
+                <div class="flex items-center gap-2 mb-3 text-primary font-semibold">
+                    <i class="fas fa-info-circle"></i>
+                    <span>Информация об обратной связи</span>
+                </div>
+                
+                <p class="mb-3 leading-relaxed text-xs">
+                    Форма отправки сообщений на сайте временно отключена и не осуществляет сбор, запись, систематизацию или хранение персональных данных (ФЗ № 152-ФЗ).
+                </p>
+
+                <ul class="space-y-2 text-xs text-gray-700">
+                    <li class="flex items-start gap-2">
+                        <i class="fas fa-ban text-red-500 mt-0.5"></i>
+                        <span>Сайт не собирает и не обрабатывает персональные данные через интерактивные формы.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fas fa-envelope text-primary mt-0.5"></i>
+                        <span>Для обращения и направлений запросов используйте прямой адрес электронной почты: 
+                            <a href="mailto:{{ site.Params.email }}" class="text-primary underline font-medium">{{ site.Params.email }}</a>
+                        </span>
+                    </li>
+                </ul>
+
+                <div class="mt-4 pt-3 border-t border-secondary-golden/30 text-xs text-gray-500">
+                    Ознакомиться с документами организации можно на странице 
+                    <a href="/privacy/" class="text-primary underline font-medium">Политики конфиденциальности</a>.
+                </div>
             </div>
 
-            <div class="grid gap-2">
-                <label for="email">Email</label>
-                <input disabled id="email" name="email" type="email" class="px-3 py-2 bg-gray-200" required>
-            </div>
-
-            <div class="grid gap-2">
-                <label for="message">Сообщение</label>
-                <textarea disabled id="message" name="message" rows="5" class="px-3 py-2 bg-gray-200" required></textarea>
-            </div>
-
-            <button disabled type="submit" class="px-5 py-2 bg-blue-600 text-white hover:bg-blue-700">
-                Отправить
-            </button>
-        </form>
+        </div>
     </div>
 
 </section>

@@ -1,0 +1,24 @@
+---
+title: "25 ноября 2022 года в Общественной палате Российской Федерации открылась и начала свою работу Международная конференция «Судьба солдата"
+slug: '25-noiabria-2022-goda-v-obshchestvennoi-palate-rossiiskoi-i'
+date: 2022-11-27
+categories: 
+  - "главная-рубрика"
+coverImage: "IFgZ5l0vCnomCpWKhcfb_BFRUk0nR0SGG6aK7wRYaZG4rtvjRrNu7IMpkh.jpg"
+---
+
+25 ноября 2022 года в Общественной палате Российской Федерации открылась и начала свою работу Международная конференция «Судьба солдата: теория и практика архивных исследований».
+
+150 экспертов из Белоруссии, Казахстана, Кыргызстана, Латвии, Литвы, Молдовы, России, Узбекистана, Эстонии, ЛНР и ДНР приехали в Москву, чтобы представить новые исследования и апробированные методические разработки по установлению фронтовых судеб защитников Отечества.
+
+В течение трех дней участники конференции выступали с очень интересными докладами. В рамках проведения конференции прошли также церемонии передачи личных вещей погибших красноармейцев, а также документы, свидетельствующие об их фронтовой судьбе.
+
+Все подробности в последующих публикациях.
+
+ПоисковикиРФ #ПоисковикиЧР #КомандаКРА #ПоискРФ #ПоискЧР #ПатриотыРоссии #Ингушетия #Фондпрезидентскихгрантов #ОбщественнаяпалатаРФ #ОбщественнаяпалатаЧР #ОфицерыРоссии #Регион95 #ГГНТУ #ТерскийРубеж #Чечня #ЧГУ #ЧГПУ #ПатриотЧР #ПоисковоедвижениевЧеченскойРеспублике #Судьбасолдата #БитвазаКавказ #СтуденческийдесантЧГУ #Грозный #ПатриотыЧечни #Малгобек #маоонацсовет #ЮнармияРИ #Дагестан
+
+[![](https://terskiyrubezh.ru/wp-content/uploads/2022/11/k6gyZugYRfJH7CPDo6ABPJXxML2PzxiWOXjqTMGt_uwfR5v_O2zYe5TXh-.jpg)](https://terskiyrubezh.ru/wp-content/uploads/2022/11/k6gyZugYRfJH7CPDo6ABPJXxML2PzxiWOXjqTMGt_uwfR5v_O2zYe5TXh-.jpg)
+
+[![](https://terskiyrubezh.ru/wp-content/uploads/2022/11/SffCePGsbYA8nd3QVcTpD_T9DzqRTUFsT_Ygy2jz4jCVplg5PtXFbI.jpg)](https://terskiyrubezh.ru/wp-content/uploads/2022/11/SffCePGsbYA8nd3QVcTpD_T9DzqRTUFsT_Ygy2jz4jCVplg5PtXFbI.jpg)
+
+[![](https://terskiyrubezh.ru/wp-content/uploads/2022/11/ZmgaP9HZkgmj74YIubx-ku-uQIYulkc6vV-lvy6rEMFAIT0Bnmr2avGxa.jpg)](https://terskiyrubezh.ru/wp-content/uploads/2022/11/ZmgaP9HZkgmj74YIubx-ku-uQIYulkc6vV-lvy6rEMFAIT0Bnmr2avGxa.jpg)

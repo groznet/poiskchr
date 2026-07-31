@@ -2,150 +2,306 @@
 
 <!-- Hero -->
 <section class="relative overflow-hidden rounded-lg bg-[rgba(255,255,255,0.8)] backdrop-blur-[2px] ring-1 ring-neutrals-borderGray shadow-vintage">
-    <div class="absolute -right-20 -top-14 rotate-12">
-    <svg class="h-40 w-40 text-secondary-golden/30" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <rect x="10" y="10" width="80" height="80" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/>
-    </svg>
+    <div class="absolute -right-20 -top-14 rotate-12 pointer-events-none">
+        <svg class="h-40 w-40 text-secondary-golden/30" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="10" y="10" width="80" height="80" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/>
+        </svg>
     </div>
     <div class="p-6 sm:p-8 md:p-10">
-        <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-neutral-900">
+        <h1 class="text-xl sm:text-2xl md:text-3xl font-bold font-serif text-neutral-900">
             Сохранение памяти о защитниках Отечества
-        </h2>
+        </h1>
 
-        <p class="mt-2 text-[15px] leading-relaxed text-neutral-700">
+        <p class="mt-2 text-base leading-relaxed text-neutral-700 max-w-3xl">
             Материалы о поисковых экспедициях, найденных артефактах, судьбах солдат и работе добровольцев. Всё, что помогает восстановить историю и увековечить память павших.
         </p>
 
-        <div class="mt-4 flex flex-wrap gap-3">
-            <a href="/news" class="inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-white shadow hover:bg-secondary-lightBlue focus:outline-none focus:ring-2 focus:ring-primary/40">
-                <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                    <path d="M10.5 3a.5.5 0 00-1 0v8.793l-3.146-3.147a.5.5 0 10-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 10-.708-.708L10.5 11.793V3z"/>
-                </svg>
+        <div class="mt-6 flex flex-wrap gap-3">
+            <a href="/news/" class="inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-sm font-medium text-white shadow hover:bg-secondary-lightBlue focus:outline-none focus:ring-2 focus:ring-primary/40 transition-colors">
+                <i class="fa-solid fa-newspaper text-sm"></i>
                 Перейти к материалам
             </a>
 
-            <a href="/projects" class="inline-flex items-center gap-2 rounded-md border border-neutral-300 bg-white/70 px-4 py-2 text-neutral-800 hover:bg-white focus:outline-none focus:ring-2 focus:ring-secondary-golden/40">
+            <a href="/projects/" class="inline-flex items-center gap-2 rounded-md border border-neutral-300 bg-white/80 px-4 py-2 text-sm font-medium text-neutral-800 hover:bg-white focus:outline-none focus:ring-2 focus:ring-secondary-golden/40 transition-colors">
                 Методические материалы
             </a>
         </div>
-
     </div>
 </section>
 
-<!-- Latest News -->
-<section id="latest-news" class="mt-8">
-    <div class="flex items-baseline justify-between">
-        <h3 class="text-lg sm:text-xl font-bold text-primary">Последние новости</h3>
-        <a href="/news/" class="text-sm text-primary hover:underline">Все новости</a>
+<!-- Latest News Section -->
+<section id="latest-news" class="mt-10">
+    <div class="flex items-baseline justify-between border-b border-gray-200 pb-2">
+        <h2 class="text-xl sm:text-2xl font-bold font-serif text-primary">Последние новости</h2>
+        <a href="/news/" class="text-sm font-medium text-primary hover:underline flex items-center gap-1">
+            <span>Все новости</span>
+            <i class="fa-solid fa-chevron-right text-xs"></i>
+        </a>
     </div>
 
-    <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {{ $news := where .Site.RegularPages "Section" "news" }}
-        {{ range first 6 $news.ByDate.Reverse }}
-        <article class="group overflow-hidden rounded-md bg-[rgba(255,255,255,0.85)] ring-1 ring-neutrals-borderGray shadow">
-<div class="vintage-frame overflow-hidden aspect-[4/3]">
-    {{ $img := .Params.featured | default "/uploads/default-featured.jpg" }}
-    <img src="{{ $img }}" alt="{{ .Title }}" class="h-full w-full object-cover transition-transform duration-200 ease-out group-hover:scale-[1.03]" />
-</div>
-            <div class="p-4">
-                <h4 class="text-base font-semibold text-neutral-900">
-                    <a href="{{ .Permalink }}">{{ .Title }}</a>
-                </h4>
-                {{ with .Params.summary }}
-                <p class="mt-1 text-sm text-neutral-700 leading-relaxed">{{ . }}</p>
+        {{ range first 6 (sort $news "Date" "desc") }}
+
+            {{/* 1. Gallery JSON / Remote metadata resolution */}}
+            {{ $gData := dict }}
+            {{ if .File }}
+                {{ $galleryJson := printf "%sgallery.json" .File.Dir }}
+                {{ if fileExists $galleryJson }}
+                    {{ $gData = unmarshal (readFile $galleryJson) }}
                 {{ end }}
-                <div class="mt-3 flex items-center gap-3 text-[12px] text-neutral-600">
-                    <span class="inline-flex items-center gap-1">
-                        <i class="fas fa-calendar-alt"></i> {{ .Date.Format "2006" }}
-                    </span>
-                    <span>Обновлено {{ .Date.Format "02-Jan-2006" }}</span>
+            {{ end }}
+            {{ if not $gData }}
+                {{ $galleryResource := .Resources.GetMatch "gallery.json" }}
+                {{ if $galleryResource }}
+                    {{ $gData = $galleryResource | transform.Unmarshal }}
+                {{ end }}
+            {{ end }}
+
+            {{/* 2. Featured Image Fallback Chain */}}
+            {{ $featuredSrc := "" }}
+
+            {{ if $gData.featured_image }}
+                {{ $featuredSrc = $gData.featured_image }}
+            {{ else }}
+                {{ $mainImg := .Resources.GetMatch "{featured,cover,main,index}*.{jpg,jpeg,png,webp,gif,avif,svg}" }}
+                {{ if not $mainImg }}
+                    {{ $mainImg = index (.Resources.ByType "image") 0 }}
+                {{ end }}
+
+                {{ if $mainImg }}
+                    {{ $featuredSrc = $mainImg.RelPermalink }}
+                {{ else if .Params.image }}
+                    {{ $featuredSrc = .Params.image | relURL }}
+                {{ else if .File }}
+                    {{ $cdn := .Site.Params.cdn }}
+                    {{ $dir := replace .File.Dir "\\" "/" -1 }}
+                    {{ $featuredSrc = printf "%s/%sfeatured.jpg" $cdn $dir }}
+                {{ end }}
+            {{ end }}
+
+            {{ $category := .Params.category | default "Новости" }}
+
+            <article class="group flex flex-col justify-between overflow-hidden rounded-md bg-white/85 ring-1 ring-neutrals-borderGray shadow hover:shadow-md transition-shadow">
+                <div class="flex flex-col h-full">
+                    <!-- Image -->
+                    <div class="overflow-hidden aspect-[4/3] relative bg-gray-100 shrink-0">
+                        <a href="{{ .Permalink }}" class="block h-full w-full">
+                            <img 
+                                src="{{ $featuredSrc }}" 
+                                alt="{{ .Title }}" 
+                                class="h-full w-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.02]"
+                                onerror="this.onerror=null;this.src='/images/post-placeholder.jpg';"
+                                loading="lazy"
+                            />
+                        </a>
+                        <span class="absolute top-2 left-2 bg-black/60 backdrop-blur-sm text-white text-[11px] font-medium px-2 py-0.5 rounded">
+                            {{ $category }}
+                        </span>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="p-4 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="text-base font-semibold font-serif text-neutral-900 group-hover:text-primary transition-colors line-clamp-2">
+                                <a href="{{ .Permalink }}">{{ .Title }}</a>
+                            </h3>
+                            <p class="mt-1.5 text-sm text-neutral-600 leading-relaxed line-clamp-3">
+                                {{ (.Params.summary | default .Summary) | truncate 85 "..." }}
+                            </p>
+                        </div>
+
+                        <!-- Meta -->
+                        <div class="mt-4 pt-2.5 border-t border-gray-100 flex items-center justify-between text-xs text-neutral-500">
+                            <span class="flex items-center gap-1.5">
+                                <i class="fa-regular fa-calendar text-primary/80"></i>
+                                <time datetime="{{ .Date.Format "2006-01-02" }}">
+                                    {{ .Date.Format "02.01.2006" }}
+                                </time>
+                            </span>
+                            <span title="Время чтения" class="flex items-center gap-1">
+                                <i class="fa-regular fa-clock text-xs"></i> {{ .ReadingTime }} мин
+                            </span>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </article>
+            </article>
         {{ end }}
     </div>
 </section>
 
-<section id="themes" class="mt-10">
-    <h3 class="text-lg sm:text-xl font-bold text-primary">Темы и Хронология</h3>
-    <div class="mt-4 grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <div class="rounded-md bg-[rgba(255,255,255,0.85)] ring-1 ring-neutrals-borderGray shadow p-4">
-            <h4 class="text-base font-semibold text-neutral-900">Главные экспедиции ЧР</h4>
-            <ol class="mt-2 space-y-2 text-sm">
-                <li class="flex items-start gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-primary"></span><span>2025: Вахта Памяти «Терский Рубеж»</span></li>
-                <li class="flex items-start gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-primary"></span><span>2025: Вологда — обмен опытом</span></li>
-                <li class="flex items-start gap-2"><span class="mt-1 h-2 w-2 rounded-full bg-primary"></span><span>2025: Брест — передача наград</span></li>
+<!-- Themes & Timeline -->
+<section id="themes" class="mt-12">
+    <div class="border-b border-gray-200 pb-2">
+        <h2 class="text-xl sm:text-2xl font-bold font-serif text-primary">Темы и Направления</h2>
+    </div>
+
+    <div class="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div class="rounded-md bg-white/85 ring-1 ring-neutrals-borderGray shadow p-5">
+            <h3 class="text-base font-semibold font-serif text-neutral-900 flex items-center gap-2">
+                <i class="fa-solid fa-compass text-primary"></i>
+                Главные экспедиции ЧР
+            </h3>
+            <ol class="mt-3 space-y-2.5 text-sm text-neutral-700">
+                <li class="flex items-start gap-2">
+                    <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary"></span>
+                    <span>Вахта Памяти «Терский Рубеж»</span>
+                </li>
+                <li class="flex items-start gap-2">
+                    <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary"></span>
+                    <span>Вологда — межрегиональный обмен опытом</span>
+                </li>
+                <li class="flex items-start gap-2">
+                    <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary"></span>
+                    <span>Брест — передача обнаруженных наград</span>
+                </li>
             </ol>
         </div>
-        <div class="rounded-md bg-[rgba(255,255,255,0.85)] ring-1 ring-neutrals-borderGray shadow p-4">
-            <h4 class="text-base font-semibold text-neutral-900">Волонтёры и образовательные проекты</h4>
-            <p class="mt-2 text-sm text-neutral-700 leading-relaxed">Организация семинаров, мастер-классов, лекций и мероприятий для студентов и волонтёров.</p>
+
+        <div class="rounded-md bg-white/85 ring-1 ring-neutrals-borderGray shadow p-5">
+            <h3 class="text-base font-semibold font-serif text-neutral-900 flex items-center gap-2">
+                <i class="fa-solid fa-users text-primary"></i>
+                Волонтёры и образование
+            </h3>
+            <p class="mt-3 text-sm text-neutral-700 leading-relaxed">
+                Организация семинаров, практических мастер-классов, лекций и полевых мероприятий для студентов и молодых добровольцев.
+            </p>
         </div>
-        <div class="rounded-md bg-[rgba(255,255,255,0.85)] ring-1 ring-neutrals-borderGray shadow p-4">
-            <h4 class="text-base font-semibold text-neutral-900">Архивные исследования</h4>
-            <p class="mt-2 text-sm text-neutral-700 leading-relaxed">Работа с документами и личными архивами для восстановления судеб солдат и участников войны.</p>
-            <a href="/projects/" class="mt-3 inline-flex items-center gap-1 text-sm text-primary hover:underline">Все проекты <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.293 4.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 11-1.414-1.414L14.586 10l-3.293-3.293a1 1 0 011.414-1.414z" clip-rule="evenodd"/></svg></a>
+
+        <div class="rounded-md bg-white/85 ring-1 ring-neutrals-borderGray shadow p-5 flex flex-col justify-between">
+            <div>
+                <h3 class="text-base font-semibold font-serif text-neutral-900 flex items-center gap-2">
+                    <i class="fa-solid fa-box-archive text-primary"></i>
+                    Архивные исследования
+                </h3>
+                <p class="mt-3 text-sm text-neutral-700 leading-relaxed">
+                    Системная работа с государственными и личными архивами для полного восстановления судеб и боевых путей солдат.
+                </p>
+            </div>
+            <a href="/projects/" class="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:underline">
+                <span>Все проекты</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
         </div>
     </div>
 </section>
 
+<!-- Latest Additions Section (Dynamic) -->
+<section id="latest-additions" class="mt-12">
+    <div class="flex items-baseline justify-between border-b border-gray-200 pb-2">
+        <h2 class="text-xl sm:text-2xl font-bold font-serif text-primary">Новые артефакты и документы</h2>
+        <a href="/projects/" class="text-sm font-medium text-primary hover:underline flex items-center gap-1">
+            <span>Архив проектов</span>
+            <i class="fa-solid fa-chevron-right text-xs"></i>
+        </a>
+    </div>
 
-<!-- Latest Additions -->
-<section id="latest" class="mt-10">
-    <div class="flex items-baseline justify-between">
-    <h3 class="text-lg sm:text-xl font-bold text-primary">Latest Additions</h3>
-    <a href="#" class="text-sm text-primary hover:underline">See archive log</a>
-    </div>
-    <div class="mt-3 grid grid-cols-1 md:grid-cols-2 gap-6">
-    <div class="rounded-md bg-[rgba(255,255,255,0.85)] ring-1 ring-neutrals-borderGray p-4 shadow">
-        <div class="flex items-start gap-4">
-        <div class="vintage-frame h-24 w-32 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38?q=80&w=1200&auto=format&fit=crop" alt="Declassified memorandum" class="h-full w-full object-cover" />
-        </div>
-        <div class="min-w-0">
-            <h4 class="truncate text-base font-semibold text-neutral-900">Declassified Memorandum: Logistics Report (1943)</h4>
-            <p class="mt-1 text-sm text-neutral-700 line-clamp-3">Operational notes detailing supply lines and material readiness in the Mediterranean theater. Includes annotated maps.</p>
-            <div class="mt-2 text-[12px] text-neutral-600">Added 3 days ago • Document</div>
-        </div>
-        </div>
-    </div>
-    <div class="rounded-md bg-[rgba(255,255,255,0.85)] ring-1 ring-neutrals-borderGray p-4 shadow">
-        <div class="flex items-start gap-4">
-        <div class="vintage-frame h-24 w-32 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1509020170936-9f39f46d9bf6?q=80&w=1200&auto=format&fit=crop" alt="Pilot diary" class="h-full w-full object-cover" />
-        </div>
-        <div class="min-w-0">
-            <h4 class="truncate text-base font-semibold text-neutral-900">Pilot Diary Excerpts: Pacific Sorties (1944)</h4>
-            <p class="mt-1 text-sm text-neutral-700 line-clamp-3">Daily entries describing weather, morale, and mission parameters from a Navy aviator stationed in the Pacific.</p>
-            <div class="mt-2 text-[12px] text-neutral-600">Added 1 week ago • Journal</div>
-        </div>
-        </div>
-    </div>
+    <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+        {{ $projects := where .Site.RegularPages "Section" "projects" }}
+        {{ range first 2 (sort $projects "Date" "desc") }}
+
+            {{/* 1. Gallery JSON / Remote metadata resolution */}}
+            {{ $gData := dict }}
+            {{ if .File }}
+                {{ $galleryJson := printf "%sgallery.json" .File.Dir }}
+                {{ if fileExists $galleryJson }}
+                    {{ $gData = unmarshal (readFile $galleryJson) }}
+                {{ end }}
+            {{ end }}
+            {{ if not $gData }}
+                {{ $galleryResource := .Resources.GetMatch "gallery.json" }}
+                {{ if $galleryResource }}
+                    {{ $gData = $galleryResource | transform.Unmarshal }}
+                {{ end }}
+            {{ end }}
+
+            {{/* 2. Featured Image Fallback Chain */}}
+            {{ $featuredSrc := "" }}
+
+            {{ if $gData.featured_image }}
+                {{ $featuredSrc = $gData.featured_image }}
+            {{ else }}
+                {{ $mainImg := .Resources.GetMatch "{featured,cover,main,index}*.{jpg,jpeg,png,webp,gif,avif,svg}" }}
+                {{ if not $mainImg }}
+                    {{ $mainImg = index (.Resources.ByType "image") 0 }}
+                {{ end }}
+
+                {{ if $mainImg }}
+                    {{ $featuredSrc = $mainImg.RelPermalink }}
+                {{ else if .Params.image }}
+                    {{ $featuredSrc = .Params.image | relURL }}
+                {{ else if .File }}
+                    {{ $cdn := .Site.Params.cdn }}
+                    {{ $dir := replace .File.Dir "\\" "/" -1 }}
+                    {{ $featuredSrc = printf "%s/%sfeatured.jpg" $cdn $dir }}
+                {{ end }}
+            {{ end }}
+
+            <div class="rounded-md bg-white/85 ring-1 ring-neutrals-borderGray p-4 shadow hover:shadow-md transition-shadow">
+                <div class="flex items-start gap-4">
+                    <div class="overflow-hidden aspect-[4/3] w-28 shrink-0 rounded bg-gray-100">
+                        <a href="{{ .Permalink }}">
+                            <img 
+                                src="{{ $featuredSrc }}" 
+                                alt="{{ .Title }}" 
+                                class="h-full w-full object-cover"
+                                onerror="this.onerror=null;this.src='/images/post-placeholder.jpg';"
+                                loading="lazy"
+                            />
+                        </a>
+                    </div>
+                    <div class="min-w-0 flex-1">
+                        <h3 class="text-base font-semibold font-serif text-neutral-900 hover:text-primary transition-colors line-clamp-1">
+                            <a href="{{ .Permalink }}">{{ .Title }}</a>
+                        </h3>
+                        <p class="mt-1 text-sm text-neutral-600 line-clamp-2 leading-relaxed">
+                            {{ (.Params.summary | default .Summary) | truncate 80 "..." }}
+                        </p>
+                        <div class="mt-2 text-xs text-neutral-500 flex items-center gap-2">
+                            <span><i class="fa-regular fa-calendar text-xs"></i> {{ .Date.Format "02.01.2006" }}</span>
+                            {{ with .Params.type }}
+                                <span>• {{ . }}</span>
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {{ else }}
+            {{/* Fallback state if no project pages exist yet */}}
+            <div class="col-span-2 rounded-md bg-white/85 ring-1 ring-neutrals-borderGray p-6 text-center text-sm text-neutral-500">
+                Раздел пополняется новыми архивными материалами.
+            </div>
+        {{ end }}
     </div>
 </section>
 
 <!-- Contribute CTA -->
-<section id="contribute" class="mt-10">
+<section id="contribute" class="mt-12">
     <div class="relative overflow-hidden rounded-md bg-secondary-creamBeige ring-1 ring-neutrals-borderGray shadow">
-        <div class="absolute -left-6 -top-6 rotate-[18deg]">
+        <div class="absolute -left-6 -top-6 rotate-[18deg] pointer-events-none">
             <svg class="h-24 w-24 text-secondary-golden/35" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <circle cx="50" cy="50" r="44" fill="none" stroke="currentColor" stroke-width="3"/>
-                <text x="50" y="55" text-anchor="middle" font-size="14" font-weight="700" fill="currentColor">JOIN</text>
+                <text x="50" y="55" text-anchor="middle" font-size="14" font-weight="700" fill="currentColor">ПОИСК</text>
             </svg>
         </div>
         <div class="p-6 sm:p-8">
             <div class="md:flex md:items-center md:justify-between md:gap-8">
                 <div>
-                    <h3 class="text-lg sm:text-xl font-bold text-neutral-900">Присоединяйтесь к нашим экспедициям</h3>
-                    <p class="mt-1 text-sm text-neutral-700">Помогите расширить проекты: делитесь архивными материалами, фотографиями и историческими исследованиями.</p>
+                    <h2 class="text-lg sm:text-xl font-bold font-serif text-neutral-900">
+                        Присоединяйтесь к нашим экспедициям
+                    </h2>
+                    <p class="mt-1 text-sm text-neutral-700 max-w-2xl">
+                        Помогите расширить проекты: делитесь архивными материалами, фотографиями и историческими исследованиями.
+                    </p>
                 </div>
-                <div class="mt-4 md:mt-0">
-                    <a href="/contacts/" class="inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-white shadow hover:bg-secondary-lightBlue focus:outline-none focus:ring-2 focus:ring-primary/40">Принять участие</a>
+                <div class="mt-4 md:mt-0 shrink-0">
+                    <a href="/contacts/" class="inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-sm font-medium text-white shadow hover:bg-secondary-lightBlue focus:outline-none focus:ring-2 focus:ring-primary/40 transition-colors">
+                        Принять участие
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
 
 {{ end }}

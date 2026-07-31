@@ -5,7 +5,10 @@
     <header class="mb-6">
         <!-- Breadcrumb -->
         {{ partial "breadcrumb.html" . }}
-        <h1 class="text-3xl font-semibold">{{ .Title }}</h1>
+        <h1 class="text-3xl font-semibold font-serif flex items-center gap-3">
+            <i class="fa-solid fa-layer-group text-primary"></i>
+            <span>{{ .Title }}</span>
+        </h1>
     </header>
         <div class="text-gray-600">
             {{ .Content }}

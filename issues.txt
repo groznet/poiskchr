@@ -1,0 +1,54 @@
+You are dealing with a **migration mismatch between Tailwind CDN/runtime mode and Tailwind CLI compiled mode**, which is causing **layout inconsistencies and broken styling after switching build systems**.
+
+### Core problem
+
+Your site was originally styled using a **runtime Tailwind setup (JS-based / CDN-like engine with plugins enabled dynamically)**. After switching to a **CLI-generated static CSS file (`output.css`)**, the layout no longer matches.
+
+### Why this happens
+
+The two systems do not produce identical CSS:
+
+* **Runtime Tailwind (JS version)**
+
+  * Generates utilities dynamically
+  * Injects plugin behavior on demand (e.g. typography)
+  * Applies a more complete or flexible default behavior at runtime
+
+* **CLI Tailwind build**
+
+  * Generates only what is detected in `content` files
+  * Requires explicit plugin registration in `tailwind.config.js`
+  * Produces a fixed, static CSS file
+
+### Likely causes of your layout break
+
+1. **Incomplete `content` configuration**
+
+   * Tailwind CLI is not scanning all templates
+   * Some utility classes are missing from the final CSS
+
+2. **Missing plugins in CLI config**
+
+   * Runtime version had plugins enabled (e.g. typography)
+   * CLI build does not include them unless explicitly added
+
+3. **Different base/preflight assumptions**
+
+   * Small differences in default styles (flex, spacing, typography base)
+   * Layout behavior changes due to missing resets or utilities
+
+4. **Mixing both systems (possible hidden issue)**
+
+   * Runtime script still present alongside compiled CSS
+   * Leads to conflicting or unpredictable styling
+
+### Resulting symptom
+
+* Layout structure shifts or breaks
+* Flex/grid behavior differs from previous version
+* Spacing and sizing no longer match original design
+* Site looks “almost correct” but inconsistent across sections
+
+### One-line summary
+
+You migrated from a **dynamic Tailwind runtime system to a static CLI build**, but the CLI setup is **not fully replicating the generated utility set and plugin behavior of the runtime version**, leading to layout inconsistencies.

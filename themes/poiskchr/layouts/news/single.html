@@ -4,7 +4,6 @@
         word-break: break-word;
         overflow-wrap: break-word;
     }
-
 </style>
 <article class="mx-auto max-w-5xl">
     <header class="mb-2">
@@ -26,19 +25,59 @@
                 <i class="fas fa-eye text-xs"></i>
                 {{ add 50 (mod (.Date.Unix | int) 150) }} читали
             </span>
-
         </p>
     </header>
 
+    {{/* 1. Remote Gallery Metadata Handling */}}
+    {{ $gData := dict }}
+    {{ if .File }}
+        {{ $galleryJson := printf "%sgallery.json" .File.Dir }}
+        {{ if fileExists $galleryJson }}
+            {{ $gData = unmarshal (readFile $galleryJson) }}
+        {{ end }}
+    {{ end }}
+    {{ if not $gData }}
+        {{ $galleryResource := .Resources.GetMatch "gallery.json" }}
+        {{ if $galleryResource }}
+            {{ $gData = $galleryResource | transform.Unmarshal }}
+        {{ end }}
+    {{ end }}
+
+    {{/* 2. Featured Image Resolution (Remote -> Local Bundle -> Params -> CDN Fallback) */}}
+    {{ $mainImgSrc := "" }}
+
+    {{ if $gData.featured_image }}
+        {{ $mainImgSrc = $gData.featured_image }}
+    {{ else }}
+        {{ $mainImg := .Resources.GetMatch "{featured,cover,main,index}*.{jpg,jpeg,png,webp,gif,avif,svg}" }}
+        {{ if not $mainImg }}
+            {{ $mainImg = index (.Resources.ByType "image") 0 }}
+        {{ end }}
+
+        {{ if $mainImg }}
+            {{ $mainImgSrc = $mainImg.RelPermalink }}
+        {{ else if .Params.image }}
+            {{ $mainImgSrc = .Params.image | relURL }}
+        {{ else if .File }}
+            {{ $cdn := .Site.Params.cdn }}
+            {{ $dir := replace .File.Dir "\\" "/" }}
+            {{ $mainImgSrc = printf "%s/%sfeatured.jpg" $cdn $dir }}
+        {{ end }}
+    {{ end }}
+
     <!-- Featured Image -->
-    {{ $cdn := .Site.Params.cdn }}
-    {{ $dir := replace .File.Dir "\\" "/" -1 }}
-    {{ $featured := printf "%s/%sfeatured.jpg" $cdn $dir }}
-
+    {{ if $mainImgSrc }}
     <div class="mb-6 overflow-hidden">
-        <img src="{{ $featured }}" alt="{{ .Title }}" class="w-full h-full object-cover">
+        <img src="{{ $mainImgSrc }}" alt="{{ .Title }}" class="w-full h-full object-cover">
+        {{ with .Params.image_caption }}
+            <p class="text-xs text-gray-600 mt-2 italic text-center">{{ . }}</p>
+        {{ else }}
+            {{ with .Description }}
+                <p class="text-xs text-gray-600 mt-2 italic text-center">{{ . }}</p>
+            {{ end }}
+        {{ end }}
     </div>
-
+    {{ end }}
 
     <!-- Summary / Intro -->
     {{ if .Params.summary }}
@@ -50,39 +89,52 @@
         {{ .Content }}
     </div>
 
-    <!-- Gallery -->
-    <!-- 
-    This gallery setup works with remote images. 
-
-    1. A Node script (`scripts/generate-gallery.js`) runs before the Hugo build (via npm). 
-    It scans each post folder (`news/YYYY/MM/post-slug/images/`) and generates a `gallery.json` 
-    listing all image filenames.
-
-    2. Hugo reads `gallery.json` from the post bundle and constructs the gallery using the CDN URL. 
-
-    - Supports any number of images per post.
-    - Fully automatic, keeps templates clean, and works with images stored separately from the site.
-    -->
-
-
+    <!-- Gallery Section -->
     {{ $cdn := .Site.Params.cdn }}
-    {{ $dir := replace .File.Dir "\\" "/" }}
+    {{ $dir := "" }}
+    {{ if .File }}
+        {{ $dir = replace .File.Dir "\\" "/" }}
+    {{ end }}
 
-    {{ $gallery := .Resources.GetMatch "gallery.json" | transform.Unmarshal }}
-
-    {{ if $gallery.images }}
-    <section class="mt-8">
-        <h2 class="text-xl font-semibold mb-4">Галерея</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {{ range $gallery.images }}
-                <figure class="overflow-hidden rounded-md">
-                    <a href="{{ printf "%s/%simages/%s" $cdn $dir . }}" target="_self" rel="noopener">
-                        <img src="{{ printf "%s/%simages/%s" $cdn $dir . }}" alt="{{ $.Title }}" class="w-full h-auto object-cover">
-                    </a>
-                </figure>
-            {{ end }}
-        </div>
-    </section>
+    {{ if $gData.images }}
+        {{/* Remote / Json-based Gallery */}}
+        <section class="mt-8">
+            <h2 class="text-xl font-semibold mb-4">Галерея</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {{ range $gData.images }}
+                    {{ $imgUrl := "" }}
+                    {{ if $gData.remote_base_url }}
+                        {{ $imgUrl = printf "%s%s" $gData.remote_base_url . }}
+                    {{ else }}
+                        {{ $imgUrl = printf "%s/%simages/%s" $cdn $dir . }}
+                    {{ end }}
+                    <figure class="overflow-hidden rounded-md">
+                        <a href="{{ $imgUrl }}" target="_self" rel="noopener">
+                            <img src="{{ $imgUrl }}" alt="{{ $.Title }}" class="w-full h-auto object-cover">
+                        </a>
+                    </figure>
+                {{ end }}
+            </div>
+        </section>
+    {{ else }}
+        {{/* Local Fallback Gallery */}}
+        {{ $allImages := .Resources.ByType "image" }}
+        {{ if gt (len $allImages) 1 }}
+        <section class="mt-8">
+            <h2 class="text-xl font-semibold mb-4">Галерея</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {{ range $allImages }}
+                    {{ if ne .RelPermalink $mainImgSrc }}
+                    <figure class="overflow-hidden rounded-md">
+                        <a href="{{ .RelPermalink }}" target="_self" rel="noopener">
+                            <img src="{{ .RelPermalink }}" alt="{{ $.Title }}" class="w-full h-auto object-cover">
+                        </a>
+                    </figure>
+                    {{ end }}
+                {{ end }}
+            </div>
+        </section>
+        {{ end }}
     {{ end }}
 
 </article>

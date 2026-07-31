@@ -1,11 +1,13 @@
 <nav class="text-sm text-gray-500 mb-2" aria-label="Breadcrumb">
-    <ol class="flex gap-2">
-        <li><a href="/" class="hover:underline">Главная</a></li>
+    <ol class="flex items-center gap-2">
+        <li class="shrink-0"><a href="/" class="hover:underline">Главная</a></li>
         {{ if .Page.Params.parent }}
-            <li>/</li>
-            <li><a href="{{ .Page.Params.parent.url }}" class="hover:underline">{{ .Page.Params.parent.title }}</a></li>
+            <li class="shrink-0">/</li>
+            <li class="shrink-0"><a href="{{ .Page.Params.parent.url }}" class="hover:underline">{{ .Page.Params.parent.title }}</a></li>
         {{ end }}
-        <li>/</li>
-        <li class="text-gray-700">{{ .Page.Title }}</li>
+        <li class="shrink-0">/</li>
+        <li class="text-gray-700 truncate max-w-[200px] sm:max-w-[350px] md:max-w-[500px]" title="{{ .Page.Title }}">
+            {{ .Page.Title }}
+        </li>
     </ol>
 </nav>

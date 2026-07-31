@@ -2,29 +2,35 @@
 <div class="absolute inset-0 opacity-[0.08] pointer-events-none" style="background-image: radial-gradient(2px 2px at 10px 10px, rgba(255,255,255,0.5) 2px, transparent 2px); background-size: 22px 22px;"></div>
 
 <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-5">
-    <!-- Top: Logo + Menu button -->
+    <!-- Top: Logo + Title + Menu button -->
     <div class="flex items-center justify-between gap-4">
-        <div class="flex items-center gap-4">
-            <!-- <div class="flex h-12 w-12 items-center justify-center rounded-full bg-white/15 ring-1 ring-white/30 shadow">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-7 w-7 text-white">
-                    <path d="M12 2l2.39 7.36H22l-6.2 4.51L18.2 21 12 16.98 5.8 21l2.4-7.13L2 9.36h7.61L12 2z" />
-                </svg>
-            </div> -->
+        <div class="flex items-center gap-3 sm:gap-4">
+            <!-- Clean Logo -->
+            <a href="/" class="shrink-0">
+                <img 
+                    src="/images/logo-light.png" 
+                    alt="Поисковое Движение России по ЧР" 
+                    class="h-12 sm:h-14 w-auto object-contain"
+                    onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'%23ffffff\'><path d=\'M12 2l2.39 7.36H22l-6.2 4.51L18.2 21 12 16.98 5.8 21l2.4-7.13L2 9.36h7.61L12 2z\'/></svg>'"
+                />
+            </a>
+
             <div>
-                <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight">
-                    <a href="/">Поисковое Движение России по ЧР</a>
+                <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold font-serif tracking-tight">
+                    <a href="/" class="hover:text-white/90 transition-colors">Поисковое Движение России по ЧР</a>
                 </h1>
                 <p class="text-white/85 text-sm sm:text-base mt-0.5">
                     Региональное отделение Поискового движения России по Чеченской Республике
                 </p>
             </div>
         </div>
+
         <div class="flex items-center gap-2">
             <button id="mobileMenuBtn" class="lg:hidden inline-flex items-center gap-2 rounded-md border border-white/30 bg-white/10 px-3 py-2 text-sm font-medium text-white hover:bg-white/15 focus:outline-none focus:ring-2 focus:ring-white/40">
                 <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
-                Menu
+                Меню
             </button>
         </div>
     </div>

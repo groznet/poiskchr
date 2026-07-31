@@ -1,0 +1,32 @@
+---
+title: "Перекрестная сверка документов – исключает расхождения"
+slug: 'perekrestnaia-sverka-dokumentov-iskliuchaet-raskhozhdeniia'
+date: 2023-11-23
+categories: 
+  - "главная-рубрика"
+coverImage: "9MpV403WaT8-1.jpg"
+---
+
+Вахта Памяти «Терский Рубеж»
+
+Команда проекта завершает работу по сверке архивных документов, которые были отработаны в течение 2023 года в Центральном архиве МО РФ,- говорит Руководитель проекта – Член Общественной палаты РФ и ЧР Иса Сардалов.- Нами были исследованы документы как по боевым действиям при обороне Кавказа, так и по безвозвратным потерям 255-го Отдельного Чечено-Ингушского кавалерийского полка на территории Республики Калмыкия и части Волгоградской области.
+
+Для справки:  
+Ведя ожесточенные бои в несколько раз превосходящим противником, в основной своей массе с танковыми частями, полк понес огромные потери личного состава и материальной части, в результате чего из-за потери больше 2/3 личного состава полк был расформирован, а оставшийся личный состав передан в другие части и поздравления.  
+Данную работу у нас ведут два моих помощника Апти Абдулазиев и Ахмед Сардалов, в итоге все сведения войдут в готовящееся к выпуску научного издания,- добавил Иса Сардалов.
+
+Как заметил И.Сардалов в первую уже изданную книгу вошли сведения на более пятидесяти солдат и командиров Красной Армии, судьбы которых ранее не были известны.
+
+Здесь важно подчеркнуть, что команда, которой руководит Иса Сардалов, не делит защитников Отечества на расовую, религиозную и национальную принадлежность. Они занимаются представителями всех народов, имена которых им попадаются.
+
+Следует отметить, что данные мероприятия проводятся в рамках исполнения протокольных поручений Главы Чеченской Республики Героя России Рамзана Кадырова на средства Фонда президентских грантов при непосредственной финансовой, материальной и информационной поддержке ООД «Поискового движения России», Общественной палаты Российской Федерации и Чеченской Республики, при содействии Поискового отряда «Терский Рубеж» и РО «Офицеры России» в ЧР.
+
+[#ПоисковикиРФ](https://vk.com/feed?section=search&q=%23%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%D0%BE%D0%B2%D0%B8%D0%BA%D0%B8%D0%A0%D0%A4)[#ПоисковикиЧР](https://vk.com/feed?section=search&q=%23%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%D0%BE%D0%B2%D0%B8%D0%BA%D0%B8%D0%A7%D0%A0)[#КомандаКРА](https://vk.com/feed?section=search&q=%23%D0%9A%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%B0%D0%9A%D0%A0%D0%90)[#ПоискРФ](https://vk.com/feed?section=search&q=%23%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%D0%A0%D0%A4)[#ПоискЧР](https://vk.com/feed?section=search&q=%23%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%D0%A7%D0%A0)[#ПатриотыРоссии](https://vk.com/feed?section=search&q=%23%D0%9F%D0%B0%D1%82%D1%80%D0%B8%D0%BE%D1%82%D1%8B%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8)[#Ингушетия](https://vk.com/feed?section=search&q=%23%D0%98%D0%BD%D0%B3%D1%83%D1%88%D0%B5%D1%82%D0%B8%D1%8F)[#Фондпрезидентскихгрантов](https://vk.com/feed?section=search&q=%23%D0%A4%D0%BE%D0%BD%D0%B4%D0%BF%D1%80%D0%B5%D0%B7%D0%B8%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%D1%85%D0%B3%D1%80%D0%B0%D0%BD%D1%82%D0%BE%D0%B2)[#ОбщественнаяпалатаРФ](https://vk.com/feed?section=search&q=%23%D0%9E%D0%B1%D1%89%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F%D0%BF%D0%B0%D0%BB%D0%B0%D1%82%D0%B0%D0%A0%D0%A4)[#ОбщественнаяпалатаЧР](https://vk.com/feed?section=search&q=%23%D0%9E%D0%B1%D1%89%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F%D0%BF%D0%B0%D0%BB%D0%B0%D1%82%D0%B0%D0%A7%D0%A0)[#ОфицерыРоссии](https://vk.com/feed?section=search&q=%23%D0%9E%D1%84%D0%B8%D1%86%D0%B5%D1%80%D1%8B%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8)[#Регион95](https://vk.com/feed?section=search&q=%23%D0%A0%D0%B5%D0%B3%D0%B8%D0%BE%D0%BD95)[#ГГНТУ](https://vk.com/feed?section=search&q=%23%D0%93%D0%93%D0%9D%D0%A2%D0%A3)[#ТерскийРубеж](https://vk.com/feed?section=search&q=%23%D0%A2%D0%B5%D1%80%D1%81%D0%BA%D0%B8%D0%B9%D0%A0%D1%83%D0%B1%D0%B5%D0%B6)[#Чечня](https://vk.com/feed?section=search&q=%23%D0%A7%D0%B5%D1%87%D0%BD%D1%8F)[#ЧГУ](https://vk.com/feed?section=search&q=%23%D0%A7%D0%93%D0%A3)[#ЧГПУ](https://vk.com/feed?section=search&q=%23%D0%A7%D0%93%D0%9F%D0%A3)[#ПатриотЧР](https://vk.com/feed?section=search&q=%23%D0%9F%D0%B0%D1%82%D1%80%D0%B8%D0%BE%D1%82%D0%A7%D0%A0)[#ПоисковоедвижениевЧеченскойРеспублике](https://vk.com/feed?section=search&q=%23%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%D0%BE%D0%B2%D0%BE%D0%B5%D0%B4%D0%B2%D0%B8%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%D0%B2%D0%A7%D0%B5%D1%87%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%B9%D0%A0%D0%B5%D1%81%D0%BF%D1%83%D0%B1%D0%BB%D0%B8%D0%BA%D0%B5)[#Грозный](https://vk.com/feed?section=search&q=%23%D0%93%D1%80%D0%BE%D0%B7%D0%BD%D1%8B%D0%B9)[#Маоонацсовет](https://vk.com/feed?section=search&q=%23%D0%9C%D0%B0%D0%BE%D0%BE%D0%BD%D0%B0%D1%86%D1%81%D0%BE%D0%B2%D0%B5%D1%82)[#Судьбасолдата](https://vk.com/feed?section=search&q=%23%D0%A1%D1%83%D0%B4%D1%8C%D0%B1%D0%B0%D1%81%D0%BE%D0%BB%D0%B4%D0%B0%D1%82%D0%B0)[#СтуденческийдесантЧГУ](https://vk.com/feed?section=search&q=%23%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9%D0%B4%D0%B5%D1%81%D0%B0%D0%BD%D1%82%D0%A7%D0%93%D0%A3)[#ПатриотыЧечни](https://vk.com/feed?section=search&q=%23%D0%9F%D0%B0%D1%82%D1%80%D0%B8%D0%BE%D1%82%D1%8B%D0%A7%D0%B5%D1%87%D0%BD%D0%B8)[#Малгобек](https://vk.com/feed?section=search&q=%23%D0%9C%D0%B0%D0%BB%D0%B3%D0%BE%D0%B1%D0%B5%D0%BA)
+
+[![](https://poisk-chr.ru/wp-content/uploads/2023/11/i_fn7op7X9E.jpg)](https://poisk-chr.ru/wp-content/uploads/2023/11/i_fn7op7X9E.jpg)
+
+[![](https://poisk-chr.ru/wp-content/uploads/2023/11/jkMiC4fZvok.jpg)](https://poisk-chr.ru/wp-content/uploads/2023/11/jkMiC4fZvok.jpg)
+
+[![](https://poisk-chr.ru/wp-content/uploads/2023/11/R6cophQ7fjA.jpg)](https://poisk-chr.ru/wp-content/uploads/2023/11/R6cophQ7fjA.jpg)
+
+[![](https://poisk-chr.ru/wp-content/uploads/2023/11/shfLx6hb_6Y.jpg)](https://poisk-chr.ru/wp-content/uploads/2023/11/shfLx6hb_6Y.jpg)
