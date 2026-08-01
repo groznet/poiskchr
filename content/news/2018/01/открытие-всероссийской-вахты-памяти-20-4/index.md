@@ -7,4 +7,4 @@ categories:
 coverImage: "20190404_1655360.jpg"
 ---
 
-\[envira-gallery id='4688'\]
+

@@ -13,4 +13,4 @@ coverImage: "20190823_173840.jpg"
 
 [Лебяжье](https://terskiyrubezh.ru/wp-content/uploads/2019/08/Лебяжье.docx)
 
-\[envira-gallery id='5681'\]
+

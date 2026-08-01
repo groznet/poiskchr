@@ -7,4 +7,3 @@ categories:
 coverImage: "U9A6CC8aOOY.jpg"
 ---
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2020/02/sI2tH9sb4uw.jpg)

@@ -7,4 +7,4 @@ categories:
 coverImage: "SANY0182.jpg"
 ---
 
-\[envira-gallery id='3534'\]
+

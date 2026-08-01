@@ -12,6 +12,4 @@ coverImage: "WBZPHJsni20.jpg"
 Чеченские студенты радушно приняты в поисковое сообщество России.  
 Уже появились новые друзья, единомышленники. Получили ряд приглашений для обмена опытом со сверстниками с других регионов России.
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2020/02/cobPtV2XgQA.jpg)
 
-[![](https://terskiyrubezh.ru/wp-content/uploads/2020/02/cobPtV2XgQA.jpg)](https://terskiyrubezh.ru/wp-content/uploads/2020/02/cobPtV2XgQA.jpg)

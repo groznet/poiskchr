@@ -17,12 +17,7 @@ coverImage: "8a1sM0MH0DFhdsBIEB8Y9Q9pHD1H-d_EuXmsGJeSrU-k9KFJTeofEiUu3QqydyJztjo
 
 🌐🔗 www.oprf.ru/news/nezab…
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/12/16yFai9OumqpWlkBMR7ySfktVpQCkV0-nmSQPFVre-atMwyYHUcpVgDHZmWXCZseCvUPM2vUXVlWz4CJ77hKdZKC.jpg)
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/12/TeHET2OVB04MlsHjA59hsHdBkoTBMPzlIY3LyOpIxeU28Znug7tAmwuKH1nf1LbLV5Z1xQY7R8kS-V7H7dSvhixT.jpg)
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/12/w5jcJY98sK89aq_jUhJvy3A9iIexTOiJ1VCDrElpS81K7lY45rFOERT1_tSKohWBnK3a2xgrUTqWwaLZ4CZWF2oQ.jpg)
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/12/xShXwh3J70oKucI80JP_thUVtUn9zQibq55hKQHypYomfSNSbvfoPofhVweoz22v8Q-c1G9hAuVQN5swGUIrlRt4.jpg)
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/12/ZtBQiRKvbtC67csjZEGi58iywtrAlsCl-RB4mf3o-naRiOei3UmIXlf1MrxIEZVuedfUB44AuNg7p77bmODL4YWD.jpg)

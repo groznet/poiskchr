@@ -30,6 +30,4 @@ coverImage: "c0CzXZGJZWs.jpg"
 
 ПоисковикиРФ #ПоисковикиЧР #КомандаКРА #ПоискРФ #ПоискЧР #ПатриотыРоссии #Ингушетия #Фондпрезидентскихгрантов #КСВО #ОбщественнаяпалатаРФ #ОбщественнаяпалатаЧР #ОфицерыРоссии #Регион95 #ГГНТУ #ТерскийРубеж #Чечня #ЧГУ #ЧГПУ #ПатриотЧР #ПоисковоедвижениевЧеченскойРеспублике #Судьбасолдата #БитвазаКавказ #СтуденческийдесантЧГУ #Грозный #ПатриотыЧечни #Малгобек #маоонацсовет #ЮнармияРИ #Дагестан #Освенцим #Аушвиц
 
-[![](https://terskiyrubezh.ru/wp-content/uploads/2023/01/bYbkqHkVlAQ.jpg)](https://terskiyrubezh.ru/wp-content/uploads/2023/01/bYbkqHkVlAQ.jpg)
 
-[![](https://terskiyrubezh.ru/wp-content/uploads/2023/01/W0Q31Nt9FqQ.jpg)](https://terskiyrubezh.ru/wp-content/uploads/2023/01/W0Q31Nt9FqQ.jpg)

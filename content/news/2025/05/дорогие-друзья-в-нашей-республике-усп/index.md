@@ -13,16 +13,9 @@ coverImage: "q_mbhYASr0.jpg"
 
 Сейчас на сайте zagorodsreda.gosuslugi.ru/ проходит онлайн-голосование за объекты благоустройства. Выставлено 72 объекта в 17 муниципальных образованиях. Успейте проголосовать за понравившуюся вам территорию до 12 июня!
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/05/a2MwmXiKKDI.jpg)
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/05/CPgIm6JQLZ0.jpg)
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/05/ftkz64iyMKA.jpg)
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/05/jbWRtsXmZH0.jpg)
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/05/n2Of6Z20D_c.jpg)
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/05/NP2iDRYCxYQ.jpg)
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/05/tWxM4G-tpuU.jpg)

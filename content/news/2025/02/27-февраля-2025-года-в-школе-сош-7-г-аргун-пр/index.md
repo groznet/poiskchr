@@ -43,18 +43,10 @@ coverImage: "9yXz7XQcHv4.jpg"
 
 ПатриотыРоссии #Ингушетия #Фондпрезидентскихгрантов #ОбщественнаяпалатаРФ #ОбщественнаяпалатаЧР #ОфицерыРоссии #Регион95 #ГГНТУ #ТерскийРубеж #Чечня #ЧГУ #ЧГПУ #ПатриотЧР #ПоисковоедвижениевЧеченскойРеспублике #Грозный #Маоонацсовет #Судьбасолдата #СтуденческийдесантЧГУ #ПатриотыЧечни #Малгобек
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/02/kcKrP8aiT1Q.jpg)
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/02/mQmmjOqPSrE.jpg)
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/02/xHIZ0TcZ_eo.jpg)
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/02/xVDratXONfo.jpg)
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/02/y5RouN7kHDI.jpg)
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/02/0M2fv0olF0A.jpg)
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/02/2OqTks_gTLs.jpg)
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/02/9bOamEbGZ5M.jpg)

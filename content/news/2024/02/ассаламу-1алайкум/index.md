@@ -15,12 +15,9 @@ coverImage: "xJ148VGGcro.jpg"
   
 Мои знакомые также готовы принять участие в голосовании, и я уверен, что эти выборы станут рекордными по явке. Давайте вместе внесем свой вклад в создание лучшего будущего!  
   
-[#ОбщественнаяпалатаРФ](https://vk.com/feed?section=search&q=%23%D0%9E%D0%B1%D1%89%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F%D0%BF%D0%B0%D0%BB%D0%B0%D1%82%D0%B0%D0%A0%D0%A4)  
-[#ОщественнаяпалатаЧР](https://vk.com/feed?section=search&q=%23%D0%9E%D1%89%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F%D0%BF%D0%B0%D0%BB%D0%B0%D1%82%D0%B0%D0%A7%D0%A0)  
-[#ВыборыПрезидентаРФ](https://vk.com/feed?section=search&q=%23%D0%92%D1%8B%D0%B1%D0%BE%D1%80%D1%8B%D0%9F%D1%80%D0%B5%D0%B7%D0%B8%D0%B4%D0%B5%D0%BD%D1%82%D0%B0%D0%A0%D0%A4)
+#ОбщественнаяпалатаРФ  
+#ОщественнаяпалатаЧР  
+#ВыборыПрезидентаРФ
 
-[![](https://terskiyrubezh.ru/wp-content/uploads/2024/03/J_13zdW0EJ4.jpg)](https://terskiyrubezh.ru/wp-content/uploads/2024/03/J_13zdW0EJ4.jpg)
 
-[![](https://terskiyrubezh.ru/wp-content/uploads/2024/03/jlLwOrv43HU.jpg)](https://terskiyrubezh.ru/wp-content/uploads/2024/03/jlLwOrv43HU.jpg)
 
-[![](https://terskiyrubezh.ru/wp-content/uploads/2024/03/wAwlB98PlJo.jpg)](https://terskiyrubezh.ru/wp-content/uploads/2024/03/wAwlB98PlJo.jpg)

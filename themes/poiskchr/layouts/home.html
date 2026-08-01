@@ -63,12 +63,19 @@
 
             {{ if $gData.featured_image }}
                 {{ $featuredSrc = $gData.featured_image }}
-            {{ else }}
-                {{ $mainImg := .Resources.GetMatch "{featured,cover,main,index}*.{jpg,jpeg,png,webp,gif,avif,svg}" }}
-                {{ if not $mainImg }}
-                    {{ $mainImg = index (.Resources.ByType "image") 0 }}
+            {{ else if and $gData.images (gt (len $gData.images) 0) }}
+                {{/* Fallback to first image listed in gallery.json */}}
+                {{ $firstImg := index $gData.images 0 }}
+                {{ if $gData.remote_base_url }}
+                    {{ $featuredSrc = printf "%s%s" $gData.remote_base_url $firstImg }}
+                {{ else if .File }}
+                    {{ $cdn := .Site.Params.cdn }}
+                    {{ $dir := replace .File.Dir "\\" "/" -1 }}
+                    {{ $featuredSrc = printf "%s/%simages/%s" $cdn $dir $firstImg }}
                 {{ end }}
-
+            {{ else }}
+                {{/* Fallback to any local image in page bundle */}}
+                {{ $mainImg := index (.Resources.ByType "image") 0 }}
                 {{ if $mainImg }}
                     {{ $featuredSrc = $mainImg.RelPermalink }}
                 {{ else if .Params.image }}
@@ -76,7 +83,7 @@
                 {{ else if .File }}
                     {{ $cdn := .Site.Params.cdn }}
                     {{ $dir := replace .File.Dir "\\" "/" -1 }}
-                    {{ $featuredSrc = printf "%s/%sfeatured.jpg" $cdn $dir }}
+                    {{ $featuredSrc = printf "%s/%simages/1.jpg" $cdn $dir }}
                 {{ end }}
             {{ end }}
 
@@ -220,12 +227,19 @@
 
             {{ if $gData.featured_image }}
                 {{ $featuredSrc = $gData.featured_image }}
-            {{ else }}
-                {{ $mainImg := .Resources.GetMatch "{featured,cover,main,index}*.{jpg,jpeg,png,webp,gif,avif,svg}" }}
-                {{ if not $mainImg }}
-                    {{ $mainImg = index (.Resources.ByType "image") 0 }}
+            {{ else if and $gData.images (gt (len $gData.images) 0) }}
+                {{/* Fallback to first image listed in gallery.json */}}
+                {{ $firstImg := index $gData.images 0 }}
+                {{ if $gData.remote_base_url }}
+                    {{ $featuredSrc = printf "%s%s" $gData.remote_base_url $firstImg }}
+                {{ else if .File }}
+                    {{ $cdn := .Site.Params.cdn }}
+                    {{ $dir := replace .File.Dir "\\" "/" -1 }}
+                    {{ $featuredSrc = printf "%s/%simages/%s" $cdn $dir $firstImg }}
                 {{ end }}
-
+            {{ else }}
+                {{/* Fallback to any local image in page bundle */}}
+                {{ $mainImg := index (.Resources.ByType "image") 0 }}
                 {{ if $mainImg }}
                     {{ $featuredSrc = $mainImg.RelPermalink }}
                 {{ else if .Params.image }}
@@ -233,7 +247,7 @@
                 {{ else if .File }}
                     {{ $cdn := .Site.Params.cdn }}
                     {{ $dir := replace .File.Dir "\\" "/" -1 }}
-                    {{ $featuredSrc = printf "%s/%sfeatured.jpg" $cdn $dir }}
+                    {{ $featuredSrc = printf "%s/%simages/1.jpg" $cdn $dir }}
                 {{ end }}
             {{ end }}
 

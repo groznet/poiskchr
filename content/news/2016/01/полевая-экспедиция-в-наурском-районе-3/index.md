@@ -7,4 +7,4 @@ categories:
 coverImage: "DSCN3254.jpg"
 ---
 
-\[envira-gallery id='4555'\]
+

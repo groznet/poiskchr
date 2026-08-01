@@ -6,4 +6,4 @@ categories:
   - "главная-рубрика"
 ---
 
-\[envira-gallery id='7173'\]
+

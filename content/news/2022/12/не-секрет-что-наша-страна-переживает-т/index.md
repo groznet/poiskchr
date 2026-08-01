@@ -7,11 +7,8 @@ categories:
 coverImage: "cHxjO78Z-OOK5-ka1gimf9pIpNpSjnOBSQLDMOWMmn2dNCedo25Pylky1CVEcNUjDDm_WvVI7AshsOGdTvA3360Z.jpg"
 ---
 
-[![](https://terskiyrubezh.ru/wp-content/uploads/2022/12/ENjMcR8_yoNw-f7kmgglTngcjNvRrp9bRi_YTGqRtKUAAE1Va4vFmobperw1UsuMXTAzQtAdh4MC8iedgdjqgrCI.jpg)](https://terskiyrubezh.ru/wp-content/uploads/2022/12/ENjMcR8_yoNw-f7kmgglTngcjNvRrp9bRi_YTGqRtKUAAE1Va4vFmobperw1UsuMXTAzQtAdh4MC8iedgdjqgrCI.jpg)
 
-[![](https://terskiyrubezh.ru/wp-content/uploads/2022/12/nVx26N2eRnrVFSPUwsr7l1gNnTb6EEeTXxgnDm3-HjjTeupvKQb8ixmrgfPghK1TKwgeYAiPOQJxYijYXsmD3QIG.jpg)](https://terskiyrubezh.ru/wp-content/uploads/2022/12/nVx26N2eRnrVFSPUwsr7l1gNnTb6EEeTXxgnDm3-HjjTeupvKQb8ixmrgfPghK1TKwgeYAiPOQJxYijYXsmD3QIG.jpg)
 
-[![](https://terskiyrubezh.ru/wp-content/uploads/2022/12/7qZv9kCbiJxf5oIucszfTsPzMfCBuBjU3lDdzxRxNvzJQllmXk424_kTF6GivsYLqZS5ipQyRktoZ07WasND_NVU.jpg)](https://terskiyrubezh.ru/wp-content/uploads/2022/12/7qZv9kCbiJxf5oIucszfTsPzMfCBuBjU3lDdzxRxNvzJQllmXk424_kTF6GivsYLqZS5ipQyRktoZ07WasND_NVU.jpg)
 
 Однако, несмотря на все сложности, руководство нашего региона в лице Главы Чеченской Республики Героя России Рамзана Кадырова делает все, чтобы жители республики не чувствовали никакие тяготы.  
 Республика живет в обычном штатном режиме, функционируют все ведомства обеспечивающие жизнедеятельность населения.

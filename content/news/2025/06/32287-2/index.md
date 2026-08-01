@@ -20,12 +20,7 @@ coverImage: "nofeNXCiru6V5vLaDKlQ8RwtKYjUwsuA1UG6wcj_rFpJUBmx2RmQB6AEV7ThUFl7qES
 
 ПоисковикиРФ #ПоисковикиЧР #КомандаКРА #ПоискРФ #ПоискЧР #ПатриотыРоссии #Ингушетия #Фондпрезидентскихгрантов #ОбщественнаяпалатаРФ #ОбщественнаяпалатаЧР #ОфицерыРоссии #Регион95 #ГГНТУ #ТерскийРубеж #Чечня #ЧГУ #ЧГПУ #ПатриотЧР #Аджимушкай #ПоисковоедвижениевЧеченскойРеспублике #Судьбасолдата #СтуденческийдесантЧГУ #Терроризм #Грозный #ПатриотыЧечни #Малгобек #маоонацсовет #ЮнармияРИ #Дагестан
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/07/uXV5sioc0ZevouHMbWU2j16NrZrDpuZLD356M7gW9IrC4JI0lDcvmaA5wK3JUSXoCcg3YAXW8wwJThppTqIsByEt.jpg)
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/07/VvCZEgELZO7Li02WgcmfuRF0i7VqheXygI6k3Ry6ex0UJkZRl4prbSnMYaX6Ti9JHeVJDN5VdM6J_GxM7LZsLp7u.jpg)
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/07/8s7L6hiA1WUfmC1qSR9eNTue_O_hyzBCFaApjxZQ9IhpQ6AZMirqWudvdNaylp6E09N4jKSwRxdnRdenreN8xChK.jpg)
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/07/kzNMt1GbEbuWD7TTut6knzSQhrrawKDEHd2N4laqZY49P9pB2RGiTcmwcXB09KbKAd_IqTIyfWofEyDqB1cD55en.jpg)
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/07/Mm5_8CGFzrtoEKcPAsq-9HL3M1OthiT1EYyscIw2qAdLQB_vjCx5ahYIMF2hpwpr7QG3eW-iKH_6LXyXAcT0jvX1.jpg)

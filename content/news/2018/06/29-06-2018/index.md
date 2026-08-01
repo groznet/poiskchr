@@ -15,6 +15,4 @@ coverImage: "k7Eamm6cEQE.jpg"
 К сожалению, не все документы находятся в Германии, огромное количество трофейных документов хранятся в США.  
 Работа продолжается.
 
-[![](https://terskiyrubezh.ru/wp-content/uploads/2020/02/dD_oLcseKu0.jpg)](https://terskiyrubezh.ru/wp-content/uploads/2020/02/dD_oLcseKu0.jpg)
 
-[![](https://terskiyrubezh.ru/wp-content/uploads/2020/02/jp_ZqItotCE.jpg)](https://terskiyrubezh.ru/wp-content/uploads/2020/02/jp_ZqItotCE.jpg)

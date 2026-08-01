@@ -9,6 +9,4 @@ coverImage: "l3WKrY_1BX4.jpg"
 
 Председатель Общественной палаты Чеченской Республики Исмаил Денильханов провел рабочее совещание с руководящим составом ОП ЧР. В совещании принял участие член Общественной палаты РФ и ЧР Иса Сардалов и член комиссии Общественной палаты Алтайского края по вопросам экономики и предпринимательства Валид Газиев. На встрече обсудили организацию встречи делегации из Алтая и подписание соглашения о взаимодействии.
 
-[![](https://terskiyrubezh.ru/wp-content/uploads/2024/05/EpjFX1ajvtk.jpg)](https://terskiyrubezh.ru/wp-content/uploads/2024/05/EpjFX1ajvtk.jpg)
 
-[![](https://terskiyrubezh.ru/wp-content/uploads/2024/05/jdJAunvLkkw.jpg)](https://terskiyrubezh.ru/wp-content/uploads/2024/05/jdJAunvLkkw.jpg)

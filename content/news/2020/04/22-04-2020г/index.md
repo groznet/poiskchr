@@ -7,4 +7,4 @@ categories:
 coverImage: "93995801_1097741317291223_5412542645689909248_o.jpg"
 ---
 
-\[envira-gallery id='8525'\]
+

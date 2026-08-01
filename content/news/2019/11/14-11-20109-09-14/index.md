@@ -7,4 +7,4 @@ categories:
 coverImage: "SLWoeQh-Sew.jpg"
 ---
 
-\[envira-gallery id='7122'\]
+

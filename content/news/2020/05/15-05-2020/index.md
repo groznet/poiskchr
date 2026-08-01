@@ -50,6 +50,4 @@ ZOOM по инициативе Руководства Общероссийско
 
 РоссийскоедвижениешкольниковвЧР #Грозный
 
-[![](https://terskiyrubezh.ru/wp-content/uploads/2020/05/20200515_202501.jpg)](https://terskiyrubezh.ru/wp-content/uploads/2020/05/20200515_202501.jpg)
 
-[![](https://terskiyrubezh.ru/wp-content/uploads/2020/05/20200515_202501-—-копия.jpg)](https://terskiyrubezh.ru/wp-content/uploads/2020/05/20200515_202501-—-копия.jpg)

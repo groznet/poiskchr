@@ -41,20 +41,11 @@ coverImage: "EfctCOwsH8w.jpg"
   
 Подробнее смотрите в сюжетах Новгородского областного телевидения.  
   
-[http://opnov.ru/3132-v-obshchestvennoj-palate-proshel](https://vk.com/away.php?to=http%3A%2F%2Fopnov.ru%2F3132-v-obshchestvennoj-palate-proshel&post=62548391_3519&cc_key=&track_code=)..
 
-[![](https://terskiyrubezh.ru/wp-content/uploads/2024/03/a2VXMg-duv4.jpg)](https://terskiyrubezh.ru/wp-content/uploads/2024/03/a2VXMg-duv4.jpg)
 
-[![](https://terskiyrubezh.ru/wp-content/uploads/2024/03/KTC6LK9iQ4A.jpg)](https://terskiyrubezh.ru/wp-content/uploads/2024/03/KTC6LK9iQ4A.jpg)
 
-[![](https://terskiyrubezh.ru/wp-content/uploads/2024/03/nXayons1KbU.jpg)](https://terskiyrubezh.ru/wp-content/uploads/2024/03/nXayons1KbU.jpg)
 
-[![](https://terskiyrubezh.ru/wp-content/uploads/2024/03/oU_GOjlYySg.jpg)](https://terskiyrubezh.ru/wp-content/uploads/2024/03/oU_GOjlYySg.jpg)
 
-[![](https://terskiyrubezh.ru/wp-content/uploads/2024/03/Sr2HgefhOsE.jpg)](https://terskiyrubezh.ru/wp-content/uploads/2024/03/Sr2HgefhOsE.jpg)
 
-[![](https://terskiyrubezh.ru/wp-content/uploads/2024/03/TNlKy6phztE.jpg)](https://terskiyrubezh.ru/wp-content/uploads/2024/03/TNlKy6phztE.jpg)
 
-[![](https://terskiyrubezh.ru/wp-content/uploads/2024/03/ud6VtjjAKKg.jpg)](https://terskiyrubezh.ru/wp-content/uploads/2024/03/ud6VtjjAKKg.jpg)
 
-[![](https://terskiyrubezh.ru/wp-content/uploads/2024/03/Wr1IbJPm0MI.jpg)](https://terskiyrubezh.ru/wp-content/uploads/2024/03/Wr1IbJPm0MI.jpg)

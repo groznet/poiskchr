@@ -15,4 +15,3 @@ coverImage: "3QG51H9yYWk.jpg"
 Грозный, Чеченская Республика. В минуты отдыха.  
 Поисковики Чечни с Ответственным секретарём "Поисковое движение России" с Еленой Моисеевной Цунаевой.
 
-[![](https://terskiyrubezh.ru/wp-content/uploads/2020/02/qqnMeRp_nKY.jpg)](https://terskiyrubezh.ru/wp-content/uploads/2020/02/qqnMeRp_nKY.jpg)

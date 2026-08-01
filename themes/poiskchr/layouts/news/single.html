@@ -46,22 +46,19 @@
     {{/* 2. Featured Image Resolution (Remote -> Local Bundle -> Params -> CDN Fallback) */}}
     {{ $mainImgSrc := "" }}
 
+    {{ $mainImgSrc := "" }}
+
     {{ if $gData.featured_image }}
         {{ $mainImgSrc = $gData.featured_image }}
     {{ else }}
-        {{ $mainImg := .Resources.GetMatch "{featured,cover,main,index}*.{jpg,jpeg,png,webp,gif,avif,svg}" }}
-        {{ if not $mainImg }}
-            {{ $mainImg = index (.Resources.ByType "image") 0 }}
-        {{ end }}
+        {{ $anyImg := index (.Resources.ByType "image") 0 }}
 
-        {{ if $mainImg }}
-            {{ $mainImgSrc = $mainImg.RelPermalink }}
+        {{ if $anyImg }}
+            {{ $mainImgSrc = $anyImg.RelPermalink }}
         {{ else if .Params.image }}
             {{ $mainImgSrc = .Params.image | relURL }}
-        {{ else if .File }}
-            {{ $cdn := .Site.Params.cdn }}
-            {{ $dir := replace .File.Dir "\\" "/" }}
-            {{ $mainImgSrc = printf "%s/%sfeatured.jpg" $cdn $dir }}
+        {{ else }}
+            {{ $mainImgSrc = "/images/post-placeholder.jpg" }}
         {{ end }}
     {{ end }}
 

@@ -17,6 +17,4 @@ coverImage: "w6FZZjuB_JU.jpg"
 Хочется выразить огромную благодарность в лице Главного поисковика Ингушетии Беслан Дзейтов всем ингушским поисковикам за организацию и приглашение на данное мероприятие.  
 Удачи всем!
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2020/02/0TLSml59okw.jpg)
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2020/02/1gJhBKlLITc.jpg)

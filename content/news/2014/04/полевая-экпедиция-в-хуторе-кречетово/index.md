@@ -29,4 +29,4 @@ coverImage: "20140508_162027.jpg"
 
 http://www.dosaaf.ru/region40/news/pervaya-ofitcialnaya-poiskovaya-ekspeditciya-v-chechenskoj/
 
-\[envira-gallery id='4342'\]
+

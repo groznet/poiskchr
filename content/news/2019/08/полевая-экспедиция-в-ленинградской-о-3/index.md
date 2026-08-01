@@ -7,4 +7,4 @@ categories:
 coverImage: "20190821_112141.jpg"
 ---
 
-\[envira-gallery id='5691'\]
+

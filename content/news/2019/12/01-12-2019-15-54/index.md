@@ -7,4 +7,4 @@ categories:
 coverImage: "LGSekZVs2fM.jpg"
 ---
 
-\[envira-gallery id='6576'\]
+

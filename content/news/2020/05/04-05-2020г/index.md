@@ -7,4 +7,4 @@ categories:
 coverImage: "20200504_111922.jpg"
 ---
 
-\[envira-gallery id='8623'\]
+

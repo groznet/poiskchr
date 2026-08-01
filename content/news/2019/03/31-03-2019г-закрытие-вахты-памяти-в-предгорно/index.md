@@ -7,4 +7,4 @@ categories:
 coverImage: "IMG_4201.jpg"
 ---
 
-\[envira-gallery id='4910'\]
+

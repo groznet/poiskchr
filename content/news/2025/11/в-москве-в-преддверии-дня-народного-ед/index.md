@@ -24,20 +24,11 @@ coverImage: "EKLUz8Spxg-RFkhNk-C-prKQs220CPUhal2Q_9dYOHloOoneCf29zR78VGwyKvZP2lw
 
 Начальник Управления президента России по общественным проектам Сергей Новиков перечислил ключевые вехи: диалог с гражданским обществом, грантовую поддержку НКО, принятие федерального закона об общественном контроле, развитие института ОНК, работу над поправками к Конституции, участие НКО в помощи в период пандемии и в поддержке участников специальной военной операции и их семей.
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/11/0cLDNjzcBlG_9Jb1a1dbfVUBOKtPnseqU0lKQljS3gE_DsB9azc8NTGW7I1-rztHE13D7zMlRb5BwLSJ9Le_faUR.jpg)
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/11/4ACAk2XdFBV0rKUQqU3PLQNVEYWw2OMW1vpYCVxGcftf4vt2KLuE2c59MGL0jJB-w6uJGywdzlK93mi1u-mv6kyZ.jpg)
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/11/Dsfh-gHF2BsMJA9oswwqYxS5v2j8NIziXURZZaklyArTFltHDpvSr6UEVd-nkRwofHPZ-uwSyIo_Tou7A0tbY9V.jpg)
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/11/eGOlwV2QOyzgJg0Lo12gEmiLFcZMJf5K-pMwz6qDyb57fjVjNh08WfAvQjUHQAcwhJ9BnzNngKquMHHAJXw18Xc_.jpg)
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/11/ja7WuN6WysVSWf-uAH_LhWdU97nT4EZSDqNVyoByALJfAdoFRPVj7dmSiV5lRSLVkmJqy5C4NFEOJ5IYHai-Y44O.jpg)
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/11/NxGOmgZg5wsO1VKCZ7X0ETpp30oZ7TxZubxWdV1_T7SsFB6Tz6yPWQFQl9WAJnn7Tx-N_XsDJ1HNz0PGZSjd57Af.jpg)
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/11/rPqkOE4Jyz3hCQVoVW5O39Q4eMRsjUoxdanngech53-BhGVDFGPZ9dWs0mqzTOc8UGQ7Oq3ItLeYOmx5XNqn6LCr.jpg)
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/11/toii70by_qW3WwR4Tb7rAuC3LXt1nCuBgtn564bDXtkwq6GvAZsf3igmCeV3XX6VTgYtOL1t-HSO8QFlfOB8MIxK.jpg)
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/11/uQk9Pjc2DUYNlnbHYAPdzsHGwq2qfNQXbIIcYcWbO_d90k3TG4fu01Nb-jEX97Elw0AkXq_1nyndE95GSA0oKkdu.jpg)

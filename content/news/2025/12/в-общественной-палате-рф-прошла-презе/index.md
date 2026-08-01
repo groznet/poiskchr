@@ -48,20 +48,11 @@ coverImage: "Hm7Cqyf55c9ZLs7yB85y8YqWN9qOM8A0Cupw_3TTI6X7_RSJIg12UeZkZwosMv3Ia4_
 «Программа была выполнена полностью. В том числе в Кабардино-Балкарской Республике было восстановлено 96 захоронений, в Республике Северная Осетия — Алания — 90, в Карачаево-Черкесской Республике — 41, в Республике Ингушетия — 24, в Чеченской республике — 17», — сообщил Игорь Гойхман.  
 Информация с сайта Общественной палаты РФ www.oprf.ru/news/nezab.
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/12/qTLVeq6wgeeMzYMyd3JguysC98TRPloyslCwlhQiL-nejZTRb2faSOUYrPR5SarNpYMUwK65mftd13FqO4K6bsbv.jpg)
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/12/sC1KPbUgzTzfIS-SU3SazsxJPszJ0ngrXr_DtpvdGOCdiPmxRToNMiIbzrZwnvHpl11XPlQI06zMiV4e77tv3KEJ.jpg)
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/12/Z5sDO9RZlJ7SW2vxrGOEk1ckC5heRSIYZy7rBCWbz6BZ_1YaqDvN_q14Be7DZW4bHNFj8uK3et0xKcmvNtsEuJPe.jpg)
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/12/1cvG1X7FTIjULfcfX8-0b1DUYuhn6B3BiP96DilS1P_-PRt7QwP_sxLKk7uQEjpap5XIKtokGMUeRJhj3epn3Z0z.jpg)
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/12/7XQg35TWhmYO57LscJoOKc_Nt_xA5nQFGb1bFfz1oKCERdICtixaBIi_b82d1C-lL-UYtBv2YyYano_0skZ1z8Z4.jpg)
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/12/aQ0UTiTZUo2KtJQcpRcjgmDWkM9Abt0FW-Ae6ea5zp83_zpOshYoJ3A5rZ3qOAacQV39c0ogEJYKXYubBbit0eDf.jpg)
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/12/B9KFWHKFPSj1p79dAlgeVpdK87arf3sLM7ugXZzxwNZbmprhPDthBqkQBY7IoDiixG39aXUK1ynL5Bfdoe-mnIbK.jpg)
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/12/elDHrJeuwyLflmJmklJRxW6fUvMjIj4BmT-N5dnzMtbhrj3bLaO2XZJ4vEAzKr6e708wLh0Qt8Ta6AajUOjjPqkP.jpg)
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/12/f6QQ5UEObfAV7vD-F1mUH_INyvD12ysDW3evGdDw0uUhIgWSOUGekvaySgGEkGvVQMDerB5HDk2qyo3p_6PkMEZY.jpg)

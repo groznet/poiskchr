@@ -11,4 +11,3 @@ coverImage: "awdawdawgawwdawdwa.jpg"
 
 В рамках программы участники СВО проходят отбор и обучение в Высшей школе государственного управления Президентской академии. А это значит, что они смогут продолжить трудиться на благо Родины теперь уже в мирных условиях.
 
-<iframe src="https://vk.com/video_ext.php?oid=62548391&amp;id=456239195&amp;hd=2" width="853" height="480" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>

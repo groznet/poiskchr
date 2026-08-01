@@ -30,4 +30,4 @@ categories:
 
 Поиск продолжается.
 
-\[envira-gallery id='5045'\]
+

@@ -11,4 +11,4 @@ coverImage: "IMG_5862.jpg"
 
  До скорой встречи, Малгобекчане!
 
-\[envira-gallery id='6113'\]
+

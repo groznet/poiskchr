@@ -19,8 +19,5 @@ coverImage: "gfcKr3QqGIU.jpg"
   
 Участники встречи пришли к единому мнению, что проводимая работа, хотя на своем начальном этапе небольшой объем, начала давать положительные результаты. И договорились провести очередную встречу в ноябре месяце текущего года.
 
-[![](https://terskiyrubezh.ru/wp-content/uploads/2023/08/GnCT-SIMVAU.jpg)](https://terskiyrubezh.ru/wp-content/uploads/2023/08/GnCT-SIMVAU.jpg)
 
-[![](https://terskiyrubezh.ru/wp-content/uploads/2023/08/i4d5s3NXRkI.jpg)](https://terskiyrubezh.ru/wp-content/uploads/2023/08/i4d5s3NXRkI.jpg)
 
-[![](https://terskiyrubezh.ru/wp-content/uploads/2023/08/uiz3WerMv4Q.jpg)](https://terskiyrubezh.ru/wp-content/uploads/2023/08/uiz3WerMv4Q.jpg)

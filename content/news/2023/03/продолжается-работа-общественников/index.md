@@ -21,6 +21,4 @@ coverImage: "Z-FdbVkeAdU.jpeg"
 
 Следует отметить, что данные мероприятия проводятся в рамках исполнения протокольных поручений Главы Чеченской Республики Героя России Рамзана Кадырова на средства Фонда президентских грантов при непосредственной финансовой, материальной и информационной поддержке ООД «Поискового движения России», Общественной палаты Российской Федерации и Чеченской Республики. И, конечно же, имеет огромный положительный результат.
 
-[![](https://terskiyrubezh.ru/wp-content/uploads/2023/03/jOloKvAG3pg.jpg)](https://terskiyrubezh.ru/wp-content/uploads/2023/03/jOloKvAG3pg.jpg)
 
-[![](https://terskiyrubezh.ru/wp-content/uploads/2023/03/Z-FdbVkeAdU.jpg)](https://terskiyrubezh.ru/wp-content/uploads/2023/03/Z-FdbVkeAdU.jpg)

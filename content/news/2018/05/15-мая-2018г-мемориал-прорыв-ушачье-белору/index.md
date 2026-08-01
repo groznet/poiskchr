@@ -7,4 +7,4 @@ categories:
 coverImage: "20180515_125934.jpg"
 ---
 
-\[envira-gallery id='4642'\]
+

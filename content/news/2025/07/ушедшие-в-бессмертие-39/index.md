@@ -28,12 +28,7 @@ categories:
 
 ПоисковикиРФ #ПоисковикиЧР #КомандаКРА #ПоискРФ #ПоискЧР #ПатриотыРоссии #ОПРФ #Ингушетия #Фондпрезидентскихгрантов #ОбщественнаяпалатаРФ #ОбщественнаяпалатаЧР #ОПЧР #ОфицерыРоссии #Регион95 #ГГНТУ #ТерскийРубеж #Чечня #ЧГУ #ЧГПУ #ПатриотЧР #Аджимушкай #ПоисковоедвижениевЧеченскойРеспублике #Судьбасолдата #СтуденческийдесантЧГУ #Грозный #ПатриотыЧечни #Малгобек #ЦАМО #СанктПетербург #Брестскаякрепость #Аджимушкайскиекаменоломни
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/07/GqK3D8Ne6GPWkXO4CLG4mm3LRPI3Sjfep7KCTABIPW9SkQ3ZtVDr-3iwVIui0vPDjHLPKeWXiD5kQaT4vXo5HV4l.jpg)
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/07/K5yEEOthf0x66i6jSDbLfNiDloidZtK2kro32b4IK3hjhy2ynt3WUoW398dtQaFHeGJC8a7eAKHJx8Ni9FdCX1pz.jpg)
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/07/WSkxnernvZkFPVpqVFdhKSj7yeGt3lXdOeBcYCAVukpepSXF_zTSjq94n6Zq7mOE30A8wyRY_nzJirvRXqOnwU8e.jpg)
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/07/wWqstG3ALTKgL0uuSIT_FlK0ajHej-bt5PdhRfwh7ndLe3uObHiXW2dGOeIfJz2cRc5qjc5KuWPEu6JDEIObOrb_.jpg)
 
-![](https://terskiyrubezh.ru/wp-content/uploads/2025/07/8HqRdqOw5Ipx381hZJlGhDN1s3rv-HuPfpWzrQ702BL87frf4v4PrR-_LVi4KHjkzyATI5KBp5-wBLQF9vb5xaBG.jpg)

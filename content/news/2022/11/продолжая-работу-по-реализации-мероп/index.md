@@ -7,9 +7,7 @@ categories:
 coverImage: "e4w4vmfQ5zpoUjy5CtTnOBXq_gxBX2nJTOONu7k-miM_x2oTNPbN8odg-MwSlmCSAtZmq5.jpg"
 ---
 
-[![](https://terskiyrubezh.ru/wp-content/uploads/2022/11/GbVKPHjFtTo1aaesIEz4YPY53uy1El1xa4kH_Qzs97qLYXnI-ipDIYpq49uOiy4TvXt_Gz.jpg)](https://terskiyrubezh.ru/wp-content/uploads/2022/11/GbVKPHjFtTo1aaesIEz4YPY53uy1El1xa4kH_Qzs97qLYXnI-ipDIYpq49uOiy4TvXt_Gz.jpg)
 
-[![](https://terskiyrubezh.ru/wp-content/uploads/2022/11/VsLXsjNxxsf3XyaatxoXpO8RteA73UB7QFixoK2OS-jDtUbJ4goojD-5U9N7zHtwNl.jpg)](https://terskiyrubezh.ru/wp-content/uploads/2022/11/VsLXsjNxxsf3XyaatxoXpO8RteA73UB7QFixoK2OS-jDtUbJ4goojD-5U9N7zHtwNl.jpg)
 
 Продолжая работу по реализации мероприятий поддержанного Фондом президентских грантов проекта «Вахта Памяти «Терский Рубеж» члены команды проекта для очередной встречи со студентами выбрали ГБПОУ “Чеченский аграрно-технический колледж”.
 

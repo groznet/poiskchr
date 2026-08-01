@@ -19,6 +19,6 @@ coverImage: "N2AGzWSA-OxlwsoE3kNquJmj2EGV5MOUoE73YJH3ZHaX6_wX6My5HwVcMpajjbLPfIk
 
 Участники почтили память погибших при защите Отечества минутой молчания, а также возложили цветы и венки к Вечному огню.
 
-[#ПоисковикиРФ](https://vk.com/feed?section=search&q=%23%D0%9F%D0%BE%D0%B8%D1%81%D0%BA%D0%BE%D0%B2%D0%B8%D0%BA%D0%B8%D0%A0%D0%A4)
+#ПоисковикиРФ
 
-\[envira-gallery id='13472'\]
+

@@ -17,4 +17,4 @@ coverImage: "P1090008.jpg"
 
 [Игнату](https://terskiyrubezh.ru/wp-content/uploads/2019/03/Игнату-1.docx)
 
-\[envira-gallery id='5466'\]
+
