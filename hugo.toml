@@ -3,7 +3,7 @@
 # Refined for Poisk-CHR
 ##############################################
 
-baseURL = "http://laserchr.ru/"
+baseURL = "https://poisk-chr.ru/"
 languageCode = "ru"
 title = "Поисковое движение по ЧР"
 theme = "poiskchr"
