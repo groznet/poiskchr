@@ -1,3 +1,16 @@
+"""
+Hugo News Directory Folder Renamer
+
+This script scans 'content/news' for post directories containing 'index.md'.
+If a directory name exceeds 30 characters or contains non-ASCII characters 
+(e.g., Cyrillic text), it renames the folder to a clean 'post-N' format.
+
+Behavior on repeated runs:
+- Skips already formatted 'post-N' directories.
+- Increments the index (e.g., 'post-3') for newly added posts to avoid collisions.
+- Only renames directories; it does NOT modify the front matter inside 'index.md'.
+"""
+
 import os
 import re
 
