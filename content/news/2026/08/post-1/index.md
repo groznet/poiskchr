@@ -1,6 +1,6 @@
 ---
 date: '2026-08-08T11:28:25+03:00'
-draft: true
+draft: false
 title: 'В первые выходные августа Аксай принимал спортсменов из разных регионов страны'
 slug: 'v-pervye-vykhodnye-avgusta-aksai-prinimal-sportsmenov-iz'
 ---
