@@ -3,7 +3,7 @@ Hugo Remote Media Manifest Generator (generate_galleries.py)
 
 This script scans Hugo page bundles in 'content/news/' for image assets.
 For each post bundle, it generates a 'gallery.json' file mapping local image 
-filenames to their corresponding remote CDN URLs on files.groznet.com.
+filenames to their corresponding remote CDN URLs on files.example.com.
 
 Output JSON Structure:
 - remote_base_url: The full CDN URL path pointing to the post's 'images/' directory.
@@ -18,8 +18,8 @@ import re
 # ==========================================
 # SITE CONFIGURATION
 # ==========================================
-SITE_SLUG = "poiskchr"                             # Unique identifier for the site on CDN
-MEDIA_SERVER_BASE = "https://files.groznet.com"     # Base domain of the external media server
+SITE_SLUG = "poiskchr"                              # Unique identifier for the site on CDN
+MEDIA_SERVER_BASE = "https://ci21392.tw1.ru"        # Base domain of the external media server
 CONTENT_SECTION = "news"                            # Target Hugo content directory name
 
 # Absolute path resolution relative to the script location (assumes script lives in a subfolder like 'scripts/')
