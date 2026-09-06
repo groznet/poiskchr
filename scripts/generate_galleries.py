@@ -19,7 +19,7 @@ import re
 # SITE CONFIGURATION
 # ==========================================
 SITE_SLUG = "poiskchr"                              # Unique identifier for the site on CDN
-MEDIA_SERVER_BASE = "https://ci21392.tw1.ru"        # Base domain of the external media server
+MEDIA_SERVER_BASE = "https://files.groznet.com"     # Base domain of the external media server
 CONTENT_SECTION = "news"                            # Target Hugo content directory name
 
 # Absolute path resolution relative to the script location (assumes script lives in a subfolder like 'scripts/')

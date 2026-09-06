@@ -44,7 +44,7 @@ buildExpired = false
   siteDescription = "Официальный сайт регионального поискового движения"
   author = "Команда Poisk-CHR"
   copyright = "© 2025"
-  cdn = "http://ci21392.tw1.ru/poiskchr"
+  cdn = "https://files.groznet.com/poiskchr"
 
   defaultImage = "/images/og-default.jpg"
   dateFormat = "02.01.2006"      # Russian date format

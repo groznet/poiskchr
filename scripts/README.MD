@@ -16,7 +16,7 @@ The script starts at `content/news`. Instead of scanning every single folder (wh
 ### 2. URL Construction
 
 Once it finds a post, e.g., `content/news/2026/03/my-new-event`, it calculates the matching remote URL:
-`https://ci21392.tw1.ru/poiskchr/news/2026/03/my-new-event/images/`
+`https://files.groznet.com/poiskchr/news/2026/03/my-new-event/images/`
 
 ### 3. Remote Scraping (The "Bot" Phase)
 
