@@ -38,11 +38,13 @@
                 <div id="year-{{ $year.Key }}" class="px-4 pb-3 {{ if not $isOpen }}hidden{{ end }}">
                     <ul class="m-0 space-y-1">
                         {{ range $month := $year.Pages.GroupByDate "January" }}
-                            {{ $translated := index $months $month.Key }}
+                            {{/* Extract exact English month name from the first page in group */}}
+                            {{ $monthName := (index $month.Pages 0).Date.Format "January" }}
+                            {{ $translated := index $months $monthName }}
                             <li>
                                 <a class="block rounded px-2 py-1.5 text-sm hover:bg-secondary-creamBeige/70"
-                                href="/news/{{ $year.Key }}/{{ printf "%02d" (index $month.Pages 0).Date.Month }}/">
-                                    {{ $translated }} ({{ len $month.Pages }})
+                                href="/news/{{ $year.Key }}/{{ (index $month.Pages 0).Date.Format "01" }}/">
+                                    {{ $translated | default $monthName }} ({{ len $month.Pages }})
                                 </a>
                             </li>
                         {{ end }}
