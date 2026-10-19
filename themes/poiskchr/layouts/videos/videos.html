@@ -19,23 +19,49 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {{ range .Site.Data.videos }}
         <div class="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-1 border-4 border-gray-200 hover:border-primary">
-            <a href="{{ .video | relURL }}" class="relative block aspect-video rounded-lg overflow-hidden">
-                <img src="{{ .thumb | relURL }}" alt="{{ .title }}" loading="lazy" class="w-full h-full object-cover">
-                <span class="absolute inset-0 flex items-center justify-center">
+            <div class="video-card relative w-full aspect-video bg-black rounded-lg overflow-hidden cursor-pointer">
+                <video
+                    class="w-full h-full block bg-black object-cover"
+                    preload="none"
+                    playsinline
+                    poster="{{ .thumb | relURL }}"
+                    title="{{ .title }}">
+                    <source src="{{ replace .video " " "%20" }}" type="video/mp4">
+                </video>
+                <span class="video-play absolute inset-0 flex items-center justify-center pointer-events-none">
                     <i class="fa-solid fa-circle-play text-white text-6xl drop-shadow-lg opacity-90 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"></i>
                 </span>
-            </a>
+                <button type="button" class="video-fs absolute bottom-2 right-2 flex items-center justify-center w-8 h-8 rounded bg-black/60 text-white" aria-label="На весь экран">
+                    <svg viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
+                </button>
+            </div>
         </div>
         {{ end }}
     </div>
 </div>
 
-<style>
-.line-clamp-2 {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-</style>
+<script>
+document.querySelectorAll('.video-card').forEach(function (card) {
+    var v = card.querySelector('video');
+    var btn = card.querySelector('.video-play');
+    card.addEventListener('click', function () {
+        if (v.paused) {
+            document.querySelectorAll('.video-card video').forEach(function (o) { if (o !== v) o.pause(); });
+            v.play();
+        } else {
+            v.pause();
+        }
+    });
+    card.querySelector('.video-fs').addEventListener('click', function (e) {
+        e.stopPropagation();
+        if (v.requestFullscreen) v.requestFullscreen();
+        else if (v.webkitEnterFullscreen) v.webkitEnterFullscreen();
+        else if (v.webkitRequestFullscreen) v.webkitRequestFullscreen();
+    });
+    document.addEventListener('fullscreenchange', function () { v.controls = document.fullscreenElement === v; });
+    v.addEventListener('play', function () { btn.style.display = 'none'; });
+    v.addEventListener('pause', function () { btn.style.display = ''; });
+    v.addEventListener('ended', function () { btn.style.display = ''; });
+});
+</script>
 {{ end }}
