@@ -1,277 +1,277 @@
 [
   {
     "title": "Видео 1",
-    "url": "0Y_elO0Oxmg",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_1.mp4",
+    "thumb": "/images/video-thumbs/video-1.jpg"
   },
   {
     "title": "Видео 2",
-    "url": "iReLTGoI0FM",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_2.mp4",
+    "thumb": "/images/video-thumbs/video-2.jpg"
   },
   {
     "title": "Видео 3",
-    "url": "mHudW4UYqkg",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_3.mp4",
+    "thumb": "/images/video-thumbs/video-3.jpg"
   },
   {
     "title": "Видео 4",
-    "url": "BVcPCqQr4KI",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_4.mp4",
+    "thumb": "/images/video-thumbs/video-4.jpg"
   },
   {
     "title": "Видео 5",
-    "url": "qrZlcmKlJz4",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_5.mp4",
+    "thumb": "/images/video-thumbs/video-5.jpg"
   },
   {
     "title": "Видео 6",
-    "url": "BRVHuE0X6AM",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_6.mp4",
+    "thumb": "/images/video-thumbs/video-6.jpg"
   },
   {
     "title": "Видео 7",
-    "url": "5dQiqQSeu-k",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_7.mp4",
+    "thumb": "/images/video-thumbs/video-7.jpg"
   },
   {
     "title": "Видео 8",
-    "url": "NtbVSgAAkmI",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_8.mp4",
+    "thumb": "/images/video-thumbs/video-8.jpg"
   },
   {
     "title": "Видео 9",
-    "url": "k4ZYszRPjdY",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_9.mp4",
+    "thumb": "/images/video-thumbs/video-9.jpg"
   },
   {
     "title": "Видео 10",
-    "url": "8_atn_iK40I",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_10.mp4",
+    "thumb": "/images/video-thumbs/video-10.jpg"
   },
   {
     "title": "Видео 11",
-    "url": "A5mNKhmNmKg",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_11.mp4",
+    "thumb": "/images/video-thumbs/video-11.jpg"
   },
   {
     "title": "Видео 12",
-    "url": "apOMT31TVk8",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_12.mp4",
+    "thumb": "/images/video-thumbs/video-12.jpg"
   },
   {
     "title": "Видео 13",
-    "url": "80_KD1pgYCU",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_13.mp4",
+    "thumb": "/images/video-thumbs/video-13.jpg"
   },
   {
     "title": "Видео 14",
-    "url": "cxq34uF_iRA",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_14.mp4",
+    "thumb": "/images/video-thumbs/video-14.jpg"
   },
   {
     "title": "Видео 15",
-    "url": "tIZhglw6mb0",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_15.mp4",
+    "thumb": "/images/video-thumbs/video-15.jpg"
   },
   {
     "title": "Видео 16",
-    "url": "Hxp5j_sCdvE",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_16.mp4",
+    "thumb": "/images/video-thumbs/video-16.jpg"
   },
   {
     "title": "Видео 17",
-    "url": "faVORod_DZE",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_17.mp4",
+    "thumb": "/images/video-thumbs/video-17.jpg"
   },
   {
     "title": "Видео 18",
-    "url": "zGPE-uxLrrc",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_18.mp4",
+    "thumb": "/images/video-thumbs/video-18.jpg"
   },
   {
     "title": "Видео 19",
-    "url": "C29vxLKb74I",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_19.mp4",
+    "thumb": "/images/video-thumbs/video-19.jpg"
   },
   {
     "title": "Видео 20",
-    "url": "9AoSI_evFtk",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_20.mp4",
+    "thumb": "/images/video-thumbs/video-20.jpg"
   },
   {
     "title": "Видео 21",
-    "url": "wTO6pO32ffI",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_21.mp4",
+    "thumb": "/images/video-thumbs/video-21.jpg"
   },
   {
     "title": "Видео 22",
-    "url": "I0d4_aV5mtg",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_22.mp4",
+    "thumb": "/images/video-thumbs/video-22.jpg"
   },
   {
     "title": "Видео 23",
-    "url": "BNehvTjG9z8",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_23.mp4",
+    "thumb": "/images/video-thumbs/video-23.jpg"
   },
   {
     "title": "Видео 24",
-    "url": "LMg3-UQmyQI",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_24.mp4",
+    "thumb": "/images/video-thumbs/video-24.jpg"
   },
   {
     "title": "Видео 25",
-    "url": "vztfWCfc3FI",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_25.mp4",
+    "thumb": "/images/video-thumbs/video-25.jpg"
   },
   {
     "title": "Видео 26",
-    "url": "QRhnEzC4luA",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_26.mp4",
+    "thumb": "/images/video-thumbs/video-26.jpg"
   },
   {
     "title": "Видео 27",
-    "url": "eQf9ke2FqBE",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_27.mp4",
+    "thumb": "/images/video-thumbs/video-27.jpg"
   },
   {
     "title": "Видео 28",
-    "url": "WqeptLFGLfo",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_28.mp4",
+    "thumb": "/images/video-thumbs/video-28.jpg"
   },
   {
     "title": "Видео 29",
-    "url": "G4hTVFxgBdc",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_29.mp4",
+    "thumb": "/images/video-thumbs/video-29.jpg"
   },
   {
     "title": "Видео 30",
-    "url": "NpEaa2P7qZI",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_30.mp4",
+    "thumb": "/images/video-thumbs/video-30.jpg"
   },
   {
     "title": "Видео 31",
-    "url": "MmwlfJPw_8g",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_31.mp4",
+    "thumb": "/images/video-thumbs/video-31.jpg"
   },
   {
     "title": "Видео 32",
-    "url": "EyLNYNYtK_w",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_32.mp4",
+    "thumb": "/images/video-thumbs/video-32.jpg"
   },
   {
     "title": "Видео 33",
-    "url": "KY1eMvgrp2U",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_33.mp4",
+    "thumb": "/images/video-thumbs/video-33.jpg"
   },
   {
     "title": "Видео 34",
-    "url": "hKgUR3ImvtU",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_34.mp4",
+    "thumb": "/images/video-thumbs/video-34.jpg"
   },
   {
     "title": "Видео 35",
-    "url": "H9qkMbUK3JI",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_35.mp4",
+    "thumb": "/images/video-thumbs/video-35.jpg"
   },
   {
     "title": "Видео 36",
-    "url": "xZSkXBJPBoE",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_36.mp4",
+    "thumb": "/images/video-thumbs/video-36.jpg"
   },
   {
     "title": "Видео 37",
-    "url": "foAJk2cKn7c",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_37.mp4",
+    "thumb": "/images/video-thumbs/video-37.jpg"
   },
   {
     "title": "Видео 38",
-    "url": "Z6Ij3eX4qbM",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_38.mp4",
+    "thumb": "/images/video-thumbs/video-38.jpg"
   },
   {
     "title": "Видео 39",
-    "url": "NCKRBJegvqQ",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_39.mp4",
+    "thumb": "/images/video-thumbs/video-39.jpg"
   },
   {
     "title": "Видео 40",
-    "url": "JuNFQhCuM3g",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_40.mp4",
+    "thumb": "/images/video-thumbs/video-40.jpg"
   },
   {
     "title": "Видео 41",
-    "url": "gBJU5c-ILqg",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_41.mp4",
+    "thumb": "/images/video-thumbs/video-41.jpg"
   },
   {
     "title": "Видео 42",
-    "url": "bRypxA2h80Y",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_42.mp4",
+    "thumb": "/images/video-thumbs/video-42.jpg"
   },
   {
     "title": "Видео 43",
-    "url": "zcDRDh5zfE4",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_43.mp4",
+    "thumb": "/images/video-thumbs/video-43.jpg"
   },
   {
     "title": "Видео 44",
-    "url": "pVhpvMRkoRE",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_44.mp4",
+    "thumb": "/images/video-thumbs/video-44.jpg"
   },
   {
     "title": "Видео 45",
-    "url": "aFy2t-9Ff4c",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_45.mp4",
+    "thumb": "/images/video-thumbs/video-45.jpg"
   },
   {
     "title": "Видео 46",
-    "url": "YejRI9LrQ-A",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_46.mp4",
+    "thumb": "/images/video-thumbs/video-46.jpg"
   },
   {
     "title": "Видео 47",
-    "url": "apnsmhCdccw",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_47.mp4",
+    "thumb": "/images/video-thumbs/video-47.jpg"
   },
   {
     "title": "Видео 48",
-    "url": "-IPIKDP-th4",
-    "thumb": "/images/-video-placeholder.png"
+    "video": "/videos/Video_48.mp4",
+    "thumb": "/images/video-thumbs/video-48.jpg"
   },
   {
     "title": "Видео 49",
-    "url": "gEeiL3umAmY",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_49.mp4",
+    "thumb": "/images/video-thumbs/video-49.jpg"
   },
   {
     "title": "Видео 50",
-    "url": "kGYYSWvSup4",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_50.mp4",
+    "thumb": "/images/video-thumbs/video-50.jpg"
   },
   {
     "title": "Видео 51",
-    "url": "dg0BT-ZWEJU",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_51.mp4",
+    "thumb": "/images/video-thumbs/video-51.jpg"
   },
   {
     "title": "Видео 52",
-    "url": "y0l3QrvslMQ",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_52.mp4",
+    "thumb": "/images/video-thumbs/video-52.jpg"
   },
   {
     "title": "Видео 53",
-    "url": "5YPa7ROpm3o",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_53.mp4",
+    "thumb": "/images/video-thumbs/video-53.jpg"
   },
   {
     "title": "Видео 54",
-    "url": "0nl2kd1Go4w",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_54.mp4",
+    "thumb": "/images/video-thumbs/video-54.jpg"
   },
   {
     "title": "Видео 55",
-    "url": "pzQQRNKpRew",
-    "thumb": "/images/video-placeholder.png"
+    "video": "/videos/Video_55.mp4",
+    "thumb": "/images/video-thumbs/video-55.jpg"
   }
 ]

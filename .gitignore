@@ -27,3 +27,5 @@ Thumbs.db
 
 # Ignore any content images folders
 /content/**/images/
+# Large downloaded videos
+/videos/
